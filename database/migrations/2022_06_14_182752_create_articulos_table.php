@@ -15,6 +15,7 @@ class CreateArticulosTable extends Migration
     {
         Schema::create('articulos', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('categoria_id')->unsigned();
             $table->string('articulo',50)->nullable(false);
             $table->string('desc',50)->nullable(false);
             $table->double('precio')->nullable(false);
@@ -25,6 +26,8 @@ class CreateArticulosTable extends Migration
             $table->string('img4',100)->nullable(false);
             $table->boolean('estado')->nullable(false);
             $table->timestamps();
+            $table->foreign('categoria_id')->references('id')->on('categorias')->onUpdate('cascade')
+            ->onDelete('cascade');
         });
     }
 
