@@ -15,13 +15,13 @@ class CreateDepositosTable extends Migration
     {
         Schema::create('depositos', function (Blueprint $table) {
             $table->id();
-            // $table->timestamps();
+            $table->bigInteger('user_id')->unsigned();
             $table->decimal('monto')->nullable(false);
             $table->date('fecha')->nullable(false);
             $table->string('comprobante')->nullable(false);
             $table->integer('estado')->nullable(false);
-            $table->bigInteger('id_usuario')->unsigned();
-            $table->foreign('id_usuario')->references('id')->on('users')->onUpdate('cascade')
+            $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')
             ->onDelete('cascade');
         });
     }
