@@ -24,6 +24,9 @@ class CreateDetallesTable extends Migration
             $table->timestamps();
             $table->foreign('renta_id')->references('id')->on('rentas')->onUpdate('cascade')
             ->onDelete('cascade');
+            $table->bigInteger('articulo_id')->unsigned();
+            $table->foreign('articulo_id')->references('id')->on('articulos')->onUpdate('cascade')
+            ->onDelete('cascade');
         });
     }
 
