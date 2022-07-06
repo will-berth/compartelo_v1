@@ -17,4 +17,19 @@ use App\Http\Controllers\DepositosController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});
+Route::get('/marcas', function () {
+    return view('marcas');
+});
+Route::get('/periodos', function () {
+    return view('periodos');
+});
+Route::get('/quejas', function () {
+    return view('quejas');
+});
+Route::get('/rentas', function () {
+    return view('renta');
+});
 Route::get('getDepositos', [DepositosController::class, 'index']);
