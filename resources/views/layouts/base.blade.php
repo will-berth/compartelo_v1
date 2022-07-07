@@ -9,7 +9,7 @@
   <meta name="author" content="">
   <link href="img/logo/logo.png" rel="icon">
   <title>RuangAdmin - Dashboard</title>
-  <link href="{{ asset('assets/css/tabler.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
   <link href="{{ asset('assets/css/ruang-admin.min.css') }}" rel="stylesheet">
 </head>
 
@@ -340,7 +340,7 @@
   <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
   <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
   <script src="{{ asset('assets/js/jquery.easing.min.js') }}"></script>
-  <script src="{{ asset('assets/js/tabler.min.js') }}"></script>
+  <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
   <script src="{{ asset('assets/js/ruang-admin.min.js') }}"></script>
   
 </body>
