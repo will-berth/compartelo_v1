@@ -1,0 +1,7 @@
+.table > thead{
+
+    color: #fff !important;
+}
+.table tr th{
+    font-weight: lighter !important;
+}

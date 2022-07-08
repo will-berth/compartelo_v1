@@ -8,20 +8,39 @@
     </ol>
 </div>
 <br>
-<div class="d-flex justify-content-end">
-    <button type="button" class="btn btn-primary">Agregar marca</button>
+<div class="row">
+    <div class="col-md-6">
+        <label for="">Buscar</label>
+        <input type="search" class="form-control" placeholder="Buscar..." id="buscar" autocomplete="off">
+    </div>
+    <div class="col-md-6">
+        <label for="" class="invisible">add</label>
+        <div class="d-flex justify-content-end">
+            <button type="button" class="btn btn-primary">Agregar marca</button>
+        </div>
+    </div>
 </div>
 <br>
+<div class="d-flex justify-content-end">
+    <button class="btn btn-secondary">Reload</button>
+</div>  
 <div class="table-reaponsive">
-    <table class="table">
-        <thead>
+    <table class="table table-bordered shadow-sm">
+        <thead class="bg-dark text-center">
             <tr>
                 <th>Marca</th>
                 <th>Acciones</th>
             </tr>
         </thead>
-        <tbody>
-
+        <tbody class="text-center">
+            <tr>
+                <td>seee</td>
+                <td>Editar</td>
+            </tr>
+            <tr>
+                <td>seee</td>
+                <td>Editar</td>
+            </tr>
         </tbody>
     </table>
 </div>
