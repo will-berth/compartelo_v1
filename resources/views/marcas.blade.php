@@ -34,16 +34,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td colspan="2">
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                            aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-                            <center><b class="h6">Cargando...</b></center>
-                        </div>
-                    </div>
-                </td>
-            </tr>
+            
         </tbody>
     </table>
 </div>
@@ -75,5 +66,11 @@
     </div>
   </div>
 </div>
-
+@endsection
+@section('script')
+<script>
+    $(document).ready(function(){
+        getMarcas(0);
+    })
+</script>
 @endsection
