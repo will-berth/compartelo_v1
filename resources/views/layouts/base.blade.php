@@ -15,7 +15,7 @@
   <link href="{{ asset('assets/icofont/icofont.min.css') }}" rel="stylesheet">
 </head>
 
-<body id="page-top">
+<body id="page-top" class="fw-5">
   <div id="wrapper">
     <!-- Sidebar -->
     <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">

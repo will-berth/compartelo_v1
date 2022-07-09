@@ -1,3 +1,54 @@
+@font-face {
+    font-family: "Airbnb Cereal Bd";
+    src: url("../fonts/airbnb_cereal/AirbnbCereal_W_Bd.otf");
+}
+@font-face {
+    font-family: "Airbnb Cereal Bk";
+    src: url("../fonts/airbnb_cereal/AirbnbCereal_W_Bk.otf");
+}
+@font-face {
+    font-family: "Airbnb Cereal Blk";
+    src: url("../fonts/airbnb_cereal/AirbnbCereal_W_Blk.otf");
+}
+@font-face {
+    font-family: "Airbnb Cereal Lt";
+    src: url("../fonts/airbnb_cereal/AirbnbCereal_W_Lt.otf");
+}
+@font-face {
+    font-family: "Airbnb Cereal Md";
+    src: url("../fonts/airbnb_cereal/AirbnbCereal_W_Md.otf");
+}
+@font-face {
+    font-family: "Airbnb Cereal XBd";
+    src: url("../fonts/airbnb_cereal/AirbnbCereal_W_XBd.otf");
+}
+
+/* body{
+    font-family: "Airbnb Cereal Bk" !important;
+} */
+
+/* Reusables */
+.fw-1{
+    font-family: "Airbnb Cereal Blk" !important;
+}
+.fw-2{
+    font-family: "Airbnb Cereal XBd" !important;
+}
+.fw-3{
+    font-family: "Airbnb Cereal Bd" !important;
+}
+.fw-4{
+    font-family: "Airbnb Cereal Md" !important;
+}
+.fw-5{
+    font-family: "Airbnb Cereal Bk" !important;
+}
+.fw-6{
+    font-family: "Airbnb Cereal Lt" !important;
+}
+
+/* END Reusables */
+
 .table > thead{
 
     color: #fff !important;
