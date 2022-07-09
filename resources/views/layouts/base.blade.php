@@ -297,6 +297,7 @@
   <script src="{{ asset('assets/js/jquery.easing.min.js') }}"></script>
   <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
   <script src="{{ asset('assets/js/ruang-admin.min.js') }}"></script>
+  <script src="{{ asset('assets/js/openCloseModal.js') }}"></script>
   
 </body>
 

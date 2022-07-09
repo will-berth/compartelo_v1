@@ -20,30 +20,60 @@
     </div>
     <div class="col-md-6">
         <div class="d-flex justify-content-end">
-            <button type="button" class="btn btn-primary">Agregar marca</button>
+            <button type="button" class="btn btn-primary" onclick="openClose('add-marcas', 'marcas', '', 0)">Agregar marca</button>
         </div>
     </div>
 </div>
 <br>
 <div class="table-responsive">
     <table class="table align-items-center table-flush">
-      <thead class="thead-light text-center">
-        <tr>
-          <th>Marca</th>
-          <th>Accion</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-            <td colspan="2">
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"><center><b class="h6">Cargando...</b></center></div>
-                </div>
-            </td>
-        </tr>
-      </tbody>
+        <thead class="thead-light text-center">
+            <tr>
+                <th>Marca</th>
+                <th>Accion</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="2">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                            aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                            <center><b class="h6">Cargando...</b></center>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
     </table>
-  </div>
+</div>
 
-  
+<!-- modal para agregar marcas -->
+<div class="modal fade" id="add-marcas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="titulo-modal"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="">
+            <div class="row">
+                <div class="col-md-12">
+                    <label for="">Marca</label>
+                    <input type="text" class="form-control" name="marca" id="marca" placeholder="Marca" required autocomplete="off">
+                </div>
+            </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" id="btn-save"></button>
+      </div>
+    </div>
+  </div>
+</div>
+
 @endsection
