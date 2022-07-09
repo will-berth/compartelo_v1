@@ -12,6 +12,7 @@
   <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
   <link href="{{ asset('assets/css/ruang-admin.min.css') }}" rel="stylesheet">
   <link href="{{ asset('assets/css/general.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/icofont/icofont.min.css') }}" rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -100,7 +101,7 @@
             <li class="nav-item dropdown no-arrow mx-1">
               <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-bell fa-fw"></i>
+                <i class="icofont-alarm icono-nav"></i>
                 <span class="badge badge-danger badge-counter">3+</span>
               </a>
               <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -147,7 +148,7 @@
             <li class="nav-item dropdown no-arrow mx-1">
               <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-envelope fa-fw"></i>
+                <i class="icofont-envelope icono-nav"></i>
                 <span class="badge badge-warning badge-counter">2</span>
               </a>
               <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"

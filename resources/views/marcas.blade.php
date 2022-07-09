@@ -10,38 +10,40 @@
 <br>
 <div class="row">
     <div class="col-md-6">
-        <label for="">Buscar</label>
-        <input type="search" class="form-control" placeholder="Buscar..." id="buscar" autocomplete="off">
+        <label class="sr-only" for="inlineFormInputGroup">Buscar...</label>
+        <div class="input-group mb-2">
+            <input type="search" class="form-control" id="buscar" placeholder="Buscar..." autocomplete="off">
+            <div class="input-group-prepend">
+                <div class="input-group-text"><i class="icofont-search"></i></div>
+            </div>
+        </div>
     </div>
     <div class="col-md-6">
-        <label for="" class="invisible">add</label>
         <div class="d-flex justify-content-end">
             <button type="button" class="btn btn-primary">Agregar marca</button>
         </div>
     </div>
 </div>
 <br>
-<div class="d-flex justify-content-end">
-    <button class="btn btn-secondary">Reload</button>
-</div>  
-<div class="table-reaponsive">
-    <table class="table table-bordered shadow-sm">
-        <thead class="bg-dark text-center">
-            <tr>
-                <th>Marca</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody class="text-center">
-            <tr>
-                <td>seee</td>
-                <td>Editar</td>
-            </tr>
-            <tr>
-                <td>seee</td>
-                <td>Editar</td>
-            </tr>
-        </tbody>
+<div class="table-responsive">
+    <table class="table align-items-center table-flush">
+      <thead class="thead-light text-center">
+        <tr>
+          <th>Marca</th>
+          <th>Accion</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+            <td colspan="2">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"><center><b class="h6">Cargando...</b></center></div>
+                </div>
+            </td>
+        </tr>
+      </tbody>
     </table>
-</div>
+  </div>
+
+  
 @endsection
