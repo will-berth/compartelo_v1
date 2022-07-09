@@ -69,7 +69,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <label for="">periodos</label>
-                    <input type="text" class="form-control" name="periodo" id="periodo" placeholder="Periodo" required autocomplete="off">
+                    <input type="text" class="form-control" name="tipo" id="tipo" placeholder="Periodo" required autocomplete="off">
                 </div>
             </div>
             <div class="modal-footer">

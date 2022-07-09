@@ -9,6 +9,9 @@ $('#form-add-periodos').submit(function(e){
 
         },
         success: function(response){
+            var resp = JSON.parse(response);
+            console.log(resp);
+
 
         }
     })
