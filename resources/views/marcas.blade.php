@@ -59,18 +59,18 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="">
+        <form action="" id="form-add-marcas">
             <div class="row">
                 <div class="col-md-12">
                     <label for="">Marca</label>
                     <input type="text" class="form-control" name="marca" id="marca" placeholder="Marca" required autocomplete="off">
                 </div>
             </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="submit" class="btn btn-primary" id="btn-save"></button>
+            </div>
         </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary" id="btn-save"></button>
       </div>
     </div>
   </div>

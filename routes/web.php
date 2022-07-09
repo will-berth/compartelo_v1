@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DepositosController;
+use App\Http\Controllers\MarcasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +34,4 @@ Route::get('/rentas', function () {
     return view('renta');
 });
 Route::get('getDepositos', [DepositosController::class, 'index']);
+Route::post('addMarcas/', [MarcasController::class, 'store']);
