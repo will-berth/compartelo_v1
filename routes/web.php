@@ -35,3 +35,4 @@ Route::get('/rentas', function () {
 });
 Route::get('getDepositos', [DepositosController::class, 'index']);
 Route::post('addMarcas/', [MarcasController::class, 'store']);
+Route::get('getMarcas/{filtro}', [MarcasController::class, 'index']);
