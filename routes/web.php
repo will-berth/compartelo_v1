@@ -39,3 +39,4 @@ Route::get('getDepositos', [DepositosController::class, 'index']);
 Route::post('addMarcas/', [MarcasController::class, 'store']);
 Route::post('addPeriodos/', [PeriodosController::class, 'store']);
 
+Route::get('getMarcas/{filtro}', [MarcasController::class, 'index']);

@@ -298,7 +298,9 @@
   <script src="{{ asset('assets/js/jquery.easing.min.js') }}"></script>
   <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
   <script src="{{ asset('assets/js/ruang-admin.min.js') }}"></script>
+  <script src="{{ asset('assets/js/sweetalert2.all.min.js') }}"></script>
   <script src="{{ asset('assets/js/openCloseModal.js') }}"></script>
+  <script src="{{ asset('assets/js/respuestas.js') }}"></script>
   <script src="{{ asset('assets/js/marcas/crud-marcas.js') }}"></script>
   <script src="{{ asset('assets/js/periodos/crud-periodos.js') }}"></script>
 

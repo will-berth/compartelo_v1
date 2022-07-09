@@ -10,7 +10,26 @@ $('#form-add-marcas').submit(function(e){
         },
         success: function(response){
             var resp = JSON.parse(response);
-            console.log(resp);
+            Toast.fire({
+                icon: resp.icon,
+                title: resp.title,
+                text: resp.text
+            });
+            getMarcas('getMarcas/', 0)
         }
     })
 })
+
+function getMarcas(url, filtro){
+    $.ajax({
+        'type': 'get',
+        'url': 'getMarcas/'+filtro,
+        beforeSend: function(){
+
+        },
+        success: function(response){
+            var resp = JSON.parse(response);
+            console.log(resp);
+        }
+    })
+}

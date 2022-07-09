@@ -26,7 +26,7 @@
 </div>
 <br>
 <div class="table-responsive">
-    <table class="table align-items-center table-flush">
+    <table class="table align-items-center table-flush" id="table-marcas">
         <thead class="thead-light text-center">
             <tr>
                 <th>Marca</th>

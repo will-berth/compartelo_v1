@@ -7,6 +7,14 @@ use App\Models\Marca;
 
 class MarcasController extends Controller
 {
+    public function index($filtro){
+        if ($filtro == 0){
+            $marcas = Marca::all();
+            return json_encode($marcas);
+        }else{
+
+        }
+    }
     public function store(Request $request)
     {
         $request->validate([
