@@ -300,6 +300,8 @@
   <script src="{{ asset('assets/js/ruang-admin.min.js') }}"></script>
   <script src="{{ asset('assets/js/openCloseModal.js') }}"></script>
   <script src="{{ asset('assets/js/marcas/crud-marcas.js') }}"></script>
+  <script src="{{ asset('assets/js/periodos/crud-periodos.js') }}"></script>
+
   <script type="text/javascript">
     $.ajaxSetup({
         headers: {

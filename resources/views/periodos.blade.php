@@ -65,19 +65,20 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="">
+        <form action="" id="form-add-periodos">
             <div class="row">
                 <div class="col-md-12">
                     <label for="">periodos</label>
                     <input type="text" class="form-control" name="periodo" id="periodo" placeholder="Periodo" required autocomplete="off">
                 </div>
             </div>
+            <div class="modal-footer">
+             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary" id="btn-save"></button>
+            </div>
         </form>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary" id="btn-save"></button>
-      </div>
+      
     </div>
   </div>
 </div>

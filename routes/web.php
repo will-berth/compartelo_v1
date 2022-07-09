@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DepositosController;
 use App\Http\Controllers\MarcasController;
+use App\Http\Controllers\PeriodosController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -35,3 +37,5 @@ Route::get('/rentas', function () {
 });
 Route::get('getDepositos', [DepositosController::class, 'index']);
 Route::post('addMarcas/', [MarcasController::class, 'store']);
+Route::post('addPeriodos/', [PeriodosController::class, 'store']);
+
