@@ -21,3 +21,7 @@ function openClose(id_modal, modulo, desc, tipo){
     }
     $('#'+id_modal).modal({backdrop: 'static', keyboard: false});
 }
+function closeModal(id_modal, id_from){
+    $('#'+id_modal).modal('hide');
+    $('#'+id_from).trigger('reset');
+}
