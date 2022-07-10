@@ -26,30 +26,17 @@
 </div>
 <br>
 
-<div class="d-flex justify-content-end">
-    <button type="button" class="btn btn-primary">Agregar</button>
-</div>
-<br>
-<div class="table-reaponsive">
-    <table class="table">
-        <thead
+
+<div class="table-responsive">
+    <table  class="table-aling-items-center table-flush" id="table-periodos">
+        <thead class="thead-light text-center">
             <tr>
                 <th>Tipo</th>
                 <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
-        <tr>
-                <td colspan="2">
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                            aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-                            <center><b class="h6">Cargando...</b></center>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-
+        
         </tbody>
     </table>
 </div>
@@ -82,4 +69,11 @@
     </div>
   </div>
 </div>
+@endsection
+@section('script')
+<script>
+    $(document).ready(function(){
+        getPeriodos(0);
+    })
+</script>
 @endsection
