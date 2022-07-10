@@ -1,50 +1,44 @@
-@font-face {
-    font-family: "Airbnb Cereal Bd";
-    src: url("../fonts/airbnb_cereal/AirbnbCereal_W_Bd.otf");
-}
-@font-face {
-    font-family: "Airbnb Cereal Bk";
-    src: url("../fonts/airbnb_cereal/AirbnbCereal_W_Bk.otf");
-}
-@font-face {
-    font-family: "Airbnb Cereal Blk";
-    src: url("../fonts/airbnb_cereal/AirbnbCereal_W_Blk.otf");
-}
-@font-face {
-    font-family: "Airbnb Cereal Lt";
-    src: url("../fonts/airbnb_cereal/AirbnbCereal_W_Lt.otf");
-}
-@font-face {
-    font-family: "Airbnb Cereal Md";
-    src: url("../fonts/airbnb_cereal/AirbnbCereal_W_Md.otf");
-}
-@font-face {
-    font-family: "Airbnb Cereal XBd";
-    src: url("../fonts/airbnb_cereal/AirbnbCereal_W_XBd.otf");
+:root{
+    --bg-primary: #016170;
+    --bg-secondary: #009393;
 }
 
-/* body{
-    font-family: "Airbnb Cereal Bk" !important;
-} */
+body{
+    /* font-family: "Airbnb" !important; */
+    font-family: 'Manrope', sans-serif !important;
+    font-weight: 500;
+}
+
+/* Fuente Proyecto */
 
 /* Reusables */
 .fw-1{
-    font-family: "Airbnb Cereal Blk" !important;
+    font-weight: 800 !important;
 }
 .fw-2{
-    font-family: "Airbnb Cereal XBd" !important;
+    font-weight: 700 !important;
 }
 .fw-3{
-    font-family: "Airbnb Cereal Bd" !important;
+    font-weight: 600 !important;
 }
 .fw-4{
-    font-family: "Airbnb Cereal Md" !important;
+    font-weight: 500 !important;
 }
 .fw-5{
-    font-family: "Airbnb Cereal Bk" !important;
+    font-weight: 400 !important;
 }
 .fw-6{
-    font-family: "Airbnb Cereal Lt" !important;
+    font-weight: 300 !important;
+}
+.fw-7{
+    font-weight: 200 !important;
+}
+
+.bg-comp-1{
+    background-color: var(--bg-primary) !important;
+}
+.bg-comp-2{
+    background-color: var(--bg-secondary) !important;
 }
 
 /* END Reusables */
