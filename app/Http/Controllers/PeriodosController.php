@@ -6,6 +6,15 @@ use App\Models\Periodo;
 
 class PeriodosController extends Controller
 {
+    public function index($filtro){
+        if ($filtro == 0){
+            $periodos = Periodo::all();
+            return json_encode($periodos);
+        }else{
+
+        }
+    }
+
     public function store(Request $request)
     {
         $request->validate([
