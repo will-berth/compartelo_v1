@@ -57,8 +57,109 @@
     font-weight: lighter !important;
 }
 .icono-nav{
+    font-size: 25px;
+}
+.bg-general{
+    background-color: #ff6984;
+}
+.border-dropw{
+    border-radius: 20px;
+    width: 80px;
+}
+.icon-user{
+    background-color: #727272;
+    color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+}
+.input-buscar{
+    width: 70%;
+    border-radius: 50px;
+    padding: 10px;
+}
+.icono-input{
+    border-radius: 50% !important;
+    background-color: #ff6984 !important;
+    border: 0;
+    color: #fff;
+    position: relative;
+    left: -45px;
+    font-size: 12px;
+    font-weight: bold;
+    top: 5px;
+    width: 35px;
+    height: 35px;
+}
+.carrito{
+    border-radius: 60px;
+}
+.carrito-badge{
+    position: absolute;
+    top: -60px;
+    color: #fff;
+}
+.btn-carousel{
+    border-radius: 50%;
+    background-color: transparent;
+    color: #727272;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 18px;
+}
+.btn-carousel:hover{
+    color: #727272;
+}
+.icon-cat{
+    font-size: 40px;
+}
+.categorias{
+    color: #9c9c9c;
+}
+/* animacion hover a los iconos de las categorias */
+.nav a{
+    position: relative;
+    display: block;
+}
+.categorias:hover{
+    color: #232323;
+}
+.categorias:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    top: 80px;
+    width: 40px;
+    height: 1.5px;
+    background: #9c9c9c;
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+}
+.categorias:hover::before{
+    transform: scaleX(1);
+}
+.nav[data-animation="bonus"] a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+    transition-timing-function: cubic-bezier(0.2, 1, 0.82, 0.94);
+}
+.list-categorias ul{
+    overflow-x: hidden;
+    list-style: none;
+    display: flex;
+}
+.titulo-logo{
+    color: #ff6984;
+    font-weight: bold;
+    position: relative;
+    top: 5px;
     font-size: 20px;
 }
-.bg-black{
-    background-color: #000;
+#carousel-promo img{
+    max-height: 500px;
+}
+.espacio{
+    margin-left: 70px;
 }

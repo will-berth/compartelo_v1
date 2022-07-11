@@ -1,5 +1,5 @@
 // 0 - agregar 1 - actualizar
-function openClose(id_modal, modulo, desc, tipo){
+function openModal(id_modal, modulo, desc, tipo){
     switch (modulo){
         case 'marcas':
             if(tipo == 0){

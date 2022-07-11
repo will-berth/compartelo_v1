@@ -20,7 +20,7 @@
     </div>
     <div class="col-md-6">
         <div class="d-flex justify-content-end">
-            <button type="button" class="btn btn-primary" onclick="openClose('add-marcas', 'marcas', '', 0)">Agregar marca</button>
+            <button type="button" class="btn btn-primary" onclick="openModal('add-marcas', 'marcas', '', 0)">Agregar marca</button>
         </div>
     </div>
 </div>
