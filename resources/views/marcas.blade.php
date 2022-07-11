@@ -20,7 +20,7 @@
     </div>
     <div class="col-md-6">
         <div class="d-flex justify-content-end">
-            <button type="button" class="btn btn-primary" onclick="openClose('add-marcas', 'marcas', '', 0)">Agregar marca</button>
+            <button type="button" class="btn btn-primary" onclick="openModal('add-marcas', 'marcas', '', 0)">Agregar marca</button>
         </div>
     </div>
 </div>
@@ -33,7 +33,7 @@
                 <th>Accion</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="text-center">
             
         </tbody>
     </table>
@@ -53,6 +53,7 @@
         <form action="" id="form-add-marcas">
             <div class="row">
                 <div class="col-md-12">
+                    <input type="text" class="d-none" name="id" id="id">
                     <label for="">Marca</label>
                     <input type="text" class="form-control" name="marca" id="marca" placeholder="Marca" required autocomplete="off">
                 </div>
