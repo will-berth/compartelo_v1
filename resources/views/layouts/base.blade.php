@@ -14,13 +14,16 @@
   <link href="{{ asset('assets/css/ruang-admin.min.css') }}" rel="stylesheet">
   <link href="{{ asset('assets/css/general.css') }}" rel="stylesheet">
   <link href="{{ asset('assets/icofont/icofont.min.css') }}" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
-<body id="page-top" class="fw-5">
+<body id="page-top">
   <div id="wrapper">
     <!-- Sidebar -->
     <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center bg-comp-1" href="index.html">
         <div class="sidebar-brand-icon">
           <img src="img/logo/logo2.png">
         </div>
@@ -74,7 +77,7 @@
     <div id="content-wrapper" class="d-flex flex-column">
       <div id="content">
         <!-- TopBar -->
-        <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top d-flex justify-content-end">
+        <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top d-flex justify-content-end bg-comp-2">
           <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
             <i class="fa fa-bars"></i>
           </button>
