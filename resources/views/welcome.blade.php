@@ -271,6 +271,11 @@
                 </div>
             </div>
         </div>
+        <br>
+        <div class="row espacio">
+            <h1>MÁS POPULARES</h1>
+            <hr>
+        </div>
     </div>
     <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>

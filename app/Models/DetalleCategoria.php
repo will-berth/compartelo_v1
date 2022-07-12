@@ -9,7 +9,5 @@ class DetalleCategoria extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'estado'
-    ];
+    protected $table = 'detalles_categorias';
 }
