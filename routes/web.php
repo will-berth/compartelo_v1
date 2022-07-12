@@ -36,6 +36,10 @@ Route::get('/rentas', function () {
 Route::get('/prueba', function () {
     return view('prueba');
 });
+
+Route::get('/login', function () {
+    return view('auth.login');
+});
 Route::get('getDepositos', [DepositosController::class, 'index']);
 Route::post('addMarcas/', [MarcasController::class, 'store']);
 Route::put('updateMarcas/', [MarcasController::class, 'update']);
