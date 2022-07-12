@@ -38,4 +38,5 @@ Route::get('/prueba', function () {
 });
 Route::get('getDepositos', [DepositosController::class, 'index']);
 Route::post('addMarcas/', [MarcasController::class, 'store']);
+Route::put('updateMarcas/', [MarcasController::class, 'update']);
 Route::get('getMarcas/{filtro}', [MarcasController::class, 'index']);
