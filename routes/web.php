@@ -33,6 +33,9 @@ Route::get('/quejas', function () {
 Route::get('/rentas', function () {
     return view('renta');
 });
+Route::get('/categorias', function () {
+    return view('categorias');
+});
 Route::get('getDepositos', [DepositosController::class, 'index']);
 Route::post('addMarcas/', [MarcasController::class, 'store']);
 Route::get('getMarcas/{filtro}', [MarcasController::class, 'index']);

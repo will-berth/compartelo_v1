@@ -1,5 +1,5 @@
 // 0 - agregar 1 - actualizar
-function openClose(id_modal, modulo, desc, tipo){
+function openModal(id_modal, modulo, desc, tipo){
     switch (modulo){
         case 'marcas':
             if(tipo == 0){
@@ -16,6 +16,15 @@ function openClose(id_modal, modulo, desc, tipo){
                 $('#btn-save').html('Agregar');
             }else{
                 $('#titulo-modal').html('Actualizar periodo');
+                $('#btn-save').html('Actualizar');
+            }
+
+        case 'categorias':
+            if(tipo == 0){
+                $('#titulo-modal').html('Agregar categoria');
+                $('#btn-save').html('Agregar');
+            }else{
+                $('#titulo-modal').html('Actualizar categoria');
                 $('#btn-save').html('Actualizar');
             }
     }
