@@ -7,9 +7,16 @@ use App\Models\Articulo;
 
 class ArticulosController extends Controller
 {
-    public function serviceListArticles()
+    public function __constructor()
     {
-        $articulos = Articulo::with('categorias')->get();
-        return $articulos;
+       $this->middleware('auth', ['except'  => ['serviceListArticles']]) ;
+    }
+    public function serviceListArticles(Request $request)
+    {
+        if($request->user() != null)
+        {
+            $articulos = Articulo::with('categorias')->get();
+            return $articulos;
+        }
     }
 }
