@@ -4,17 +4,6 @@
 ==========================  **/
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600");
 @import url("../plugins/bootstrap/css/bootstrap.min.css");
-@import url("../fonts/feather/css/feather.css");
-@import url("../plugins/jquery-scrollbar/css/jquery.scrollbar.min.css");
-@import url("../fonts/datta/datta-icon.css");
-@font-face {
-  font-family: "Airbnb Cereal Lt";
-  src: url("../fonts/airbnb_cereal/AirbnbCereal_W_Lt.otf");
-}
-@font-face {
-  font-family: "Airbnb Cereal Bk";
-  src: url("../fonts/airbnb_cereal/AirbnbCereal_W_Bk.otf");
-}
 /**  =====================
       Custom css start
 ==========================  **/
