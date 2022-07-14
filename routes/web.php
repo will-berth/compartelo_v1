@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DepositosController;
 use App\Http\Controllers\MarcasController;
 use App\Http\Controllers\CategoriasController;
+use App\Http\Controllers\PeriodosController;
 
 
 /*
@@ -49,6 +50,12 @@ Route::get('getDepositos', [DepositosController::class, 'index']);
 
 Route::post('addMarcas/', [MarcasController::class, 'store']);
 Route::get('getMarcas/{filtro}', [MarcasController::class, 'index']);
+Route::post('addPeriodos/', [PeriodosController::class, 'store']);
+<<<<<<< .mine
+
+=======
+
+>>>>>>> .theirs
 Route::put('updateMarcas/', [MarcasController::class, 'update']);
 
 Route::post('addCategorias/', [CategoriasController::class, 'store']);

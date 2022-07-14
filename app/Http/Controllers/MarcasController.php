@@ -12,7 +12,8 @@ class MarcasController extends Controller
             $marcas = Marca::all();
             return json_encode($marcas);
         }else{
-
+            $marcas = Marca::where('marca', 'like', '%'.$filtro.'%')->get();
+            return json_encode($marcas);
         }
     }
     public function store(Request $request)

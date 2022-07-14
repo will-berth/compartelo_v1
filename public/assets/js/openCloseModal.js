@@ -21,7 +21,7 @@ function openModal(id_modal, modulo, desc, tipo){
                 $('#titulo-modal').html('Agregar periodo');
                 $('#btn-save').html('Agregar');
             }else{
-                $('#titulo-modal').html('Actualizar periodo');
+                $('#titulo-modal').html('Actualizar periodo'+desc);
                 $('#btn-save').html('Actualizar');
             }
 

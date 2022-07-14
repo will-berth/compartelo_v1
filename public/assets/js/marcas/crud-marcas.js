@@ -53,3 +53,11 @@ function onChange(id, marca){
     $('#marca').val(marca);
     openModal('add-marcas', 'marcas', marca, 1)
 }
+$('#buscar').keyup(function(){
+    var filtro = $(this).val();
+    if(filtro == ''){
+        getMarcas(0);
+    }else{
+        getMarcas(filtro);
+    }
+});

@@ -20,36 +20,23 @@
     </div>
     <div class="col-md-6">
         <div class="d-flex justify-content-end">
-            <button type="button" class="btn btn-primary" onclick="openClose('add-periodos', 'periodos', '', 0)">Agregar periodo</button>
+            <button type="button" class="btn btn-primary" onclick="openModal('add-periodos', 'periodos', '', 0)">Agregar periodo</button>
         </div>
     </div>
 </div>
 <br>
 
-<div class="d-flex justify-content-end">
-    <button type="button" class="btn btn-primary">Agregar</button>
-</div>
-<br>
-<div class="table-reaponsive">
-    <table class="table">
-        <thead
+
+<div class="table-responsive">
+    <table  class="table aling-items-center table-flush" id="table-periodos">
+        <thead class="thead-light text-center">
             <tr>
                 <th>Tipo</th>
                 <th>Acciones</th>
             </tr>
         </thead>
-        <tbody>
-        <tr>
-                <td colspan="2">
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                            aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-                            <center><b class="h6">Cargando...</b></center>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-
+        <tbody class="text-center">
+        
         </tbody>
     </table>
 </div>
@@ -65,20 +52,28 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="">
+        <form action="" id="form-add-periodos">
             <div class="row">
                 <div class="col-md-12">
+                    <input type="text" class="d-none" name="id" id="id">
+                    <input type="text" class="form-control" name="tipo" id="tipo" placeholder="Periodo" required autocomplete="off">
                     <label for="">periodos</label>
-                    <input type="text" class="form-control" name="periodo" id="periodo" placeholder="Periodo" required autocomplete="off">
                 </div>
             </div>
+            <div class="modal-footer">
+             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary" id="btn-save"></button>
+            </div>
         </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary" id="btn-save"></button>
       </div>
     </div>
   </div>
 </div>
+@endsection
+@section('script')
+<script>
+    $(document).ready(function(){
+        getPeriodos(0);
+    })
+</script>
 @endsection
