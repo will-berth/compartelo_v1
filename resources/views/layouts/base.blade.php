@@ -305,6 +305,7 @@
   <script src="{{ asset('assets/js/openCloseModal.js') }}"></script>
   <script src="{{ asset('assets/js/respuestas.js') }}"></script>
   <script src="{{ asset('assets/js/marcas/crud-marcas.js') }}"></script>
+  <script src="{{ asset('assets/js/categorias/crud-categorias.js') }}"></script>
   <script type="text/javascript">
     $.ajaxSetup({
         headers: {

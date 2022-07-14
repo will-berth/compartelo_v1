@@ -16,13 +16,16 @@ class CategoriaSeeder extends Seeder
     {
         $data = [
             [
-                'categoria' => 'Limpieza'
+                'categoria' => 'Limpieza',
+                'icono'     => 'icofont-recycle-alt'
             ],
             [
-                'categoria' => 'Abarrotes'
+                'categoria' => 'Abarrotes',
+                'icono'     => 'icofont-cart'
             ],
             [
-                'categoria' => 'Educacion'
+                'categoria' => 'Educacion',
+                'icono'     => 'icofont-book'
             ],
         ];
         DB::table('categorias')->insert($data);

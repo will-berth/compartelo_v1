@@ -1,10 +1,10 @@
 @extends('layouts.base')
 @section('contenido')
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Marcas</h1>
+    <h1 class="h3 mb-0 text-gray-800">Categorias</h1>
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="./">Dashboard</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Marcas</li>
+        <li class="breadcrumb-item active" aria-current="page">Categorias</li>
     </ol>
 </div>
 <br>
@@ -20,17 +20,18 @@
     </div>
     <div class="col-md-6">
         <div class="d-flex justify-content-end">
-            <button type="button" class="btn btn-primary" onclick="openModal('add-marcas', 'marcas', '', 0)">Agregar marca</button>
+            <button type="button" class="btn btn-primary" onclick="openModal('add-categorias', 'categorias', '', 0)">Agregar Categorias</button>
         </div>
     </div>
 </div>
 <br>
 <div class="table-responsive">
-    <table class="table align-items-center table-flush" id="table-marcas">
+    <table class="table align-items-center table-flush" id="table-categorias">
         <thead class="thead-light text-center">
             <tr>
-                <th>Marca</th>
-                <th>Accion</th>
+                <th>Categoría</th>
+                <th>Icono</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody class="text-center">
@@ -39,8 +40,8 @@
     </table>
 </div>
 
-<!-- modal para agregar marcas -->
-<div class="modal fade" id="add-marcas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- modal para agregar categorias -->
+<div class="modal fade" id="add-categorias" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-scrollable modal-sm">
     <div class="modal-content">
       <div class="modal-header">
@@ -50,12 +51,14 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="" id="form-add-marcas">
+        <form action="" id="form-add-categorias">
             <div class="row">
                 <div class="col-md-12">
                     <input type="text" class="d-none" name="id" id="id">
-                    <label for="">Marca</label>
-                    <input type="text" class="form-control" name="marca" id="marca" placeholder="Marca" required autocomplete="off">
+                    <label for="">Categoría</label>
+                    <input type="text" class="form-control" name="categoria" id="categoria" placeholder="Categoría" required autocomplete="off">
+                    <label for="">Icono</label>
+                    <input type="text" class="form-control" name="icono" id="icono" placeholder="Icono" required autocomplete="off">
                 </div>
             </div>
             <div class="modal-footer">
@@ -71,7 +74,7 @@
 @section('script')
 <script>
     $(document).ready(function(){
-        getMarcas(0);
+        getCategorias(0);
     })
 </script>
 @endsection

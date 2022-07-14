@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DepositosController;
 use App\Http\Controllers\MarcasController;
+use App\Http\Controllers\CategoriasController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +38,19 @@ Route::get('/rentas', function () {
 Route::get('/categorias', function () {
     return view('categorias');
 });
+Route::get('/prueba', function () {
+    return view('prueba');
+});
+
+Route::get('/login', function () {
+    return view('auth.login');
+});
 Route::get('getDepositos', [DepositosController::class, 'index']);
+
 Route::post('addMarcas/', [MarcasController::class, 'store']);
 Route::get('getMarcas/{filtro}', [MarcasController::class, 'index']);
+Route::put('updateMarcas/', [MarcasController::class, 'update']);
+
+Route::post('addCategorias/', [CategoriasController::class, 'store']);
+Route::get('getCategorias/{filtro}', [CategoriasController::class, 'index']);
+Route::put('updateCategorias/', [CategoriasController::class, 'update']);

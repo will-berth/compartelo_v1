@@ -17,7 +17,6 @@ class CreateDetallesCategoriasTable extends Migration
             $table->id();
             $table->bigInteger('categoria_id')->unsigned();
             $table->bigInteger('articulo_id')->unsigned();
-            $table->boolean('estado')->nullable(false);
             $table->timestamps();
             $table->foreign('categoria_id')->references('id')->on('categorias')->onUpdate('cascade')
             ->onDelete('cascade');

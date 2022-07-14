@@ -28,4 +28,19 @@ class MarcasController extends Controller
             return json_encode(['type' => 'error', 'title' => 'Error', 'text' => 'La marca no fue registrada']);
         }
     }
+    public function update(Request $request)
+    {
+        $request->validate([
+            'id'    => 'required',
+            'marca' => 'required'
+        ]);
+        $data = $request->all();
+        $marca = Marca::find($data['id']);
+        try {
+            $marca->update($data);
+            return json_encode(['type' => 'success', 'title' => 'Exito', 'text' => 'Marcar actualizada']);
+        } catch (\Exception $e) {
+            return json_encode(['type' => 'error', 'title' => 'Error', 'text' => 'La marca no fue actualizada']);
+        }
+    }
 }
