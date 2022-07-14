@@ -20,7 +20,7 @@
     </div>
     <div class="col-md-6">
         <div class="d-flex justify-content-end">
-            <button type="button" class="btn btn-primary" onclick="openClose('add-periodos', 'periodos', '', 0)">Agregar periodo</button>
+            <button type="button" class="btn btn-primary" onclick="openModal('add-periodos', 'periodos', '', 0)">Agregar periodo</button>
         </div>
     </div>
 </div>
@@ -28,14 +28,14 @@
 
 
 <div class="table-responsive">
-    <table  class="table-aling-items-center table-flush" id="table-periodos">
+    <table  class="table aling-items-center table-flush" id="table-periodos">
         <thead class="thead-light text-center">
             <tr>
                 <th>Tipo</th>
                 <th>Acciones</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="text-center">
         
         </tbody>
     </table>
@@ -55,8 +55,9 @@
         <form action="" id="form-add-periodos">
             <div class="row">
                 <div class="col-md-12">
-                    <label for="">periodos</label>
+                    <input type="text" class="d-none" name="id" id="id">
                     <input type="text" class="form-control" name="tipo" id="tipo" placeholder="Periodo" required autocomplete="off">
+                    <label for="">periodos</label>
                 </div>
             </div>
             <div class="modal-footer">
@@ -65,7 +66,6 @@
             </div>
         </form>
       </div>
-      
     </div>
   </div>
 </div>

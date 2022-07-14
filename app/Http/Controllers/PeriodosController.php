@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Periodo;
+use Nette\Utils\Json;
 
 class PeriodosController extends Controller
 {
@@ -11,7 +12,8 @@ class PeriodosController extends Controller
             $periodos = Periodo::all();
             return json_encode($periodos);
         }else{
-
+            $periodos = Periodo::where ('tipo', 'like', '%'.$filtro.'%')->get();
+            return json_encode($periodos);
         }
     }
 
@@ -28,4 +30,22 @@ class PeriodosController extends Controller
             return json_encode(['type' => 'error', 'title' => 'Error', 'text' => 'periodo no registrado']);
         }
     }
+
+    public function update(Request $request)
+    {
+        $request->validate([
+            'id'    => 'required',
+            'tipo' => 'required'
+        ]);
+        $data = $request->all();
+        $periodo = Periodo::find($data['id']);
+        try {
+            $periodo->update($data);
+            return json_encode(['type' => 'success', 'title' => 'Exito', 'text' => 'Periodo actualizado']);
+        } catch (\Exception $e) {
+            return json_encode(['type' => 'error', 'title' => 'Error', 'text' => 'el periodo no fue actualizado']);
+        }
+    }
+
+
 }

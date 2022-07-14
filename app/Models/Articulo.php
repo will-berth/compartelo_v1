@@ -12,21 +12,19 @@ class Articulo extends Model
 {
     use HasFactory;
 
-    public $table = 'detalles_categorias';
-
-    public function detalle_categoria(){
-       return $this->belongsTo(DetalleCategoria::class);
-    }
+    public $table = 'articulos';
     
     protected $fillable = [
         'articulo',
         'desc',
         'precio',
-        'stock',
         'img1',
         'img2',
         'img3',
         'img4',
         'estado',
     ];
+    public function categorias(){
+        return $this->belongsToMany(Categoria::class, 'detalles_categorias', 'categoria_id', 'articulo_id');
+    }
 }

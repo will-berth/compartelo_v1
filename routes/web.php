@@ -35,10 +35,19 @@ Route::get('/quejas', function () {
 Route::get('/rentas', function () {
     return view('renta');
 });
+Route::get('/prueba', function () {
+    return view('prueba');
+});
+
+Route::get('/login', function () {
+    return view('auth.login');
+});
 Route::get('getDepositos', [DepositosController::class, 'index']);
 Route::post('addMarcas/', [MarcasController::class, 'store']);
 Route::post('addPeriodos/', [PeriodosController::class, 'store']);
 
+Route::put('updateMarcas/', [MarcasController::class, 'update']);
+Route::put('updatePeriodos/', [PeriodosController::class, 'update']);
 Route::get('getMarcas/{filtro}', [MarcasController::class, 'index']);
 Route::get('getPeriodos/{filtro}', [PeriodosController::class, 'index']);
 
