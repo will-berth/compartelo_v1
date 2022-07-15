@@ -46,6 +46,11 @@ Route::get('/prueba', function () {
 Route::get('/login', function () {
     return view('auth.login');
 })->name('login');
+
+Route::get('/registrar', function () {
+    return view('auth.registrar');
+});
+
 Route::get('getDepositos', [DepositosController::class, 'index']);
 //rutas marcas
 Route::post('addMarcas/', [MarcasController::class, 'store']);

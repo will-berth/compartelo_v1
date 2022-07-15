@@ -11,6 +11,9 @@
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/general.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/icofont/icofont.min.css') }}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -61,7 +64,7 @@
                             </a>
                             <div class="dropdown-menu mr-3" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="#">Regístrate</a>
-                                <a class="dropdown-item" href="#">Iniciar sesión</a>
+                                <a class="dropdown-item" href="login">Iniciar sesión</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#">Terminos y condiciones</a>
                                 <a class="dropdown-item" href="#">Quines somos</a>

@@ -1,0 +1,15 @@
+/* .data-group{
+    display: flex;
+} */
+.data-group-text > span{
+    color: black;
+    font-size: .9rem;
+}
+.data-group-text > p{
+    margin-bottom: 0;
+    font-size: .8rem;
+}
+
+.content-card{
+    width: 40rem !important;
+}

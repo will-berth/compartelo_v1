@@ -20,7 +20,9 @@
 </head>
 
 <body>
-    <div class="bg-comparte"></div>
+    <div class="bg-comparte">
+    <img class="logo-img mt-2 ml-2" src="{{ asset('assets/img/logo_v2.png') }}" alt="" srcset="">
+    </div>
     <div class="auth-wrapper">
         <div class="auth-content">
             <div class="card">

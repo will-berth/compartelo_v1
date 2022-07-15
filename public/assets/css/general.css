@@ -1,6 +1,6 @@
 :root{
-    --bg-primary: #016170;
-    --bg-secondary: #009393;
+    --bg-primary: #c92b48;
+    --bg-secondary: #FF385C;
 }
 
 body{
@@ -39,6 +39,19 @@ body{
 }
 .bg-comp-2{
     background-color: var(--bg-secondary) !important;
+}
+
+.color-txt-primary {
+    color: #ff6984 !important;
+}
+.color-success{
+    color: #24e230;
+}
+
+.btn-1{
+    background-color: var(--bg-secondary);
+    color: #FFF;
+    border-color: var(--bg-secondary)
 }
 
 /* END Reusables */

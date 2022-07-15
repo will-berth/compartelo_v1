@@ -3,7 +3,8 @@
      Google Font
 ==========================  **/
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600");
-@import url("../plugins/bootstrap/css/bootstrap.min.css");
+/* @import url("../plugins/bootstrap/css/bootstrap.min.css"); */
+@import url("../../css/bootstrap.min.css");
 /**  =====================
       Custom css start
 ==========================  **/
