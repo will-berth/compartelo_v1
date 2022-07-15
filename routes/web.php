@@ -45,19 +45,17 @@ Route::get('/prueba', function () {
 
 Route::get('/login', function () {
     return view('auth.login');
-});
+})->name('login');
 Route::get('getDepositos', [DepositosController::class, 'index']);
-
+//rutas marcas
 Route::post('addMarcas/', [MarcasController::class, 'store']);
 Route::get('getMarcas/{filtro}', [MarcasController::class, 'index']);
-Route::post('addPeriodos/', [PeriodosController::class, 'store']);
-<<<<<<< .mine
-
-=======
-
->>>>>>> .theirs
 Route::put('updateMarcas/', [MarcasController::class, 'update']);
-
+//rutas periodos
+Route::post('addPeriodos/', [PeriodosController::class, 'store']);
+Route::post('getPeriodos/', [PeriodosController::class, 'index']);
+Route::post('updatePeriodos/', [PeriodosController::class, 'update']);
+//rutas categorias
 Route::post('addCategorias/', [CategoriasController::class, 'store']);
 Route::get('getCategorias/{filtro}', [CategoriasController::class, 'index']);
 Route::put('updateCategorias/', [CategoriasController::class, 'update']);

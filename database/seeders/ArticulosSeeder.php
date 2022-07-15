@@ -16,6 +16,7 @@ class ArticulosSeeder extends Seeder
     {
         $data = [
             [
+                'user_id'       => 1,
                 'articulo'      => 'Martillo',
                 'precio'        => 100,
                 'img1'          => 'martillo1.jpg',
@@ -26,6 +27,7 @@ class ArticulosSeeder extends Seeder
                 'desc'          => 'Martillo de madera ejejje',
             ],
             [
+                'user_id'       => 1,
                 'articulo'      => 'Hacking etico',
                 'precio'        => 100,
                 'img1'          => 'librohack1.jpg',
@@ -36,6 +38,7 @@ class ArticulosSeeder extends Seeder
                 'desc'          => 'Libro sobre hackien etico',
             ],
             [
+                'user_id'       => 1,
                 'articulo'      => 'Martillo',
                 'precio'        => 100,
                 'img1'          => 'martillo1.jpg',
@@ -46,6 +49,7 @@ class ArticulosSeeder extends Seeder
                 'desc'          => 'Martillo de madera ejejje',
             ],
             [
+                'user_id'       => 1,
                 'articulo'      => 'Hacking etico',
                 'precio'        => 100,
                 'img1'          => 'librohack1.jpg',

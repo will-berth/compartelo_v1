@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\CalificacionArtc;
 use App\Models\OpinionArtc;
 use App\Models\DetalleCategoria;
+use App\Models\User;
 
 class Articulo extends Model
 {
@@ -26,5 +27,9 @@ class Articulo extends Model
     ];
     public function categorias(){
         return $this->belongsToMany(Categoria::class, 'detalles_categorias', 'categoria_id', 'articulo_id');
+    }
+    public function users()
+    {
+        return $this->belongsTo(User::class, 'user_id', 'id');
     }
 }

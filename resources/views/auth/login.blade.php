@@ -24,25 +24,31 @@
     <div class="auth-wrapper">
         <div class="auth-content">
             <div class="card">
-                <div class="card-body text-center ">
-                    
-                    <h3 class="mb-4 mt-4 font-comparte-1">¡Hola! Ingresa tu correo y contraseña</h3>
-                    <div class="label d-flex justify-content-start align-items-center"><i class="icofont-ui-email mr-2"></i> Correo</div>
-                    <div class="input-group mb-3">
-                        <input type="email" class="form-control" placeholder="user@email.com">
+                <form action="" id="form-login">
+                    <input type="hidden" value="cliente" id="tipo">
+                    <div class="card-body text-center ">
+                        <h3 class="mb-4 mt-4 font-comparte-1">¡Hola! Ingresa tu correo y contraseña</h3>
+                        <div class="label d-flex justify-content-start align-items-center"><i class="icofont-ui-email mr-2"></i> Correo</div>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" name="email" placeholder="Correo" required autocomplete="off">
+                        </div>
+                        <div class="label d-flex justify-content-start align-items-center"><i class="icofont-ui-password mr-2"></i> Contraseña</div>
+                        <div class="input-group mb-4">
+                            <input type="password" class="form-control" name="password" placeholder="Contraseña" required autocomplete="off">
+                        </div>
+                        <button type="submit" class="btn shadow-2 mb-4 btn-comparte-primary">Iniciar sesión</button>
+                        <p class="mb-2 text-muted">Olvidaste tu contraseña? <a href="reset">Recuperar</a></p>
+                        <p class="mb-0 text-muted">No tienes una cuenta? <a href="registrar">Registrarse</a></p>
                     </div>
-                    <div class="label d-flex justify-content-start align-items-center"><i class="icofont-ui-password mr-2"></i> Contraseña</div>
-                    <div class="input-group mb-4">
-                        <input type="password" class="form-control" placeholder="">
-                    </div>
-                    <button class="btn shadow-2 mb-4 btn-comparte-primary">Iniciar sesión</button>
-                    <p class="mb-2 text-muted">Olvidaste tu contraseña? <a href="reset">Recuperar</a></p>
-                    <p class="mb-0 text-muted">No tienes una cuenta? <a href="registrar">Registrarse</a></p>
-                </div>
+                </form>
             </div>
+            <br>
+            <input id="token" type="text" class="form-control d-none">
         </div>
     </div>
-
-
+    <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/js/sweetalert2.all.min.js') }}"></script>
+    <script src="{{ asset('assets/js/respuestas.js') }}"></script>
+    <script src="{{ asset('assets/login/login.js') }}"></script>
 </body>
 </html>
