@@ -27,5 +27,5 @@ class Detalle extends Model
     }
     public function Articulos(){
         return $this->belongsTo(Articulos::class);
-     }
+    }
 }

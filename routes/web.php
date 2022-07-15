@@ -7,6 +7,7 @@ use App\Http\Controllers\CategoriasController;
 use App\Http\Controllers\PeriodosController;
 
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -41,6 +42,9 @@ Route::get('/categorias', function () {
 });
 Route::get('/prueba', function () {
     return view('prueba');
+});
+Route::get('/depositos', function () {
+    return view('depositos');
 });
 
 Route::get('/login', function () {
