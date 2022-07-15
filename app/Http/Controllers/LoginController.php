@@ -15,7 +15,6 @@ class LoginController extends Controller
             'password'      => ['required', 'string']
         ]);
         $credenciales = $request->only('email', 'password');//obtiene solo esos dos datos
-
         if(Auth::guard('web2')->attempt($credenciales))
         {
             $token = Str::random(60);

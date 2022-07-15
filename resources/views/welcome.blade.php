@@ -29,21 +29,11 @@
         </button>
         <div class="collapse navbar-collapse row" id="navbarScroll">
             <div class="row w-100">
-                <div class="col-md-8">
-                    <div class="input-group mb-2 d-flex justify-content-end">
-                        <input type="search" class="input-buscar border shadow-sm" id="buscar" placeholder="Buscar..."
-                            autocomplete="off">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text icono-input"><i class="icofont-search"></i></div>
-                        </div>
-                    </div>
+                <div class="col-md-6 col-lg-7 xl-4">
+                    
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6 col-lg-5 xl-4">
                     <ul class="navbar-nav mr-auto d-flex justify-content-end">
-                        <li class="nav-item mr-3">
-                            <button class="border btn carrito px-3"><i class="icofont-settings icono-nav"></i>
-                                Filtros</button>
-                        </li>
                         <li class="nav-item mr-3">
                             <button type="button" class="btn border carrito">
                                 <i class="icofont-shopping-cart icono-nav"></i><span
@@ -78,102 +68,30 @@
     </nav>
     <br>
     <div class="container-fluid list-categorias" id="list-categorias">
+        <center>
+            <div class="input-group mb-2 d-flex justify-content-center">
+                <input type="search" class="input-buscar border shadow-sm" id="buscar" placeholder="Buscar..."
+                    autocomplete="off">
+                <div class="input-group-prepend">
+                    <div class="input-group-text icono-input"><i class="icofont-search"></i></div>
+                </div>
+            </div>
+        </center>
+        <br>
         <div class="row">
             <div class="col-md-1 d-flex justify-content-end">
-                <button class="border btn-carousel" onclick="scrollAtras()"><i
-                        class="icofont-rounded-left"></i></button>
+                <button class="border btn-carousel" onclick="scrollAtras()"><i class="icofont-rounded-left"></i></button>
             </div>
             <div class="col-md-10">
-                <ul data-animation="bonus">
-                    <li class="nav-item mr-4">
-                        <a href="" class="nav-link categorias">
-                            <center><i class="icofont-user icon-cat"></i></center>
-                            <small class="">Cocina</small>
-                        </a>
-                    </li>
-                    <li class="nav-item mr-4">
-                        <a href="" class="nav-link categorias">
-                            <center><i class="icofont-user icon-cat"></i></center>
-                            <small class="">Cocina</small>
-                        </a>
-                    </li>
-                    <li class="nav-item mr-4">
-                        <a href="" class="nav-link categorias">
-                            <center><i class="icofont-user icon-cat"></i></center>
-                            <small class="">Cocina</small>
-                        </a>
-                    </li>
-                    <li class="nav-item mr-4">
-                        <a href="" class="nav-link categorias">
-                            <center><i class="icofont-user icon-cat"></i></center>
-                            <small class="">Cocina</small>
-                        </a>
-                    </li>
-                    <li class="nav-item mr-4">
-                        <a href="" class="nav-link categorias">
-                            <center><i class="icofont-user icon-cat"></i></center>
-                            <small class="">Cocina</small>
-                        </a>
-                    </li>
-                    <li class="nav-item mr-4">
-                        <a href="" class="nav-link categorias">
-                            <center><i class="icofont-user icon-cat"></i></center>
-                            <small class="">Cocina</small>
-                        </a>
-                    </li>
-                    <li class="nav-item mr-4">
-                        <a href="" class="nav-link categorias">
-                            <center><i class="icofont-info icon-cat"></i></center>
-                            <small class="">Cocina</small>
-                        </a>
-                    </li>
-                    <li class="nav-item mr-4">
-                        <a href="" class="nav-link categorias">
-                            <center><i class="icofont-user icon-cat"></i></center>
-                            <small class="">Cocina</small>
-                        </a>
-                    </li>
-                    <li class="nav-item mr-4">
-                        <a href="" class="nav-link categorias">
-                            <center><i class="icofont-user icon-cat"></i></center>
-                            <small class="">Cocina</small>
-                        </a>
-                    </li>
-                    <li class="nav-item mr-4">
-                        <a href="" class="nav-link categorias">
-                            <center><i class="icofont-envelope icon-cat"></i></center>
-                            <small class="">Cocina</small>
-                        </a>
-                    </li>
-                    <li class="nav-item mr-4">
-                        <a href="" class="nav-link categorias">
-                            <center><i class="icofont-user icon-cat"></i></center>
-                            <small class="">Cocina</small>
-                        </a>
-                    </li>
-                    <li class="nav-item mr-4">
-                        <a href="" class="nav-link categorias">
-                            <center><i class="icofont-user icon-cat"></i></center>
-                            <small class="">Cocina</small>
-                        </a>
-                    </li>
-                    <li class="nav-item mr-4">
-                        <a href="" class="nav-link categorias">
-                            <center><i class="icofont-user icon-cat"></i></center>
-                            <small class="">Cocina</small>
-                        </a>
-                    </li>
-                    <li class="nav-item mr-4">
-                        <a href="" class="nav-link categorias">
-                            <center><i class="icofont-cart icon-cat"></i></center>
-                            <small class="">Cocina</small>
-                        </a>
-                    </li>
+                <div class="progress m-4 d-none" id="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">Cargando...</div>
+                </div>
+                <ul data-animation="bonus" id="list-cat">
+                    
                 </ul>
             </div>
             <div class="col-md-1">
-                <button class="border btn-carousel" onclick="scrollRight()"><i
-                        class="icofont-rounded-right"></i></button>
+                <button class="border btn-carousel" onclick="scrollRight()"><i class="icofont-rounded-right"></i></button>
             </div>
         </div>
     </div>
@@ -282,8 +200,12 @@
     </div>
     <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/js/categorias/crud-categorias.js') }}"></script>
 </body>
 <script>
+    $(document).ready(function(){
+        getCategoriasPublic(0);
+    })
     function scrollRight() {
         let valor = $('#list-categorias ul').scrollLeft();
         $('#list-categorias ul').scrollLeft(valor + 500);
@@ -293,7 +215,6 @@
         let valor = $('#list-categorias ul').scrollLeft();
         $('#list-categorias ul').scrollLeft(valor - 500);
     }
-
 </script>
 
 </html>

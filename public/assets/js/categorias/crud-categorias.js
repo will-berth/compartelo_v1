@@ -66,3 +66,29 @@ $('#buscar').keyup(function(){
     }
     
 });
+
+//Obtener los datos de categorias para la parte publica
+function getCategoriasPublic(filtro){
+    $.ajax({
+        'type': 'GET',
+        'url': 'getCategorias/'+filtro,
+        beforeSend: function(){
+            $('#progress').removeClass('d-none');
+        },
+        success: function(response){
+            $('#progress').addClass('d-none');
+            var resp = JSON.parse(response);
+            var row = '';
+            //Recorrer todo el JSON
+            $.each(resp, function(index, valor){
+                row += `<li class="nav-item mr-4">
+                            <a href="" class="nav-link categorias">
+                                <center><i class="${valor.icono}"></i></center>
+                                <small class="">${valor.categoria}</small>
+                            </a>
+                        </li>`;
+            })
+            $('#list-cat').html(row);
+        }
+    })
+}

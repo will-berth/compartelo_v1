@@ -45,7 +45,7 @@ class ArticulosController extends Controller
                 $articulos[$i]->distancia = $distancia;
                 $articulos[$i]->duracion = $duracion;
             }
-            return $articulos;
+            return json_encode($articulos);
         }
     }
 }
