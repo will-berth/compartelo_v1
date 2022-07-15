@@ -24,7 +24,7 @@ class CategoriaSeeder extends Seeder
                 'icono'     => 'icofont-home'
             ],
             [   
-                'categoria' => 'Accesorio para vehiculos',
+                'categoria' => 'Vehiculos',
                 'icono'     => 'icofont-auto-mobile'
             ],
 
@@ -33,31 +33,31 @@ class CategoriaSeeder extends Seeder
                 'icono'     => 'icofont-tree'
             ],
 
-            [   'categoria' => 'antiguedad y coleccion',
+            [   'categoria' => 'Coleccion',
                 'icono'     => 'icofont-bank'
             ],
 
-            [   'categoria' => 'papeleria y merceria',
+            [   'categoria' => 'Papeleria',
                 'icono'     => 'icofont-pen-holder-alt-1'
             ],
 
-            [   'categoria' => 'motos y otros',
+            [   'categoria' => 'Moticleta',
                 'icono'     => 'icofont-motor-biker'
             ],
 
-            [   'categoria' => 'computacion',
+            [   'categoria' => 'Computacion',
                 'icono'     => 'icofont-computer'
             ],
                 
-            [   'categoria' => 'consolas y videojuegos',
+            [   'categoria' => 'Consolas',
                 'icono'     => 'icofont-game-pad'
             ],
 
-            [   'categoria' => 'construcción',
+            [   'categoria' => 'Construcción',
                 'icono'     => 'icofont-under-construction-alt'
             ],
 
-            [   'categoria' => 'Deportes y Fitness',
+            [   'categoria' => 'Deportes',
                 'icono'     => 'icofont-soccer'
             ],
 
@@ -74,11 +74,11 @@ class CategoriaSeeder extends Seeder
                 'icono'     => 'icofont-court'
             ],
 
-            [   'categoria' => 'Instrumentos Musicales',
+            [   'categoria' => 'Musica',
                 'icono'     => 'icofont-guiter'
             ],
 
-            [   'categoria' => 'Fiestas y Eventos',
+            [   'categoria' => 'Eventos',
                 'icono'     => 'icofont-cheer-leader'
             ],
 
@@ -90,7 +90,7 @@ class CategoriaSeeder extends Seeder
                 'icono'     => 'icofont-farmer-alt'
             ],
 
-            [   'categoria' => 'cocina',
+            [   'categoria' => 'Cocina',
                 'icono'     => 'icofont-culinary'
             ],
 
@@ -130,7 +130,7 @@ class CategoriaSeeder extends Seeder
                 'icono'     => 'icofont-users-alt-2'
             ],
 
-            [   'categoria' => 'Maquinaria pesada',
+            [   'categoria' => 'Maquinaria',
                 'icono'     => 'icofont-vehicle-trucktor'
             ],
 
