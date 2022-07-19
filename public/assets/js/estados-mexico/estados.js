@@ -1,43 +1,43 @@
 let estados = [
-    { "clave": "AGS", "nombre": "AGUASCALIENTES" },
-    { "clave": "BC",  "nombre": "BAJA CALIFORNIA" },
-    { "clave": "BCS", "nombre": "BAJA CALIFORNIA SUR" },
-    { "clave": "CHI", "nombre": "CHIHUAHUA" },
-    { "clave": "CHS", "nombre": "CHIAPAS" },
-    { "clave": "CMP", "nombre": "CAMPECHE" },
-    { "clave": "DIF", "nombre": "CIUDAD DE MEXICO" },
-    { "clave": "COA", "nombre": "COAHUILA" },
-    { "clave": "COL", "nombre": "COLIMA" },
-    { "clave": "DGO", "nombre": "DURANGO" },
-    { "clave": "GRO", "nombre": "GUERRERO" },
-    { "clave": "GTO", "nombre": "GUANAJUATO" },
-    { "clave": "HGO", "nombre": "HIDALGO" },
-    { "clave": "JAL", "nombre": "JALISCO" },
-    { "clave": "MCH", "nombre": "MICHOACAN" },
-    { "clave": "MEX", "nombre": "MEXICO" },
-    { "clave": "MOR", "nombre": "MORELOS" },
-    { "clave": "NAY", "nombre": "NAYARIT" },
-    { "clave": "NL",  "nombre": "NUEVO LEON" },
-    { "clave": "OAX", "nombre": "OAXACA" },
-    { "clave": "PUE", "nombre": "PUEBLA" },
-    { "clave": "QR",  "nombre": "QUINTANA ROO" },
-    { "clave": "QRO", "nombre": "QUERETARO" },
-    { "clave": "SIN", "nombre": "SINALOA" },
-    { "clave": "SLP", "nombre": "SAN LUIS POTOSI" },
-    { "clave": "SON", "nombre": "SONORA" },
-    { "clave": "TAB", "nombre": "TABASCO" },
-    { "clave": "TLX", "nombre": "TLAXCALA" },
-    { "clave": "TMS", "nombre": "TAMAULIPAS" },
-    { "clave": "VER", "nombre": "VERACRUZ" },
-    { "clave": "YUC", "nombre": "YUCATAN" },
-    { "clave": "ZAC", "nombre": "ZACATECAS" } 
+    { "clave": "AGS", "nombre": "Aguascalientes" },
+    { "clave": "BC",  "nombre": "Baja California" },
+    { "clave": "BCS", "nombre": "Baja California Sur" },
+    { "clave": "CHI", "nombre": "Chihuahua" },
+    { "clave": "CHS", "nombre": "Chiapas" },
+    { "clave": "CMP", "nombre": "Campeche" },
+    { "clave": "DIF", "nombre": "Ciudad De Mexico" },
+    { "clave": "COA", "nombre": "Coahuila" },
+    { "clave": "COL", "nombre": "Colima" },
+    { "clave": "DGO", "nombre": "Durango" },
+    { "clave": "GRO", "nombre": "Guerrero" },
+    { "clave": "GTO", "nombre": "Guanajuato" },
+    { "clave": "HGO", "nombre": "Hidalgo" },
+    { "clave": "JAL", "nombre": "Jalisco" },
+    { "clave": "MCH", "nombre": "Michoacan" },
+    { "clave": "MEX", "nombre": "Estado de Mexico" },
+    { "clave": "MOR", "nombre": "Morelos" },
+    { "clave": "NAY", "nombre": "Nayarit" },
+    { "clave": "NL",  "nombre": "Nuevo Leon" },
+    { "clave": "OAX", "nombre": "Oaxaca" },
+    { "clave": "PUE", "nombre": "Puebla" },
+    { "clave": "QR",  "nombre": "Quintana Roo" },
+    { "clave": "QRO", "nombre": "Queretaro" },
+    { "clave": "SIN", "nombre": "Sinaloa" },
+    { "clave": "SLP", "nombre": "San Luis Potosi" },
+    { "clave": "SON", "nombre": "Sonora" },
+    { "clave": "TAB", "nombre": "Tabasco" },
+    { "clave": "TLX", "nombre": "Tlaxcala" },
+    { "clave": "TMS", "nombre": "Tamaulipas" },
+    { "clave": "VER", "nombre": "Veracruz" },
+    { "clave": "YUC", "nombre": "Yucatan" },
+    { "clave": "ZAC", "nombre": "Zacatecas" } 
 ];
 
 function getEstadosList(){
     estados.forEach(estado => {
-        let {clave, nombre} = estado;
-        let estadosHtml = `<option value=${clave}>${nombre}</option>`;
-        $("#form-estados").append(estadosHtml);
+        let {nombre} = estado;
+        let estadosHtml = `<option value="${nombre}">${nombre}</option>`;
+        $("#estado").append(estadosHtml);
         // console.log(clave);
     });
 }
