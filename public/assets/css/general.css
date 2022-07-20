@@ -69,13 +69,14 @@ body{
 .bg-general{
     background-color: #ff6984;
 }
+.text-general{
+    color: #ff6984;
+}
 .border-dropw{
     border-radius: 20px;
     width: 80px;
 }
 .icon-user{
-    background-color: #727272;
-    color: #fff;
     border-radius: 50%;
     padding: 5px;
 }
@@ -101,9 +102,9 @@ body{
     border-radius: 60px;
 }
 .carrito-badge{
-    position: absolute;
+    position: absolute !important;
     top: -60px;
-    color: #fff;
+    border-radius: 50px;
 }
 .btn-carousel{
     border-radius: 50%;
@@ -131,7 +132,7 @@ body{
 .categorias:hover{
     color: #232323;
 }
-.categorias:before{
+/* .categorias:before{
     content: '';
     position: absolute;
     bottom: 0;
@@ -151,14 +152,14 @@ body{
     transform-origin: left;
     transform: scaleX(1);
     transition-timing-function: cubic-bezier(0.2, 1, 0.82, 0.94);
-}
+} */
 .list-categorias ul{
     overflow-x: hidden;
     list-style: none;
     display: flex;
 }
 .titulo-logo{
-    color: #ff6984;
+    color: #fff;
     font-weight: bold;
     position: relative;
     top: 5px;
