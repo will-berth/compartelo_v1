@@ -35,16 +35,25 @@ $(document).ready(function () {
         let apm = $("#apm").val();
         let f_nacimiento = $("#f_nacimiento").val();
         let sexo = $("select[name=sexo] option").filter(":selected").val();
+        // Solamente valida que los inputs no esten vacios
         if (
             nombres != "" &&
             app != "" &&
             apm != "" &&
             f_nacimiento != "" &&
-            sexo != "0"
+            sexo != ""
         ) {
-            $("#dataPersonalCheck").addClass("check-field");
+
+            // Valida cada input, status recide true si existe algun campo no valido
+            let status = validaInputs(['nombres', 'app', 'apm', 'f_nacimiento', 'sexo'])
+            if(status){
+                checkField("#dataPersonalCheck", "is-invalid-field", "check-field");
+            }else{
+                checkField("#dataPersonalCheck", "check-field", "is-invalid-field");
+            }
         } else {
             $("#dataPersonalCheck").removeClass("check-field");
+            $("#dataPersonalCheck").removeClass("is-invalid-field");
         }
     });
 
@@ -61,17 +70,23 @@ $(document).ready(function () {
         if (
             calle != "" &&
             n_exterior != "" &&
-            n_interior != "" &&
             colonia != "" &&
-            estado != "0" &&
+            estado != "" &&
             ciudad != "" &&
             municipio != "" &&
             referencia != "" &&
             cp != ""
         ) {
-            $("#dataDomicilioCheck").addClass("check-field");
+            let status = validaInputs(['calle', 'n_exterior', 'n_interior', 'colonia', 'estado', 'ciudad', 'municipio', 'referencia', 'cp'])
+            if(status){
+                checkField("#dataDomicilioCheck", "is-invalid-field", "check-field");
+            }else{
+                checkField("#dataDomicilioCheck", "check-field", "is-invalid-field");
+            }
+            // $("#dataDomicilioCheck").addClass("check-field");
         } else {
             $("#dataDomicilioCheck").removeClass("check-field");
+            $("#dataDomicilioCheck").removeClass("is-invalid-field");
         }
     });
 
@@ -89,9 +104,16 @@ $(document).ready(function () {
             password != "" &&
             pass_repeat != ""
         ) {
-            $("#dataCuentaCheck").addClass("check-field");
+            let status = validaInputs(['email', 'nom_user', 'telefono', 'password', 'pass_repeat'])
+            if(status){
+                checkField("#dataCuentaCheck", "is-invalid-field", "check-field");
+            }else{
+                checkField("#dataCuentaCheck", "check-field", "is-invalid-field");
+            }
+            // $("#dataCuentaCheck").addClass("check-field");
         } else {
             $("#dataCuentaCheck").removeClass("check-field");
+            $("#dataCuentaCheck").removeClass("is-invalid-field");
         }
     });
 
@@ -104,4 +126,30 @@ $(document).ready(function () {
         $("#dataComDomicilioCheck").removeClass("check-field");
         // console.log('Archivo eliminado')
     });
+
+    function validaInputs(inputsList){
+        let statusList = inputsList.map(input => {
+            let status = $(`#${input}`)[0].checkValidity();
+            if(status){
+                checkField(`#${input}`, 'is-valid', 'is-invalid');
+                if(input == 'pass_repeat' && $('#pass_repeat').val() != $('#password').val()){
+                    checkField(`#${input}`, 'is-invalid', 'is-valid');
+                    // alert("Mira hdtpm vas a escribir bien o no tu contraseña? >:v")
+                    status = false;
+                }
+            }else{
+                checkField(`#${input}`, 'is-invalid', 'is-valid');
+            }
+            return status
+        })
+
+        let isInvalid = statusList.includes(false);
+
+        return isInvalid;
+    }
+
+    function checkField(selector, add, remove) {
+        $(selector).removeClass(remove);
+        $(selector).addClass(add);
+    }
 });

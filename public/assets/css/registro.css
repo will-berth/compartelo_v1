@@ -17,3 +17,11 @@
 .check-field{
     color: rgb(53, 211, 69) !important;
 }
+
+.is-invalid-field{
+    color: rgb(211, 53, 53) !important;
+}
+
+.file-is-invalid{
+    display: inherit !important;
+}
