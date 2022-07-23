@@ -5,7 +5,7 @@ use App\Http\Controllers\DepositosController;
 use App\Http\Controllers\MarcasController;
 use App\Http\Controllers\CategoriasController;
 use App\Http\Controllers\PeriodosController;
-
+use App\Http\Controllers\LoginController;
 
 
 /*
@@ -46,14 +46,27 @@ Route::get('/prueba', function () {
 Route::get('/depositos', function () {
     return view('depositos');
 });
-
-Route::get('/login', function () {
-    return view('auth.login');
-})->name('login');
-
-Route::get('/registrar', function () {
-    return view('auth.registrar');
+Route::get('/unverified-email', function () {
+    return view('unverified-email');
 });
+Route::get('/unverified-account', function () {
+    return view('unverified-account');
+});
+Route::get('/resetpass', function () {
+    return view('resetpass');
+});
+
+//Agrupación de rutas para redireccionar a los usuarios logeados
+Route::group(['middleware' => 'guest:web2'], function () {
+    Route::get('/login', function () {
+        return view('auth.login');
+    })->name('login');
+    
+    Route::get('/registrar', function () {
+        return view('auth.registrar');
+    });
+});
+
 
 Route::get('getDepositos', [DepositosController::class, 'index']);
 //rutas marcas
@@ -68,3 +81,6 @@ Route::post('updatePeriodos/', [PeriodosController::class, 'update']);
 Route::post('addCategorias/', [CategoriasController::class, 'store']);
 Route::get('getCategorias/{filtro}', [CategoriasController::class, 'index']);
 Route::put('updateCategorias/', [CategoriasController::class, 'update']);
+//api login
+Route::post('api/loginCliente', [LoginController::class, 'login']);
+Route::get('api/estadoVerificado', [LoginController::class, 'estadoVerificado']);

@@ -3,7 +3,6 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticulosController;
-use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,8 +18,6 @@ use App\Http\Controllers\LoginController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-
-Route::post('/loginCliente', [LoginController::class, 'serviceLogin']);
 Route::middleware('auth:api')->group(function(){
     Route::get('/listArticles', [ArticulosController::class, 'serviceListArticles']);
 });

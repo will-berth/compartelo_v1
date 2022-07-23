@@ -22,8 +22,7 @@ $('#form-login').submit(function(e){
                 text: resp.text
             });
             if(resp.type == 'success'){
-                $('#token').removeClass('d-none');
-                $('#token').val(resp.token);
+                window.location.href = 'api/estadoVerificado';
             }
         }
     });

@@ -74,7 +74,7 @@ body{
 }
 .border-dropw{
     border-radius: 20px;
-    width: 80px;
+    max-width: 200px;
 }
 .icon-user{
     border-radius: 50%;

@@ -22,8 +22,13 @@
     background-color: #FF385C;
     position: absolute;
     top: 0;
+    z-index: -1;
 }
 
 .logo-img{
     max-width: 4.5rem;
+}
+.empty{
+    width: 30%;
+    margin-top: 130px;
 }

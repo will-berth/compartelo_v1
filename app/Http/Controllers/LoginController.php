@@ -8,6 +8,36 @@ use Illuminate\Support\Str;
 
 class LoginController extends Controller
 {
+    public function login(Request $request)
+    {
+        $request->validate([
+            'email'         => ['required', 'email', 'string'],
+            'password'      => ['required', 'string']
+        ]);
+        $credenciales = $request->only('email', 'password');
+        if(Auth::guard('web2')->attempt($credenciales))
+        {
+            $request->session()->regenerate();
+            return json_encode(['type' => 'success', 'title' => 'Exito', 'text' => 'Bienvenido']);
+        }else{
+            return json_encode(['type' => 'error', 'title' => 'Error', 'text' => 'Credenciales invalidas']);
+        }
+    }
+    public function estadoVerificado(Request $request)
+    {
+        $email_verif = Auth::guard('web2')->user()->email_verif;
+        $estatus = Auth::guard('web2')->user()->estatus;
+        if($email_verif == 0)
+        {
+            return view('unverified-email');
+        }
+        if($estatus == 0)
+        {
+            return view('unverified-account');
+        }else{
+            return redirect ('/');
+        }
+    }
     public function serviceLogin(Request $request)
     {
         $request->validate([

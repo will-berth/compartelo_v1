@@ -30,10 +30,7 @@
         </button>
         <div class="collapse navbar-collapse row" id="navbarScroll">
             <div class="row w-100">
-                <div class="col-md-6 col-lg-7 xl-4">
-
-                </div>
-                <div class="col-md-6 col-lg-5 xl-4">
+                <div class="col-md-12 xl-4">
                     <ul class="navbar-nav mr-auto d-flex justify-content-end">
                         <li class="nav-item mr-3">
                             <button type="button" class="btn carrito">
@@ -51,11 +48,19 @@
                             <a class="nav-link border-dropw border" href="#" id="navbarDropdown" role="button"
                                 data-toggle="dropdown" aria-expanded="false">
                                 <i class="icofont-navigation-menu ml-1 mr-2 text-white"></i>
-                                <i class="icofont-user icon-user text-general bg-white"></i>
+                                @auth('web2')
+                                    <i class="text-white">{{ Auth::guard('web2')->user()->usuario }}</i>
+                                @else
+                                    <i class="icofont-user icon-user text-general bg-white"></i>
+                                @endauth
                             </a>
                             <div class="dropdown-menu mr-3" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Regístrate</a>
-                                <a class="dropdown-item" href="login">Iniciar sesión</a>
+                                @auth('web2')
+                                    <a class="dropdown-item" href="registrar">Cerrar sesión</a>
+                                @else
+                                    <a class="dropdown-item" href="registrar">Regístrate</a>
+                                    <a class="dropdown-item" href="login">Iniciar sesión</a>
+                                @endauth
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#">Terminos y condiciones</a>
                                 <a class="dropdown-item" href="#">Quines somos</a>
@@ -115,16 +120,16 @@
                         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="{{ asset('assets/img/articulos/taladro1.jpg') }}" class="d-block w-100" alt="..." style="max-height:230px min-height:230px">
+                                    <img src="{{ asset('assets/img/articulos/taladro1.jpg') }}" class="d-block w-100" alt="..." style="min-height:230px; max-height:230px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="{{ asset('assets/img/articulos/taladro2.jpeg') }}" class="d-block w-100" alt="..." style="max-height:230px min-height:230px">
+                                    <img src="{{ asset('assets/img/articulos/taladro2.jpeg') }}" class="d-block w-100" alt="..." style="min-height:230px; max-height:230px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="{{ asset('assets/img/articulos/taladro3.jpg') }}" class="d-block w-100" alt="..." style="max-height:230px min-height:230px">
+                                    <img src="{{ asset('assets/img/articulos/taladro3.jpg') }}" class="d-block w-100" alt="..." style="min-height:230px; max-height:230px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="{{ asset('assets/img/articulos/taladro4.jpg') }}" class="d-block w-100" alt="..." style="max-height:230px min-height:230px">
+                                    <img src="{{ asset('assets/img/articulos/taladro4.jpg') }}" class="d-block w-100" alt="..." style="min-height:230px; max-height:230px">
                                 </div>
                             </div>
                         </div>
@@ -137,6 +142,7 @@
                             <i class="icofont-star text-warning"></i>
                             <i class="icofont-star text-warning"></i>
                             <p class="card-text text-muted">$50.00 MXN/Día</p>
+                            <p>{{ Auth::guard('web2')->user() }}</p>
                         </div>
                         <div class="border p-1 text-center bg-info text-white">
                             <i class="icofont-car p-2 pt-4"></i><small>2 km</small> <i class="icofont-clock-time p-2 pt-4"></i><small>27 min</small>
