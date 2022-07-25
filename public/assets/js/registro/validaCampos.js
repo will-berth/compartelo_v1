@@ -30,22 +30,18 @@ $(document).ready(function () {
     });
 
     $("#dataPersonalForm").on("input", function () {
-        let nombres = $("#nombres").val();
-        let app = $("#app").val();
-        let apm = $("#apm").val();
+        let nombre = $("#nombre").val();
         let f_nacimiento = $("#f_nacimiento").val();
         let sexo = $("select[name=sexo] option").filter(":selected").val();
         // Solamente valida que los inputs no esten vacios
         if (
-            nombres != "" &&
-            app != "" &&
-            apm != "" &&
+            nombre != "" &&
             f_nacimiento != "" &&
             sexo != ""
         ) {
 
             // Valida cada input, status recide true si existe algun campo no valido
-            let status = validaInputs(['nombres', 'app', 'apm', 'f_nacimiento', 'sexo'])
+            let status = validaInputs(['nombre', 'f_nacimiento', 'sexo'])
             if(status){
                 checkField("#dataPersonalCheck", "is-invalid-field", "check-field");
             }else{
@@ -69,7 +65,6 @@ $(document).ready(function () {
         let cp = $("#cp").val();
         if (
             calle != "" &&
-            n_exterior != "" &&
             colonia != "" &&
             estado != "" &&
             ciudad != "" &&
@@ -92,19 +87,18 @@ $(document).ready(function () {
 
     $("#dataCuentaForm").on("input", function () {
         let email = $("#email").val();
-        let nom_user = $("#nom_user").val();
+        let usuario = $("#usuario").val();
         let telefono = $("#telefono").val();
         let password = $("#password").val();
         let pass_repeat = $("#pass_repeat").val();
-        console.log(password)
         if (
             email != "" &&
-            nom_user != "" &&
+            usuario != "" &&
             telefono != "" &&
             password != "" &&
             pass_repeat != ""
         ) {
-            let status = validaInputs(['email', 'nom_user', 'telefono', 'password', 'pass_repeat'])
+            let status = validaInputs(['email', 'usuario', 'telefono', 'password', 'pass_repeat'])
             if(status){
                 checkField("#dataCuentaCheck", "is-invalid-field", "check-field");
             }else{
@@ -119,12 +113,10 @@ $(document).ready(function () {
 
     $("#comprobante").on("FilePond:addfile", function (e) {
         $("#dataComDomicilioCheck").addClass("check-field");
-        // console.log('Archivo agregado')
     });
 
     $("#comprobante").on("FilePond:removefile", function (e) {
         $("#dataComDomicilioCheck").removeClass("check-field");
-        // console.log('Archivo eliminado')
     });
 
     function validaInputs(inputsList){
@@ -134,7 +126,6 @@ $(document).ready(function () {
                 checkField(`#${input}`, 'is-valid', 'is-invalid');
                 if(input == 'pass_repeat' && $('#pass_repeat').val() != $('#password').val()){
                     checkField(`#${input}`, 'is-invalid', 'is-valid');
-                    // alert("Mira hdtpm vas a escribir bien o no tu contraseña? >:v")
                     status = false;
                 }
             }else{

@@ -28,15 +28,15 @@ class CreateUsersTable extends Migration
             $table->string('ine_reverso', 100)->nullable(false);
             $table->string('comprobante', 100)->nullable(false);
             $table->boolean('email_verif')->nullable(true)->default(false);
-            $table->float('saldo')->nullable(false);
+            $table->float('saldo')->nullable(false)->default(0);
             $table->string('ciudad', 50)->nullable(false);
             $table->string('estado', 50)->nullable(false);
             $table->string('municipio', 50)->nullable(false);
             $table->string('cp', 5)->nullable(false);
             $table->string('colonia', 50)->nullable(false);
             $table->string('calle', 50)->nullable(false);
-            $table->string('n_exterior', 10)->nullable(false);
-            $table->string('n_inteior', 10)->nullable(true);
+            $table->string('n_exterior', 10)->nullable(false)->default('SN');
+            $table->string('n_interior', 10)->nullable(true)->default('SN');
             $table->string('referencia', 200)->nullable(false);
             $table->boolean('estatus')->nullable(true)->default(false);
             $table->string('api_token', 100)->nullable(true)->default(false);

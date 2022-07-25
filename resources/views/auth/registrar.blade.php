@@ -29,7 +29,7 @@
     <div class="auth-wrapper">
         <div class="auth-content content-card">
             <div class="card">
-                <form id="formRegistro" class="card-body text-center needs-validation" enctype="multipart/form-data" novalidate>
+                <form id="formRegistro" action="POST" class="card-body text-center needs-validation" enctype="multipart/form-data" novalidate autocomplete="off">
                     <h3 class="mb-3 mt-2">¡Hola! necesitamos algunos de tus datos</h3>
 
                     
@@ -50,13 +50,13 @@
                             <div class="collapse w-100" id="collapseDataPersonal">
                                 <div id="dataPersonalForm" class="card card-body w-100">
                                     <div class="input-group mb-3">
-                                        <label class="w-100 text-left" for="nombres">Nombre(s)</label>
-                                        <input id="nombres" name="nombres" type="text" class="form-control" placeholder="Nombre(s), ej: Jhon" minlength="3" maxlength="40" pattern="[\sA-Z\u00C0-\u00DCa-z\u00E0-\u00FC\u00f1\u00d1]{1,40}" title="Debe registrar un nombre correcto sin caracteres especiales." required>
+                                        <label class="w-100 text-left" for="nombre">Nombre(s)</label>
+                                        <input id="nombre" name="nombre" type="text" class="form-control" placeholder="Nombre(s), ej: Jhon Hernández Pérez" minlength="3" maxlength="40" pattern="[\sA-Z\u00C0-\u00DCa-z\u00E0-\u00FC\u00f1\u00d1]{1,40}" title="Debe registrar un nombre correcto sin caracteres especiales." required>
                                         <div class="invalid-feedback text-left">
                                             Debe registrar un nombre correcto.
                                         </div>
                                     </div>
-                                    <div class="form-row">
+                                    <!-- <div class="form-row">
                                         <div class="col-sm-12 col-lg-6 mb-3">
                                             <label class="w-100 text-left" for="app">Apellido paterno</label>
                                             <input id="app" name="app" type="text" class="form-control" placeholder="Apellido paterno, ej: Hernández" minlength="3" maxlength="15" pattern="[A-Z\u00C0-\u00DCa-z\u00E0-\u00FC\u00f1\u00d1]{1,15}" title="Debe registrar un apellido paterno." required>
@@ -71,7 +71,7 @@
                                                 Debe registrar un apellido materno.
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
 
                                     <div class="form-row">
                                         <div class="col-sm-12 col-lg-6 mb-3">
@@ -168,11 +168,17 @@
                                         </div>
                                         <div class="col-sm-6 col-lg-3 mb-3">
                                             <label class="w-100 text-left" for="n_exterior">Número exterior</label>
-                                            <input id="n_exterior" name="n_exterior" type="text" class="form-control" placeholder="SN" pattern="[snSN0-9]{1,6}" required>
+                                            <input id="n_exterior" name="n_exterior" type="text" class="form-control" placeholder="SN" pattern="[snSN0-9]{1,6}">
+                                            <div class="invalid-feedback text-left">
+                                                Debe registrar un número exterior o SN en caso de no tenerlo.
+                                            </div>
                                         </div>
                                         <div class="col-sm-6 col-lg-3 mb-3">
                                             <label class="w-100 text-left" for="n_interior">Número interior</label>
                                             <input id="n_interior" name="n_interior" type="text" class="form-control" placeholder="SN" pattern="[snSN0-9]{1,6}">
+                                            <div class="invalid-feedback text-left">
+                                                Debe registrar un número interior o SN en caso de no tenerlo.
+                                            </div>
                                         </div>
                                         <div class="form-group col-sm-12 col-lg-6 mb-3">
                                             <label class="w-100 text-left" for="colonia">Colonia</label>
@@ -280,8 +286,8 @@
                                             </div>
                                         </div>
                                         <div class="col-sm-12 col-lg-6 mb-3">
-                                            <label class="w-100 text-left" for="nom_user">Nombre de usuario</label>
-                                            <input id="nom_user" name="nom_user" type="text" class="form-control" placeholder="Nombre de usuario, ej: User23" pattern="[a-zA-Z0-9]{4,10}" title="El nombre de usuario debe ser de 4 a 10 caracteres, no debe tener espacios ni caracteres especiales." required>
+                                            <label class="w-100 text-left" for="usuario">Nombre de usuario</label>
+                                            <input id="usuario" name="usuario" type="text" class="form-control" placeholder="Nombre de usuario, ej: User23" pattern="[a-zA-Z0-9]{4,10}" title="El nombre de usuario debe ser de 4 a 10 caracteres, no debe tener espacios ni caracteres especiales." required>
                                             <div class="invalid-feedback text-left">
                                                 El nombre de usuario debe ser de 4 a 10 caracteres, no debe tener espacios ni caracteres especiales.
                                             </div>
@@ -319,7 +325,7 @@
                     
 
                     <button type="submit" class="btn btn-primary shadow-2 mb-4 btn-comparte-primary">Registrarse</button>
-                    <p class="mb-0 text-muted">¿Ya tienes una cuenta? <a href="signin"> Iniciar sesión</a></p>
+                    <p class="mb-0 text-muted">¿Ya tienes una cuenta? <a href="login"> Iniciar sesión</a></p>
                 </form>
                 
             </div>
@@ -328,12 +334,13 @@
 
     <!-- Required Js -->
     <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/js/sweetalert2.all.min.js') }}"></script>
+    <script src="{{ asset('assets/js/respuestas.js') }}"></script>
   <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
   <script src="{{ asset('assets/js/jquery.easing.min.js') }}"></script>
   <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
   <script src="{{ asset('assets/js/estados-mexico/estados.js') }}"></script>
   <script src="{{ asset('assets/js/estados-mexico/municipios.js') }}"></script>
-  <!-- <script src="{{ asset('assets/js/estados-mexico/validarCp.js') }}"></script> -->
   
   <script src="{{ asset('assets/js/filepond/jquery.js') }}"></script>
   <script src="{{ asset('assets/js/filepond/filepond.min.js') }}"></script>
@@ -350,5 +357,6 @@
   <script src="{{ asset('assets/js/estados-mexico/select-estado.js') }}"></script>
   <script src="{{ asset('assets/js/registro/manejoArchivos.js') }}"></script>
   <script src="{{ asset('assets/js/registro/validaCampos.js') }}"></script>
+  <script src="{{ asset('assets/js/registro/envioDatos.js') }}"></script>
 </body>
 </html>

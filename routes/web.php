@@ -6,6 +6,7 @@ use App\Http\Controllers\MarcasController;
 use App\Http\Controllers\CategoriasController;
 use App\Http\Controllers\PeriodosController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\UsersController;
 
 
 /*
@@ -84,3 +85,5 @@ Route::put('updateCategorias/', [CategoriasController::class, 'update']);
 //api login
 Route::post('api/loginCliente', [LoginController::class, 'login']);
 Route::get('api/estadoVerificado', [LoginController::class, 'estadoVerificado']);
+// api registrar
+Route::post('api/registrar', [UsersController::class, 'store']);
