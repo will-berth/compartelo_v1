@@ -49,28 +49,9 @@ class UsersController extends Controller
         $request->comprobante = $comprobante;
         // $request->password = Hash::make($request->password);
         $request->password = hash('sha256', $request->password);
+        $data = $request->all();
         
-        User::create([
-            'nombre' => $request->nombre,
-            'f_nacimiento' => $request->f_nacimiento,
-            'sexo' => $request->sexo,
-            'telefono' => $request->telefono,
-            'usuario' => $request->usuario,
-            'email' => $request->email,
-            'password' => $request->password,
-            'ine_frontal' => $request->ine_frontal,
-            'ine_reverso' => $request->ine_reverso,
-            'comprobante' => $request->comprobante,
-            'ciudad' => $request->ciudad,
-            'estado' => $request->estado,
-            'municipio' => $request->municipio,
-            'cp' => $request->cp,
-            'colonia' => $request->colonia,
-            'calle' => $request->calle,
-            'n_exterior' => $request->n_exterior,
-            'n_interior' => $request->n_interior,
-            'referencia' => $request->referencia,
-        ]);
+        User::create($data);
 
         return json_encode(['type' => 'success', 'title' => 'Exito', 'text' => 'Tu registro se realizó con exito, queda en espera de verificación de los datos proporcionados.']);
 

@@ -110,55 +110,19 @@
     </div>
     <br>
     <div class="container">
-        <div class="row">
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <a href="#"  class="text-decoration-none">
-                    <div class="card shadow-sm mb-3">
-                        <div class="card-header d-flex justify-content-end">
-                            <span class="badge badge-primary">Mas popular</span>
-                        </div>
-                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="{{ asset('assets/img/articulos/taladro1.jpg') }}" class="d-block w-100" alt="..." style="min-height:230px; max-height:230px">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="{{ asset('assets/img/articulos/taladro2.jpeg') }}" class="d-block w-100" alt="..." style="min-height:230px; max-height:230px">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="{{ asset('assets/img/articulos/taladro3.jpg') }}" class="d-block w-100" alt="..." style="min-height:230px; max-height:230px">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="{{ asset('assets/img/articulos/taladro4.jpg') }}" class="d-block w-100" alt="..." style="min-height:230px; max-height:230px">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body text-center">
-                            <h6 class="card-title text-muted">Taladro electrico</h6>
-                            <p class="text-muted m-0"><i class="icofont-badge"></i>DrWalt</p>
-                            <i class="icofont-star text-warning"></i>
-                            <i class="icofont-star text-warning"></i>
-                            <i class="icofont-star text-warning"></i>
-                            <i class="icofont-star text-warning"></i>
-                            <i class="icofont-star text-warning"></i>
-                            <p class="card-text text-muted">$50.00 MXN/Día</p>
-                            <p>{{ Auth::guard('web2')->user() }}</p>
-                        </div>
-                        <div class="border p-1 text-center bg-info text-white">
-                            <i class="icofont-car p-2 pt-4"></i><small>2 km</small> <i class="icofont-clock-time p-2 pt-4"></i><small>27 min</small>
-                        </div>
-                    </div>
-                </a>
-            </div>
+        <div class="row" id="populares">
+            
         </div>
     </div>
     <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('assets/js/categorias/crud-categorias.js') }}"></script>
+    <script src="{{ asset('assets/js/articulos/crud-articulos.js') }}"></script>
 </body>
 <script>
     $(document).ready(function () {
         getCategoriasPublic(0);
+        getArticulos();
     })
 
     function scrollRight() {

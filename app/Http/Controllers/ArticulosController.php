@@ -12,6 +12,10 @@ class ArticulosController extends Controller
     {
        $this->middleware('auth', ['except'  => ['serviceListArticles']]) ;
     }
+    public function index(){
+        $articulos = Articulo::orderByRaw('rand()')->limit(5)->with(['categorias', 'users'])->get();
+       return json_encode($articulos);
+    }
     public function serviceListArticles(Request $request)
     {
         if($request->user() != null)

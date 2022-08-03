@@ -26,7 +26,7 @@ class Articulo extends Model
         'estado',
     ];
     public function categorias(){
-        return $this->belongsToMany(Categoria::class, 'detalles_categorias', 'categoria_id', 'articulo_id');
+        return $this->belongsToMany(Categoria::class, 'detalles_categorias', 'articulo_id', 'categoria_id');
     }
     public function users()
     {

@@ -7,6 +7,7 @@ use App\Http\Controllers\CategoriasController;
 use App\Http\Controllers\PeriodosController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\ArticulosController;
 
 
 /*
@@ -82,6 +83,9 @@ Route::post('updatePeriodos/', [PeriodosController::class, 'update']);
 Route::post('addCategorias/', [CategoriasController::class, 'store']);
 Route::get('getCategorias/{filtro}', [CategoriasController::class, 'index']);
 Route::put('updateCategorias/', [CategoriasController::class, 'update']);
+//rutas articulos
+Route::get('getArticulos', [ArticulosController::class, 'index']);
+
 //api login
 Route::post('api/loginCliente', [LoginController::class, 'login']);
 Route::get('api/estadoVerificado', [LoginController::class, 'estadoVerificado']);

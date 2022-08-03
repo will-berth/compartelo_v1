@@ -31,6 +31,30 @@ class DetalleCatSeeder extends Seeder
                 'categoria_id'  => 3,
                 'articulo_id'   => 4
             ],
+            [
+                'categoria_id'  => 9,
+                'articulo_id'   => 5
+            ],
+            [
+                'categoria_id'  => 11,
+                'articulo_id'   => 6
+            ],
+            [
+                'categoria_id'  => 14,
+                'articulo_id'   => 7
+            ],
+            [
+                'categoria_id'  => 19,
+                'articulo_id'   => 8
+            ],
+            [
+                'categoria_id'  => 15,
+                'articulo_id'   => 9
+            ],
+            [
+                'categoria_id'  => 6,
+                'articulo_id'   => 10
+            ],
         ];
         DB::table('detalles_categorias')->insert($data);
     }
