@@ -13,7 +13,23 @@ class ArticulosController extends Controller
        $this->middleware('auth', ['except'  => ['serviceListArticles']]) ;
     }
     public function index(){
-        $articulos = Articulo::orderByRaw('rand()')->limit(5)->with(['categorias', 'users'])->get();
+        $apiKey = 'AIzaSyB4CbJQ4DyUU8PBQA9wtm9IqClbF7dhOuo';
+        $articulos = Articulo::orderByRaw('rand()')->limit(5)->with(['categorias', 'users', 'periodos'])->get();
+        if(Auth::guard('web2')->user() != null){
+            for($i = 0; $i < sizeof($articulos); $i++)
+            {
+                $origen = Auth::guard('web2')->user()->coordenadas;
+                $destino = $articulos[$i]->users->coordenadas;
+                //dd($destino);
+                //calculamos la distancia
+                $calcular=file_get_contents("https://maps.googleapis.com/maps/api/directions/json?key=$apiKey&origin=$origen&destination=$destino&mode=driving");
+                $datos_api=json_decode($calcular);
+                $distancia = $datos_api->{"routes"}[0]->{"legs"}[0]->{"distance"}->{"text"};
+                $duracion = $datos_api->{"routes"}[0]->{"legs"}[0]->{"duration"}->{"text"};
+                $articulos[$i]->distancia = $distancia;
+                $articulos[$i]->duracion = $duracion;
+            }
+        }
        return json_encode($articulos);
     }
     public function serviceListArticles(Request $request)

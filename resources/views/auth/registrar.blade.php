@@ -1,31 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <title>Registrate</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-    <!-- Favicon icon -->
-    <link rel="icon" href="assets/images/favin.ico" type="image/x-icon">
-    <link href="{{ asset('assets/icofont/icofont.min.css') }}" rel="stylesheet">
-    <!-- vendor css -->
-    <link rel="stylesheet" href="{{ asset('assets/login/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/login.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/registro.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/general.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/filepond/filepond.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/filepond/filepond-plugin-image-preview.css') }}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-</head>
-
-<body>
-    <div class="bg-comparte"></div>
+@extends('layouts.public')
+@section('css')
+<link rel="stylesheet" href="{{ asset('assets/login/css/style.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/login.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/registro.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/filepond/filepond.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/filepond/filepond-plugin-image-preview.css') }}">
+@endsection
+@section('contenido')
+<div class="bg-comparte"></div>
     <div class="auth-wrapper">
         <div class="auth-content content-card">
             <div class="card">
@@ -331,32 +313,28 @@
             </div>
         </div>
     </div>
+@endsection
+@section('script')
+<script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.easing.min.js') }}"></script>
+<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('assets/js/estados-mexico/estados.js') }}"></script>
+<script src="{{ asset('assets/js/estados-mexico/municipios.js') }}"></script>
 
-    <!-- Required Js -->
-    <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
-    <script src="{{ asset('assets/js/sweetalert2.all.min.js') }}"></script>
-    <script src="{{ asset('assets/js/respuestas.js') }}"></script>
-  <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
-  <script src="{{ asset('assets/js/jquery.easing.min.js') }}"></script>
-  <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
-  <script src="{{ asset('assets/js/estados-mexico/estados.js') }}"></script>
-  <script src="{{ asset('assets/js/estados-mexico/municipios.js') }}"></script>
-  
-  <script src="{{ asset('assets/js/filepond/jquery.js') }}"></script>
-  <script src="{{ asset('assets/js/filepond/filepond.min.js') }}"></script>
-  <script src="{{ asset('assets/js/filepond/filepond.jquery.js') }}"></script>
-  <script src="{{ asset('assets/js/filepond/filepond-plugin-file-validate-type.js') }}"></script>
-  <script src="{{ asset('assets/js/filepond/filepond-plugin-image-preview.js') }}"></script>
-  <script src="{{ asset('assets/js/traductor-filepond.js') }}"></script>
-  
-  <script>
-    $(document).ready(function(){
-        getEstadosList();
-    })
-  </script>
-  <script src="{{ asset('assets/js/estados-mexico/select-estado.js') }}"></script>
-  <script src="{{ asset('assets/js/registro/manejoArchivos.js') }}"></script>
-  <script src="{{ asset('assets/js/registro/validaCampos.js') }}"></script>
-  <script src="{{ asset('assets/js/registro/envioDatos.js') }}"></script>
-</body>
-</html>
+<script src="{{ asset('assets/js/filepond/jquery.js') }}"></script>
+<script src="{{ asset('assets/js/filepond/filepond.min.js') }}"></script>
+<script src="{{ asset('assets/js/filepond/filepond.jquery.js') }}"></script>
+<script src="{{ asset('assets/js/filepond/filepond-plugin-file-validate-type.js') }}"></script>
+<script src="{{ asset('assets/js/filepond/filepond-plugin-image-preview.js') }}"></script>
+<script src="{{ asset('assets/js/traductor-filepond.js') }}"></script>
+
+<script>
+  $(document).ready(function(){
+      getEstadosList();
+  })
+</script>
+<script src="{{ asset('assets/js/estados-mexico/select-estado.js') }}"></script>
+<script src="{{ asset('assets/js/registro/manejoArchivos.js') }}"></script>
+<script src="{{ asset('assets/js/registro/validaCampos.js') }}"></script>
+<script src="{{ asset('assets/js/registro/envioDatos.js') }}"></script>
+@endsection

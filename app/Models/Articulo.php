@@ -8,6 +8,7 @@ use App\Models\CalificacionArtc;
 use App\Models\OpinionArtc;
 use App\Models\DetalleCategoria;
 use App\Models\User;
+use App\Models\Periodo;
 
 class Articulo extends Model
 {
@@ -31,5 +32,9 @@ class Articulo extends Model
     public function users()
     {
         return $this->belongsTo(User::class, 'user_id', 'id');
+    }
+    public function periodos()
+    {
+        return $this->belongsTo(Periodo::class, 'periodo_id', 'id');
     }
 }

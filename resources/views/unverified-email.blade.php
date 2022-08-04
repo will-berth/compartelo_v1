@@ -33,6 +33,7 @@
         </p>
         <div class="empty-action mb-4">
             <button class="btn btn-info">Reenviar verifiación</button>
+            <a href="/" class="btn btn-success">Ir a la pagina de inicio</a>
         </div>
     </div>
   </center>

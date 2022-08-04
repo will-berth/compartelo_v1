@@ -9,6 +9,12 @@ function getArticulos(){
             var data = JSON.parse(response);
             var card = '';
             $.each(data, function(index, valor){
+                var precio = Intl.NumberFormat('es-MX',{style:'currency',currency:'MXN'}).format(valor.precio);
+                if(typeof(valor.distancia) == 'undefined'){
+                    valor.distancia = '';
+                    valor.duracion = '';
+                }
+
                 card += `
                 <div class="col-sm-6 col-md-4 col-lg-3">
                     <a href="#"  class="text-decoration-none">
@@ -44,10 +50,10 @@ function getArticulos(){
                                 <i class="icofont-star text-warning"></i>
                                 <i class="icofont-star text-warning"></i>
                                 <i class="icofont-star text-warning"></i>
-                                <p class="card-text text-muted">$${valor.precio} MXN/Día</p>
+                                <p class="card-text text-muted">${precio} MXN/${valor.periodos.tipo}</p>
                             </div>
                             <div class="border p-1 text-center bg-info text-white">
-                                <i class="icofont-car p-2 pt-4"></i><small>2 km</small> <i class="icofont-clock-time p-2 pt-4"></i><small>27 min</small>
+                                <i class="icofont-car p-2 pt-4"></i><small>${valor.distancia}</small> <i class="icofont-clock-time p-2 pt-4"></i><small>${valor.duracion}</small>
                             </div>
                         </div>
                     </a>

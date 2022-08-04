@@ -39,6 +39,7 @@ class CreateUsersTable extends Migration
             $table->string('n_interior', 10)->nullable(true)->default('SN');
             $table->string('referencia', 200)->nullable(false);
             $table->boolean('estatus')->nullable(true)->default(false);
+            $table->string('coordenadas', 100)->nullable(true);
             $table->string('api_token', 100)->nullable(true)->default(false);
             $table->rememberToken();
             $table->timestamps();

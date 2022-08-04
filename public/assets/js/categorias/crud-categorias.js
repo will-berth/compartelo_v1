@@ -82,7 +82,7 @@ function getCategoriasPublic(filtro){
             //Recorrer todo el JSON
             $.each(resp, function(index, valor){
                 row += `<li class="nav-item mr-4">
-                            <a href="" class="nav-link categorias">
+                            <a href="categoria/${valor.categoria}" class="nav-link categorias">
                                 <center><i class="${valor.icono} text-general"></i></center>
                                 <small class="">${valor.categoria}</small>
                             </a>

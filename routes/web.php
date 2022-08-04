@@ -81,13 +81,15 @@ Route::post('getPeriodos/', [PeriodosController::class, 'index']);
 Route::post('updatePeriodos/', [PeriodosController::class, 'update']);
 //rutas categorias
 Route::post('addCategorias/', [CategoriasController::class, 'store']);
-Route::get('getCategorias/{filtro}', [CategoriasController::class, 'index']);
 Route::put('updateCategorias/', [CategoriasController::class, 'update']);
-//rutas articulos
-Route::get('getArticulos', [ArticulosController::class, 'index']);
 
 //api login
 Route::post('api/loginCliente', [LoginController::class, 'login']);
 Route::get('api/estadoVerificado', [LoginController::class, 'estadoVerificado']);
 // api registrar
 Route::post('api/registrar', [UsersController::class, 'store']);
+
+//rutas publicas
+Route::get('getArticulos', [ArticulosController::class, 'index']);
+Route::get('getCategorias/{filtro}', [CategoriasController::class, 'index']);
+Route::get('categoria/{filtro}', [CategoriasController::class, 'index']);

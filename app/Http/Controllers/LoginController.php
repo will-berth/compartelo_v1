@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
+use App\Models\User;
 
 class LoginController extends Controller
 {
@@ -14,14 +15,19 @@ class LoginController extends Controller
             'email'         => ['required', 'email', 'string'],
             'password'      => ['required', 'string']
         ]);
-        $credenciales = $request->only('email', 'password');
-        if(Auth::guard('web2')->attempt($credenciales))
-        {
-            $request->session()->regenerate();
-            return json_encode(['type' => 'success', 'title' => 'Exito', 'text' => 'Bienvenido']);
+        if(User::where('email', $request->all()['email'])->exists()){
+            $credenciales = $request->only('email', 'password');
+            if(Auth::guard('web2')->attempt($credenciales))
+            {
+                $request->session()->regenerate();
+                return json_encode(['type' => 'success', 'title' => 'Exito', 'text' => 'Bienvenido']);
+            }else{
+                return json_encode(['type' => 'error', 'title' => 'Error', 'text' => 'Credenciales invalidas']);
+            }
         }else{
-            return json_encode(['type' => 'error', 'title' => 'Error', 'text' => 'Credenciales invalidas']);
+            return json_encode(['type' => 'error', 'title' => 'Error', 'text' => 'Este correo no pertenece a ninguna cuenta']);
         }
+        
     }
     public function estadoVerificado(Request $request)
     {

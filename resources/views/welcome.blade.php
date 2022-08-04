@@ -30,7 +30,19 @@
         </button>
         <div class="collapse navbar-collapse row" id="navbarScroll">
             <div class="row w-100">
-                <div class="col-md-12 xl-4">
+                <div class="col-md-8 xl-8">
+                    <center>
+                        <div class="input-group mb-2 d-flex justify-content-center ml-4">
+                            <input type="search" class="input-buscar border shadow-sm" id="buscar" placeholder="Buscar artictulos, marcas y más"
+                                autocomplete="off">
+                            <div class="input-group-prepend">
+                                <button class="input-group-text icono-input"><i class="icofont-search"></i></button>
+                                
+                            </div>
+                        </div>
+                    </center>
+                </div>
+                <div class="col-md-4 xl-4">
                     <ul class="navbar-nav mr-auto d-flex justify-content-end">
                         <li class="nav-item mr-3">
                             <button type="button" class="btn carrito">
@@ -78,15 +90,6 @@
     <br>
     <br>
     <div class="container-fluid list-categorias" id="list-categorias">
-        <center>
-            <div class="input-group mb-2 d-flex justify-content-center">
-                <input type="search" class="input-buscar border shadow-sm" id="buscar" placeholder="Buscar..."
-                    autocomplete="off">
-                <div class="input-group-prepend">
-                    <div class="input-group-text icono-input"><i class="icofont-search"></i></div>
-                </div>
-            </div>
-        </center>
         <br>
         <div class="row">
             <div class="col-1 col-sm-2 col-lg-1 d-flex justify-content-md-end justify-content-sm-start">
