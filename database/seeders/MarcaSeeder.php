@@ -25,7 +25,7 @@ class MarcaSeeder extends Seeder
             ],
             [
                 'marca'     => 'adidas',
-                'img'       => 'adidas.jpg',
+                'img'       => 'adidas.png',
             ],
             [
                 'marca'     => 'apple',
@@ -41,11 +41,11 @@ class MarcaSeeder extends Seeder
             ],
             [
                 'marca'     => 'bose',
-                'img'       => 'bose.jpg',
+                'img'       => 'bose.png',
             ],
             [
                 'marca'     => 'ford',
-                'img'       => 'ford.jpg',
+                'img'       => 'ford.png',
             ],
             [
                 'marca'     => 'hamilton',
@@ -61,23 +61,23 @@ class MarcaSeeder extends Seeder
             ],
             [
                 'marca'     => 'husqvarna',
-                'img'       => 'husqvarna.jpg',
+                'img'       => 'husqvarna.png',
             ],
             [
                 'marca'     => 'italika',
-                'img'       => 'italik.jpg',
+                'img'       => 'italik.png',
             ],
             [
                 'marca'     => 'iusa',
-                'img'       => 'iusa.jpg',
+                'img'       => 'iusa.png',
             ],
             [
                 'marca'     => 'lacoste',
-                'img'       => 'lacoste.jpg',
+                'img'       => 'lacoste.png',
             ],
             [
                 'marca'     => 'lenovo',
-                'img'       => 'lenovo.jpg',
+                'img'       => 'lenovo.png',
             ],
             [
                 'marca'     => 'lg',
@@ -85,7 +85,7 @@ class MarcaSeeder extends Seeder
             ],
             [
                 'marca'     => 'microsoft',
-                'img'       => 'microsoft.jpg',
+                'img'       => 'microsoft.png',
             ],
             [
                 'marca'     => 'nike',
@@ -113,11 +113,11 @@ class MarcaSeeder extends Seeder
             ],
             [
                 'marca'     => 'stihl',
-                'img'       => 'stihl.jpg',
+                'img'       => 'stihl.png',
             ],
             [
                 'marca'     => 'taurus',
-                'img'       => 'taurus.jpg',
+                'img'       => 'taurus.png',
             ],
             [
                 'marca'     => 'whal',
