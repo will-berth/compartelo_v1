@@ -16,93 +16,93 @@ class CategoriaSeeder extends Seeder
     {
         $data = [
             [
-                'categoria' => 'Limpieza',
+                'categoria' => 'limpieza',
                 'icono'     => 'icofont-recycling-man'
             ],
             [ 
-                'categoria' => 'Hogar',
+                'categoria' => 'hogar',
                 'icono'     => 'icofont-home'
             ],
             [   
-                'categoria' => 'Vehiculos',
+                'categoria' => 'vehículos',
                 'icono'     => 'icofont-auto-mobile'
             ],
 
 
-            [   'categoria' => 'Agro',
+            [   'categoria' => 'agro',
                 'icono'     => 'icofont-tree'
             ],
 
-            [   'categoria' => 'Coleccion',
+            [   'categoria' => 'colección',
                 'icono'     => 'icofont-bank'
             ],
 
-            [   'categoria' => 'Papeleria',
+            [   'categoria' => 'papelería',
                 'icono'     => 'icofont-pen-holder-alt-1'
             ],
 
-            [   'categoria' => 'Moticleta',
+            [   'categoria' => 'motocicleta',
                 'icono'     => 'icofont-motor-biker'
             ],
 
-            [   'categoria' => 'Computacion',
+            [   'categoria' => 'computación',
                 'icono'     => 'icofont-computer'
             ],
                 
-            [   'categoria' => 'Consolas',
+            [   'categoria' => 'consolas',
                 'icono'     => 'icofont-game-pad'
             ],
 
-            [   'categoria' => 'Construcción',
+            [   'categoria' => 'construcción',
                 'icono'     => 'icofont-under-construction-alt'
             ],
 
-            [   'categoria' => 'Deportes',
+            [   'categoria' => 'deportes',
                 'icono'     => 'icofont-soccer'
             ],
 
             
-            [   'categoria' => 'Electronica',
+            [   'categoria' => 'electrónica',
                 'icono'     => 'icofont-micro-chip'
             ],
 
-            [   'categoria' => 'Herramientas',
+            [   'categoria' => 'herramientas',
                 'icono'     => 'icofont-repair'
             ],
 
-            [   'categoria' => 'Inmuebles',
+            [   'categoria' => 'inmuebles',
                 'icono'     => 'icofont-court'
             ],
 
-            [   'categoria' => 'Musica',
+            [   'categoria' => 'música',
                 'icono'     => 'icofont-guiter'
             ],
 
-            [   'categoria' => 'Eventos',
+            [   'categoria' => 'eventos',
                 'icono'     => 'icofont-cheer-leader'
             ],
 
-            [   'categoria' => 'Libros',
+            [   'categoria' => 'libros',
                 'icono'     => 'icofont-notebook'
             ],
 
-            [   'categoria' => 'Carpinteria',
+            [   'categoria' => 'carpintería',
                 'icono'     => 'icofont-farmer-alt'
             ],
 
-            [   'categoria' => 'Cocina',
+            [   'categoria' => 'cocina',
                 'icono'     => 'icofont-culinary'
             ],
 
-            [   'categoria' => 'Electrodomesticos',
+            [   'categoria' => 'electrodomésticos',
                 'icono'     => 'icofont-automation'
             ],
 
-            [   'categoria' => 'Oficina',
+            [   'categoria' => 'oficina',
                 'icono'     => 'icofont-ui-office'
             ],
 
-            [   'categoria' => 'Educacion',
+            [   'categoria' => 'educación',
                 'icono'     => 'icofont-graduate-alt'
             ],
 
@@ -110,27 +110,27 @@ class CategoriaSeeder extends Seeder
                 'icono'     => 'icofont-ui-travel'
             ],
 
-            [   'categoria' => 'Viajes',
+            [   'categoria' => 'viajes',
                 'icono'     => 'icofont-travelling'
             ],
 
-            [   'categoria' => 'Ropas',
+            [   'categoria' => 'ropas',
                 'icono'     => 'icofont-jersey'
             ],
 
-            [   'categoria' => 'Esteticas',
+            [   'categoria' => 'estética',
                 'icono'     => 'icofont-ui-cut'
             ],
 
-            [   'categoria' => 'Calzados',
+            [   'categoria' => 'calzados',
                 'icono'     => 'icofont-boot-alt-2'
             ],
 
-            [   'categoria' => 'Servicios',
+            [   'categoria' => 'servicios',
                 'icono'     => 'icofont-users-alt-2'
             ],
 
-            [   'categoria' => 'Maquinaria',
+            [   'categoria' => 'maquinaria',
                 'icono'     => 'icofont-vehicle-trucktor'
             ],
 
