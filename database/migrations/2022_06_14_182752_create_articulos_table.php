@@ -17,6 +17,7 @@ class CreateArticulosTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id')->nullable(false);
             $table->unsignedBigInteger('periodo_id')->nullable(false);
+            $table->unsignedBigInteger('marca_id')->nullable(false);
             $table->string('articulo',50)->nullable(false);
             $table->string('desc',50)->nullable(false);
             $table->double('precio')->nullable(false);
@@ -28,6 +29,7 @@ class CreateArticulosTable extends Migration
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('periodo_id')->references('id')->on('periodos')->onDelete('cascade');
+            $table->foreign('marca_id')->references('id')->on('marcas')->onDelete('cascade');
         });
     }
 

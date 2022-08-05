@@ -9,6 +9,7 @@ use App\Models\OpinionArtc;
 use App\Models\DetalleCategoria;
 use App\Models\User;
 use App\Models\Periodo;
+use App\Models\Marca;
 
 class Articulo extends Model
 {
@@ -36,5 +37,9 @@ class Articulo extends Model
     public function periodos()
     {
         return $this->belongsTo(Periodo::class, 'periodo_id', 'id');
+    }
+    public function marcas()
+    {
+        return $this->belongsTo(Marca::class, 'marca_id', 'id');
     }
 }

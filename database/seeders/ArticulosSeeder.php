@@ -18,6 +18,7 @@ class ArticulosSeeder extends Seeder
             [
                 'user_id'       => 1,
                 'periodo_id'    => 1,
+                'marca_id'      => 2,
                 'articulo'      => 'Martillo',
                 'precio'        => 100,
                 'img1'          => 'martillo1.jpg',
@@ -30,6 +31,7 @@ class ArticulosSeeder extends Seeder
             [
                 'user_id'       => 1,
                 'periodo_id'    => 2,
+                'marca_id'      => 3,
                 'articulo'      => 'Libro hombre alfa',
                 'precio'        => 100,
                 'img1'          => 'machoalfa1.jpg',
@@ -42,6 +44,7 @@ class ArticulosSeeder extends Seeder
             [
                 'user_id'       => 1,
                 'periodo_id'    => 3,
+                'marca_id'      => 22,
                 'articulo'      => 'Pala',
                 'precio'        => 150,
                 'img1'          => 'pala1.jpg',
@@ -54,6 +57,7 @@ class ArticulosSeeder extends Seeder
             [
                 'user_id'       => 1,
                 'periodo_id'    => 4,
+                'marca_id'      => 2,
                 'articulo'      => 'Revolvedora',
                 'precio'        => 300,
                 'img1'          => 'revolvedora1.jpg',
@@ -66,6 +70,7 @@ class ArticulosSeeder extends Seeder
             [
                 'user_id'       => 1,
                 'periodo_id'    => 5,
+                'marca_id'      => 19,
                 'articulo'      => 'Carro nissan',
                 'precio'        => 350,
                 'img1'          => 'nissan1.jpg',
@@ -78,6 +83,7 @@ class ArticulosSeeder extends Seeder
             [
                 'user_id'       => 1,
                 'periodo_id'    => 1,
+                'marca_id'      => 20,
                 'articulo'      => 'Pelotas de futbol',
                 'precio'        => 40,
                 'img1'          => 'pelota1.jpg',
@@ -90,6 +96,7 @@ class ArticulosSeeder extends Seeder
             [
                 'user_id'       => 1,
                 'periodo_id'    => 2,
+                'marca_id'      => 21,
                 'articulo'      => 'Mesa para eventos',
                 'precio'        => 450,
                 'img1'          => 'mesa1.jpg',
@@ -102,6 +109,7 @@ class ArticulosSeeder extends Seeder
             [
                 'user_id'       => 1,
                 'periodo_id'    => 3,
+                'marca_id'      => 15,
                 'articulo'      => 'Caja de herramienta',
                 'precio'        => 300,
                 'img1'          => 'cajaherramienta1.jpg',
@@ -114,6 +122,7 @@ class ArticulosSeeder extends Seeder
             [
                 'user_id'       => 1,
                 'periodo_id'    => 4,
+                'marca_id'      => 13,
                 'articulo'      => 'Bomba',
                 'precio'        => 200,
                 'img1'          => 'bomba1.jpg',
@@ -126,6 +135,7 @@ class ArticulosSeeder extends Seeder
             [
                 'user_id'       => 1,
                 'periodo_id'    => 5,
+                'marca_id'      => 12,
                 'articulo'      => 'Congelador',
                 'precio'        => 120,
                 'img1'          => 'congelador1.jpg',
@@ -138,6 +148,7 @@ class ArticulosSeeder extends Seeder
             [
                 'user_id'       => 1,
                 'periodo_id'    => 1,
+                'marca_id'      => 11,
                 'articulo'      => 'LLave perica',
                 'precio'        => 120,
                 'img1'          => 'llaveperica1.jpg',
@@ -150,6 +161,7 @@ class ArticulosSeeder extends Seeder
             [
                 'user_id'       => 1,
                 'periodo_id'    => 2,
+                'marca_id'      => 10,
                 'articulo'      => 'Taladro',
                 'precio'        => 120,
                 'img1'          => 'taladroinalambrico1.jpg',
@@ -162,6 +174,7 @@ class ArticulosSeeder extends Seeder
             [
                 'user_id'       => 1,
                 'periodo_id'    => 3,
+                'marca_id'      => 2,
                 'articulo'      => 'Camion volteo',
                 'precio'        => 120,
                 'img1'          => 'volteo1.jpg',
@@ -174,6 +187,7 @@ class ArticulosSeeder extends Seeder
             [
                 'user_id'       => 1,
                 'periodo_id'    => 4,
+                'marca_id'      => 2,
                 'articulo'      => 'Manguera para jardin',
                 'precio'        => 120,
                 'img1'          => 'manguera1.jpg',
@@ -186,6 +200,7 @@ class ArticulosSeeder extends Seeder
             [
                 'user_id'       => 1,
                 'periodo_id'    => 5,
+                'marca_id'      => 6,
                 'articulo'      => 'Moto Italika',
                 'precio'        => 120,
                 'img1'          => 'motoitalika1.jpg',
@@ -199,6 +214,7 @@ class ArticulosSeeder extends Seeder
             [
                 'user_id'       => 1,
                 'periodo_id'    => 1,
+                'marca_id'      => 7,
                 'articulo'      => 'Vaporera',
                 'precio'        => 120,
                 'img1'          => 'vaporera1.jpg',
@@ -211,6 +227,7 @@ class ArticulosSeeder extends Seeder
             [
                 'user_id'       => 1,
                 'periodo_id'    => 2,
+                'marca_id'      => 9,
                 'articulo'      => 'Guitarra acustica',
                 'precio'        => 120,
                 'img1'          => 'guitarra1.jpg',
@@ -223,6 +240,7 @@ class ArticulosSeeder extends Seeder
             [
                 'user_id'       => 1,
                 'periodo_id'    => 3,
+                'marca_id'      => 8,
                 'articulo'      => 'Bocina bluetooth',
                 'precio'        => 120,
                 'img1'          => 'bocina1.jpg',
@@ -235,6 +253,7 @@ class ArticulosSeeder extends Seeder
             [
                 'user_id'       => 1,
                 'periodo_id'    => 4,
+                'marca_id'      => 2,
                 'articulo'      => 'Cortador de cabello',
                 'precio'        => 120,
                 'img1'          => 'maquinita1.jpg',
@@ -247,6 +266,7 @@ class ArticulosSeeder extends Seeder
             [
                 'user_id'       => 1,
                 'periodo_id'    => 2,
+                'marca_id'      => 5,
                 'articulo'      => 'Proyector',
                 'precio'        => 120,
                 'img1'          => 'proyector1.jpg',
