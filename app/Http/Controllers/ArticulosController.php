@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Articulo;
+use App\Models\Marca;
 
 class ArticulosController extends Controller
 {
@@ -12,7 +13,8 @@ class ArticulosController extends Controller
     {
        $this->middleware('auth', ['except'  => ['serviceListArticles']]) ;
     }
-    public function index(){
+    public function index()
+    {
         $apiKey = 'AIzaSyB4CbJQ4DyUU8PBQA9wtm9IqClbF7dhOuo';
         $articulos = Articulo::orderByRaw('rand()')->limit(5)->with(['categorias', 'users', 'periodos'])->get();
         if(Auth::guard('web2')->user() != null){
@@ -31,6 +33,25 @@ class ArticulosController extends Controller
             }
         }
        return json_encode($articulos);
+    }
+    public function viewItemByCategory()
+    {
+        return view('itemByCategory');
+    }
+    public function itemByCategory($categoria)
+    {
+        $itemByCategory = Articulo::with(['categorias', 'users', 'periodos', 'marcas'])
+                                    ->join('detalles_categorias', 'articulo_id', '=', 'articulos.id')
+                                    ->join('categorias', 'categoria_id', '=', 'categorias.id')
+                                    ->where('categorias.categoria', $categoria)
+                                    ->get();
+        $marcas = Marca::select('marcas.*')->join('articulos', 'marca_id', '=', 'marcas.id')
+                        ->join('detalles_categorias', 'articulo_id', '=', 'articulos.id')
+                        ->join('categorias', 'categoria_id', '=', 'categorias.id')
+                        ->where('categorias.categoria', $categoria)
+                        ->groupBy('marcas.id')
+                        ->get();
+        return json_encode(['articulos' => $itemByCategory, 'marcas' => $marcas]);
     }
     public function serviceListArticles(Request $request)
     {

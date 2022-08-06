@@ -69,9 +69,16 @@ $('#buscar').keyup(function(){
 
 //Obtener los datos de categorias para la parte publica
 function getCategoriasPublic(filtro){
+    let url = window.location;
+    let urlHref = url.href.split('/');
+    if(urlHref.length > 4){
+        var link = '';
+    }else{
+        var link = 'categoria/';
+    }
     $.ajax({
         'type': 'GET',
-        'url': 'getCategorias/'+filtro,
+        'url': 'getCategorias/' + filtro,
         beforeSend: function(){
             $('#progress').removeClass('d-none');
         },
@@ -82,7 +89,7 @@ function getCategoriasPublic(filtro){
             //Recorrer todo el JSON
             $.each(resp, function(index, valor){
                 row += `<li class="nav-item mr-4">
-                            <a href="categoria/${valor.categoria}" class="nav-link categorias">
+                            <a href="${link+valor.categoria}" class="nav-link categorias">
                                 <center><i class="${valor.icono} text-general"></i></center>
                                 <small class="">${valor.categoria}</small>
                             </a>

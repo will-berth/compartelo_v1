@@ -81,6 +81,8 @@ Route::post('getPeriodos/', [PeriodosController::class, 'index']);
 Route::post('updatePeriodos/', [PeriodosController::class, 'update']);
 //rutas categorias
 Route::post('addCategorias/', [CategoriasController::class, 'store']);
+Route::get('categoria/getCategorias/{filtro}', [CategoriasController::class, 'index'])->name('getCategorias');
+Route::get('getCategorias/{filtro}', [CategoriasController::class, 'index'])->name('getCategorias');
 Route::put('updateCategorias/', [CategoriasController::class, 'update']);
 
 //api login
@@ -91,5 +93,5 @@ Route::post('api/registrar', [UsersController::class, 'store']);
 
 //rutas publicas
 Route::get('getArticulos', [ArticulosController::class, 'index']);
-Route::get('getCategorias/{filtro}', [CategoriasController::class, 'index']);
-Route::get('categoria/{filtro}', [CategoriasController::class, 'index']);
+Route::get('categoria/itemByCategory/{filtro}', [ArticulosController::class, 'itemByCategory']);
+Route::get('categoria/{filtro}', [ArticulosController::class, 'viewItemByCategory']);
