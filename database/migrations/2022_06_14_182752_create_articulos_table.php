@@ -18,6 +18,7 @@ class CreateArticulosTable extends Migration
             $table->unsignedBigInteger('user_id')->nullable(false);
             $table->unsignedBigInteger('periodo_id')->nullable(false);
             $table->unsignedBigInteger('marca_id')->nullable(false);
+            $table->string('clave',50)->nullable(false)->unique();
             $table->string('articulo',50)->nullable(false);
             $table->string('desc',50)->nullable(false);
             $table->double('precio')->nullable(false);
