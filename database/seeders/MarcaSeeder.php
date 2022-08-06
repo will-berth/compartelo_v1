@@ -21,7 +21,7 @@ class MarcaSeeder extends Seeder
             ],
             [
                 'marca'     => 'nissan',
-                'img'       => 'nissan,jpg',
+                'img'       => 'nissan.jpg',
             ],
             [
                 'marca'     => 'adidas',
@@ -65,7 +65,7 @@ class MarcaSeeder extends Seeder
             ],
             [
                 'marca'     => 'italika',
-                'img'       => 'italik.png',
+                'img'       => 'italika.png',
             ],
             [
                 'marca'     => 'iusa',
@@ -91,17 +91,14 @@ class MarcaSeeder extends Seeder
                 'marca'     => 'nike',
                 'img'       => 'nike.jpg',
             ],
-            [
-                'marca'     => 'nissan',
-                'img'       => 'nissan.jpg',
-            ],
+            
             [
                 'marca'     => 'pretul',
-                'img'       => 'microsoft.jpg',
+                'img'       => 'pretul.jpg',
             ],
             [
                 'marca'     => 'samsung',
-                'img'       => 'microsoft.jpg',
+                'img'       => 'samsung.jpg',
             ],
             [
                 'marca'     => 'sony',
@@ -109,7 +106,7 @@ class MarcaSeeder extends Seeder
             ],
             [
                 'marca'     => 'sterling',
-                'img'       => 'microsoft.jpg',
+                'img'       => 'sterling.jpg',
             ],
             [
                 'marca'     => 'stihl',
