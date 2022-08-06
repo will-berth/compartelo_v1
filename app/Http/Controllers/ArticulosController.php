@@ -38,13 +38,22 @@ class ArticulosController extends Controller
     {
         return view('itemByCategory');
     }
-    public function itemByCategory($categoria)
+    public function itemByCategory($categoria, $marca)
     {
-        $itemByCategory = Articulo::with(['categorias', 'users', 'periodos', 'marcas'])
+        if($marca == 0){
+            $itemByCategory = Articulo::with(['categorias', 'users', 'periodos', 'marcas'])
                                     ->join('detalles_categorias', 'articulo_id', '=', 'articulos.id')
                                     ->join('categorias', 'categoria_id', '=', 'categorias.id')
                                     ->where('categorias.categoria', $categoria)
                                     ->get();
+        }else{
+            $itemByCategory = Articulo::with(['categorias', 'users', 'periodos', 'marcas'])
+                                    ->join('detalles_categorias', 'articulo_id', '=', 'articulos.id')
+                                    ->join('categorias', 'categoria_id', '=', 'categorias.id')
+                                    ->join('marcas', 'articulos.marca_id', 'marcas.id')
+                                    ->where([['categorias.categoria', $categoria], ['marcas.marca', $marca]])
+                                    ->get();
+        }
         $marcas = Marca::select('marcas.*')->join('articulos', 'marca_id', '=', 'marcas.id')
                         ->join('detalles_categorias', 'articulo_id', '=', 'articulos.id')
                         ->join('categorias', 'categoria_id', '=', 'categorias.id')

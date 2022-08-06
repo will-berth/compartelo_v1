@@ -161,3 +161,9 @@ body{
 .espacio{
     margin-left: 70px;
 }
+.active-category a{
+    color: #fff !important;
+}
+.active-category i{
+    color: #fff !important;
+}

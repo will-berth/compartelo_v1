@@ -64,10 +64,10 @@ function getArticulos(){
         }
     })
 }
-function getItemByCategory(categoria){
+function getItemByCategory(categoria, marca){
     $.ajax({
         'type': 'GET',
-        'url': 'itemByCategory/'+categoria,
+        'url': 'itemByCategory/'+categoria+'/'+marca,
         beforeSend: function(){
 
         },
@@ -75,12 +75,23 @@ function getItemByCategory(categoria){
             var data = JSON.parse(response);
             var card = '';
             var marcas = '';
+            var clase = '';
+            const removeAccents = (str) => {//constante para elimnar acentos
+                return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+            } 
             $.each(data.marcas, function(index, valor){
+                if(marca != 0){
+                    if(marca.toLowerCase() == removeAccents(valor.marca.toLowerCase())){
+                        clase = 'bg-primary';
+                    }else{
+                        clase = '';
+                    }
+                }
                 marcas += `
-                <div class="col-md-2 mb-3">
-                    <a href="" class="card py-3" data-toggle="tooltip" data-placement="bottom" title="${valor.marca}">
-                        <center><img src="../assets/img/marcas/${valor.img}" alt="" width="95" height="80"></center>
-                    </a>
+                <div class="col-md-1 mb-3">
+                    <button class="btn card py-3 marca border-0 ${clase}" onclick="activeBrand('${categoria}', '${valor.marca}')" data-toggle="tooltip" data-placement="bottom" title="${valor.marca}">
+                        <center><img src="../assets/img/marcas/${valor.img}" alt="" width="60" height="50"></center>
+                    </button>
                 </div>`;
             });
             $.each(data.articulos, function(index, valor){
@@ -137,4 +148,7 @@ function getItemByCategory(categoria){
             $('#populares').html(card);
         }
     })
+}
+function activeBrand(categoria, marca){
+    getItemByCategory(categoria, marca);
 }

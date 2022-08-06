@@ -86,10 +86,25 @@ function getCategoriasPublic(filtro){
             $('#progress').addClass('d-none');
             var resp = JSON.parse(response);
             var row = '';
+            var clase = '';
+            var urlComplete = window.location;
+            var url = urlComplete.href.split('/');
+            var categoria = url[4];
+            const removeAccents = (str) => {//constante para elimnar acentos
+                return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+            } 
             //Recorrer todo el JSON
             $.each(resp, function(index, valor){
-                row += `<li class="nav-item mr-4">
-                            <a href="${link+valor.categoria}" class="nav-link categorias">
+                if(link != 'categoria/'){
+                    if(categoria.toLowerCase() == removeAccents(valor.categoria.toLowerCase())){
+                        clase = 'bg-primary active-category';
+                    }else{
+                        clase = '';
+                    }
+                }
+
+                row += `<li class="nav-item mr-4 ${clase}">
+                            <a href="${link+removeAccents(valor.categoria)}" class="nav-link categorias">
                                 <center><i class="${valor.icono} text-general"></i></center>
                                 <small class="">${valor.categoria}</small>
                             </a>

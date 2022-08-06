@@ -93,5 +93,5 @@ Route::post('api/registrar', [UsersController::class, 'store']);
 
 //rutas publicas
 Route::get('getArticulos', [ArticulosController::class, 'index']);
-Route::get('categoria/itemByCategory/{filtro}', [ArticulosController::class, 'itemByCategory']);
+Route::get('categoria/itemByCategory/{categoria}/{marca}', [ArticulosController::class, 'itemByCategory']);
 Route::get('categoria/{filtro}', [ArticulosController::class, 'viewItemByCategory']);

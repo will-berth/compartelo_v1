@@ -12,13 +12,13 @@
 <script src="{{ asset('assets/js/articulos/crud-articulos.js') }}"></script>
 <script>
     $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-    })
+        $("body").tooltip({ selector: '[data-toggle=tooltip]' });
+    });
     $(document).ready(function(){
         let urlComplete = window.location;
         let url = urlComplete.href.split('/');
         let categoria = url[4];
-        getItemByCategory(categoria)
+        getItemByCategory(categoria, 0)
     });
 </script>
 @endsection
