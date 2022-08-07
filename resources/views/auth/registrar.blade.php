@@ -34,32 +34,16 @@
                                     <div class="input-group mb-3">
                                         <label class="w-100 text-left" for="nombre">Nombre(s)</label>
                                         <input id="nombre" name="nombre" type="text" class="form-control" placeholder="Nombre(s), ej: Jhon Hernández Pérez" minlength="3" maxlength="40" pattern="[\sA-Z\u00C0-\u00DCa-z\u00E0-\u00FC\u00f1\u00d1]{1,40}" title="Debe registrar un nombre correcto sin caracteres especiales." required>
-                                        <div class="invalid-feedback text-left">
+                                        <div id="nombre-alert" class="invalid-feedback text-left">
                                             Debe registrar un nombre correcto.
                                         </div>
                                     </div>
-                                    <!-- <div class="form-row">
-                                        <div class="col-sm-12 col-lg-6 mb-3">
-                                            <label class="w-100 text-left" for="app">Apellido paterno</label>
-                                            <input id="app" name="app" type="text" class="form-control" placeholder="Apellido paterno, ej: Hernández" minlength="3" maxlength="15" pattern="[A-Z\u00C0-\u00DCa-z\u00E0-\u00FC\u00f1\u00d1]{1,15}" title="Debe registrar un apellido paterno." required>
-                                            <div class="invalid-feedback text-left">
-                                                Debe registrar un apellido paterno.
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-12 col-lg-6 mb-3">
-                                            <label class="w-100 text-left" for="apm">Apellido materno</label>
-                                            <input id="apm" name="apm " type="text" class="form-control" placeholder="Apellido materno, ej: Pérez" minlength="3" maxlength="15" pattern="[A-Z\u00C0-\u00DCa-z\u00E0-\u00FC\u00f1\u00d1]{1,15}" title="Debe registrar un apellido materno." required>
-                                            <div class="invalid-feedback text-left">
-                                                Debe registrar un apellido materno.
-                                            </div>
-                                        </div>
-                                    </div> -->
 
                                     <div class="form-row">
                                         <div class="col-sm-12 col-lg-6 mb-3">
                                             <label class="w-100 text-left" for="f_nacimiento">Fecha de nacimiento</label>
                                             <input id="f_nacimiento" name="f_nacimiento" type="date" class="form-control" placeholder="Fecha de nacimiento" value="2000-01-01" required>
-                                            <div class="invalid-feedback text-left">
+                                            <div id="f_nacimiento-alert" class="invalid-feedback text-left">
                                                 Debe registrar su fecha de nacimiento.
                                             </div>
                                         </div>
@@ -70,12 +54,11 @@
                                                 <option value="Masculino">Masculino</option>
                                                 <option value="Femenino">Femenino</option>
                                             </select>
-                                            <div class="invalid-feedback text-left">
+                                            <div id="sexo-alert" class="invalid-feedback text-left">
                                                 Debe seleccionar su sexo.
                                             </div>
                                         </div>
                                     </div>
-                                    
                                 </div>
                             </div>
                         </p>
@@ -98,10 +81,6 @@
                             </button>
                             <div class="collapse w-100" id="collapseDataIne">
                                 <div id="dataIneForm" class="card card-body w-100">
-                                    <!-- <div class="input-group mb-3">
-                                        <label for="ine-front">Parte F</label>
-                                        <input type="file" class="form-control" placeholder="Identificación oficial">
-                                    </div> -->
 
                                     <div class="form-group mb-4 h-100">
                                         <label class="d-flex justify-content-start align-items-center" for="ine_frontal"><i class="icofont-id data-group-btn mr-3"></i>Parte frontal</label>
@@ -144,69 +123,72 @@
                                         <div class="col-sm-12 col-lg-6 mb-3">
                                             <label class="w-100 text-left" for="calle">Calle</label>
                                             <input id="calle" name="calle" type="text" class="form-control" placeholder="Calle, ej: Oriente Sur" minlength="3" maxlength="40" pattern="[\sA-Z\u00C0-\u00DCa-z\u00E0-\u00FC\u00f1\u00d1]{1,40}" title="Debe registrar una calle, entre 3 a 40 caracteres." required>
-                                            <div class="invalid-feedback text-left">
+                                            <div id="calle-alert" class="invalid-feedback text-left">
                                                 Debe registrar una calle, entre 3 a 40 caracteres.
                                             </div>
                                         </div>
                                         <div class="col-sm-6 col-lg-3 mb-3">
                                             <label class="w-100 text-left" for="n_exterior">Número exterior</label>
                                             <input id="n_exterior" name="n_exterior" type="text" class="form-control" placeholder="SN" pattern="[snSN0-9]{1,6}">
-                                            <div class="invalid-feedback text-left">
+                                            <div id="n_exterior-alert" class="invalid-feedback text-left">
                                                 Debe registrar un número exterior o SN en caso de no tenerlo.
                                             </div>
                                         </div>
                                         <div class="col-sm-6 col-lg-3 mb-3">
                                             <label class="w-100 text-left" for="n_interior">Número interior</label>
                                             <input id="n_interior" name="n_interior" type="text" class="form-control" placeholder="SN" pattern="[snSN0-9]{1,6}">
-                                            <div class="invalid-feedback text-left">
+                                            <div id="n_interior-alert" class="invalid-feedback text-left">
                                                 Debe registrar un número interior o SN en caso de no tenerlo.
                                             </div>
                                         </div>
                                         <div class="form-group col-sm-12 col-lg-6 mb-3">
                                             <label class="w-100 text-left" for="colonia">Colonia</label>
                                             <input id="colonia" name="colonia" type="text" class="form-control" placeholder="Colonia, ej: Las margaritas" minlength="3" maxlength="20" pattern="[\sA-Z\u00C0-\u00DCa-z\u00E0-\u00FC\u00f1\u00d1]{1,20}" title="Debe registrar una colonia, entre 3 a 40 caracteres sin caracteres especiales." required>
-                                            <div class="invalid-feedback text-left">
+                                            <div id="colonia-alert" class="invalid-feedback text-left">
                                                 Debe registrar una colonia, entre 3 a 40 caracteres sin caracteres especiales.
                                             </div>
                                         </div>
                                         <div class="form-group col-sm-12 col-lg-6 mb-3">
-                                            <!-- <input type="text" class="form-control" placeholder="Municipio"> -->
                                             <label class="w-100 text-left" for="estado">Estado</label>
                                             <select id="estado" name="estado" class="form-control" required>
                                                 <option value="">-- SELECCIONAR --</option>
                                             </select>
-                                            <div class="invalid-feedback text-left">
+                                            <div id="estado-alert" class="invalid-feedback text-left">
                                                 Debe seleccionar un estado.
                                             </div>
                                         </div>
                                         <div class="col-sm-12 col-lg-6 mb-3">
                                             <label class="w-100 text-left" for="ciudad">Ciudad</label>
                                             <input id="ciudad" name="ciudad" type="text" class="form-control" placeholder="Ciudad, ej: Guadalajara" title="Debe registrar una ciudad, entre 3 a 40 caracteres sin caracteres especiales." required>
-                                            <div class="invalid-feedback text-left">
+                                            <div id="ciudad-alert" class="invalid-feedback text-left">
                                                 Debe registrar una ciudad, entre 3 a 40 caracteres sin caracteres especiales.
                                             </div>
                                         </div>
                                         <div class="form-group col-sm-12 col-lg-6 mb-3">
                                             <label class="w-100 text-left" for="municipio">Municipio</label>
-                                            <!-- <input type="text" class="form-control" placeholder="Municipio"> -->
                                             <select id="municipio" name="municipio" class="form-control" required>
                                                 <option value="0" selected="selected" disabled>-- SELECCIONAR --</option>
                                             </select>
+                                            <div id="municipio-alert" class="invalid-feedback text-left">
+                                                Debe seleccionar un municipio.
+                                            </div>
                                         </div>
                                         <div class="col-sm-12 col-lg-9 mb-3">
                                             <label class="w-100 text-left" for="referenca">Referencia</label>
                                             <input id="referencia" name="referencia" type="text" class="form-control" placeholder="Referencia, ej: Casa blanca con portón negro" minlength="15" maxlength="40" pattern="[\sA-Z\u00C0-\u00DCa-z\u00E0-\u00FC\u00f1\u00d1]{15,40}" title="Debe dar una descripción de su referencia de 15 a 40 caracteres." required>
-                                            <div class="invalid-feedback text-left">
+                                            <div id="referencia-alert" class="invalid-feedback text-left">
                                                 Debe dar una descripción de su referencia de 15 a 40 caracteres.
                                             </div>
                                         </div>
                                         <div class="col-sm-6 col-lg-3 mb-3">
                                             <label class="w-100 text-left" for="cp">CP</label>
                                             <input id="cp" name="cp" type="text" class="form-control" placeholder="CP" pattern="((0[1-9]|5[0-2])|[1-4][0-9])[0-9]{3}" title="Debe registrar un código postal válido." required>
-                                            <div class="invalid-feedback text-left">
+                                            <div id="cp-alert" class="invalid-feedback text-left">
                                                 Debe registrar un código postal válido.
                                             </div>
                                         </div>
+
+
                                     </div>
                                 </div>
                             </div>
@@ -263,35 +245,35 @@
                                         <div class="col-sm-12 col-lg-12 mb-3">
                                             <label class="w-100 text-left" for="email">Correo electronico</label>
                                             <input id="email" name="email" type="email" class="form-control" placeholder="Escriba su correo electrónico. Ej: user@gmail.com" pattern="[a-zA-Z0-9!#$%&'*_+-]([\.]?[a-zA-Z0-9!#$%&'*_+-])+@[a-zA-Z0-9]([^@&%$\/()=?¿!.,:;]|\d)+[a-zA-Z0-9][\.][a-zA-Z]{2,4}([\.][a-zA-Z]{2})?" title="Debe registrar un correo válido." required>
-                                            <div class="invalid-feedback text-left">
+                                            <div id="email-alert" class="invalid-feedback text-left">
                                                 Debe registrar un correo válido.
                                             </div>
                                         </div>
                                         <div class="col-sm-12 col-lg-6 mb-3">
                                             <label class="w-100 text-left" for="usuario">Nombre de usuario</label>
                                             <input id="usuario" name="usuario" type="text" class="form-control" placeholder="Nombre de usuario, ej: User23" pattern="[a-zA-Z0-9]{4,10}" title="El nombre de usuario debe ser de 4 a 10 caracteres, no debe tener espacios ni caracteres especiales." required>
-                                            <div class="invalid-feedback text-left">
+                                            <div id="usuario-alert" class="invalid-feedback text-left">
                                                 El nombre de usuario debe ser de 4 a 10 caracteres, no debe tener espacios ni caracteres especiales.
                                             </div>
                                         </div>
                                         <div class="col-sm-12 col-lg-6 mb-3">
                                             <label class="w-100 text-left" for="telefono">Teléfono</label>
                                             <input id="telefono" name="telefono" type="tel" class="form-control" placeholder="Teléfono, solo 10 digitos." pattern="[0-9]{10}" title="El número de teléfono debe tener 10 digitos." required>
-                                            <div class="invalid-feedback text-left">
+                                            <div id="telefono-alert" class="invalid-feedback text-left">
                                                 El número de teléfono debe tener 10 digitos.
                                             </div>
                                         </div>
                                         <div class="col-sm-12 col-lg-6 mb-3">
                                             <label class="w-100 text-left" for="password">Contraseña</label>
                                             <input id="password" name="password" type="password" class="form-control" placeholder="Contraseña" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$" title="Contraseña, de 8 a 12 caracteres, se requiere por lo menos una letra mayuscula, minuscula, un numero y un caracter especial" required>
-                                            <div class="invalid-feedback text-left">
+                                            <div id="password-alert" class="invalid-feedback text-left">
                                                 Contraseña, de 8 a 12 caracteres, se requiere por lo menos una letra mayuscula, minuscula, un numero y un caracter especial.
                                             </div>
                                         </div>
                                         <div class="col-sm-12 col-lg-6 mb-3">
                                             <label class="w-100 text-left" for="pass_repeat">Repetir contraseña</label>
                                             <input id="pass_repeat" name="pass_repeat" type="password" class="form-control" placeholder="Confirmar contraseña" title="La contraseña debe ser igual." required>
-                                            <div class="invalid-feedback text-left">
+                                            <div id="pass_repeat-alert" class="invalid-feedback text-left">
                                                 La contraseña debe ser igual.
                                             </div>
                                         </div>
@@ -303,7 +285,15 @@
                     <!-- END CUENTA -->
 
 
-
+                    <div class="form-check mb-4 mt-4">
+                        <input class="form-check-input" type="checkbox" value="" id="accept_t_c" name="accept_t_c">
+                        <label class="form-check-label text-muted" for="accept_t_c">
+                            He leído y acepto los <a href="#">términos y condiciones</a>.
+                        </label>
+                        <div class="invalid-feedback">
+                            Debe aceptar los términos y condiciones.
+                        </div>
+                    </div>
                     
 
                     <button type="submit" class="btn btn-primary shadow-2 mb-4 btn-comparte-primary">Registrarse</button>

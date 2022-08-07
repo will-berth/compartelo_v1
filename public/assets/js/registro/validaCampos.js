@@ -3,30 +3,34 @@ $(document).ready(function () {
     let ine_reverso = false;
     function checkIne(frontalStatus, reversoStatus) {
         if (frontalStatus && reversoStatus){
-            $("#dataIneCheck").addClass("check-field");
-        }else{
-            $("#dataIneCheck").removeClass("check-field");
+            checkField("#dataIneCheck", 'check-field', 'is-invalid-field');
         }
     }
 
     $("#ine_frontal").on("FilePond:addfile", function (e) {
         ine_frontal = true;
         checkIne(ine_frontal, ine_reverso);
+        $('#ine_frontal').removeClass('is-invalid');
+        $('#ine_frontal-alert').removeClass('file-is-invalid');
     });
     
     $("#ine_frontal").on("FilePond:removefile", function (e) {
         ine_frontal = false;
         checkIne(ine_frontal, ine_reverso);
+        // $('#ine_frontal-alert').addClass('file-is-invalid');
     });
     
     $("#ine_reverso").on("FilePond:addfile", function (e) {
         ine_reverso = true;
         checkIne(ine_frontal, ine_reverso);
+        $('#ine_reverso').removeClass('is-invalid');
+        $('#ine_reverso-alert').removeClass('file-is-invalid');
     });
     
     $("#ine_reverso").on("FilePond:removefile", function (e) {
         ine_reverso = false;
         checkIne(ine_frontal, ine_reverso);
+        // $('#ine_reverso-alert').addClass('file-is-invalid');
     });
 
     $("#dataPersonalForm").on("input", function () {
@@ -111,8 +115,19 @@ $(document).ready(function () {
         }
     });
 
+    $("#accept_t_c").on("input", function () {
+        if($('#accept_t_c').is(":checked")){
+            $("#accept_t_c").removeClass("is-invalid");
+        }else{
+            $("#accept_t_c").addClass("is-invalid");
+        }
+    });
+
     $("#comprobante").on("FilePond:addfile", function (e) {
-        $("#dataComDomicilioCheck").addClass("check-field");
+        // $("#dataComDomicilioCheck").addClass("check-field");
+        checkField("#dataComDomicilioCheck", 'check-field', 'is-invalid-field');
+        $('#comprobante-alert').removeClass('file-is-invalid');
+        $('#comprobante').removeClass('is-invalid');
     });
 
     $("#comprobante").on("FilePond:removefile", function (e) {

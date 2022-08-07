@@ -35,7 +35,7 @@ class CreateUsersTable extends Migration
             $table->string('cp', 5)->nullable(false);
             $table->string('colonia', 50)->nullable(false);
             $table->string('calle', 50)->nullable(false);
-            $table->string('n_exterior', 10)->nullable(false)->default('SN');
+            $table->string('n_exterior', 10)->nullable(true)->default('SN');
             $table->string('n_interior', 10)->nullable(true)->default('SN');
             $table->string('referencia', 200)->nullable(false);
             $table->boolean('estatus')->nullable(true)->default(false);

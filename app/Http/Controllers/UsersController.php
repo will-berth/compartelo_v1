@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Http\Requests\RegistrerUserRequest;
 use Illuminate\Support\Facades\Hash;
 
 class UsersController extends Controller
@@ -19,38 +20,20 @@ class UsersController extends Controller
         return $nombreimagen;
     }
 
-    public function store(Request $request){
-        $validated = $request->validate([
-            'nombre' => 'required|max:100',
-            'f_nacimiento' => 'required',
-            'sexo' => 'required',
-            'telefono' => 'required',
-            'usuario' => 'required|unique:users',
-            'email' => 'required|unique:users',
-            'password' => 'required',
-            'ine_frontal' => 'required',
-            'ine_reverso' => 'required',
-            'comprobante' => 'required',
-            'ciudad' => 'required',
-            'estado' => 'required',
-            'municipio' => 'required',
-            'cp' => 'required',
-            'colonia' => 'required',
-            'calle' => 'required',
-            'referencia' => 'required',
-        ]);
+    public function store(RegistrerUserRequest $request){
+        $validated = $request->validated();
 
         $ine_frontal = $this->saveFile($request, "ine_frontal", "ine_f");
         $ine_reverso = $this->saveFile($request, "ine_reverso", "ine_r");
         $comprobante = $this->saveFile($request, "comprobante", "comprobante");
 
-        $request->ine_frontal = $ine_frontal;
-        $request->ine_reverso = $ine_reverso;
-        $request->comprobante = $comprobante;
-        // $request->password = Hash::make($request->password);
-        $request->password = hash('sha256', $request->password);
+        $request['password'] = hash('sha256', $request->password);
+
         $data = $request->all();
-        
+        $data['ine_frontal'] = $ine_frontal;
+        $data['ine_reverso'] = $ine_reverso;
+        $data['comprobante'] = $comprobante;
+
         User::create($data);
 
         return json_encode(['type' => 'success', 'title' => 'Exito', 'text' => 'Tu registro se realizó con exito, queda en espera de verificación de los datos proporcionados.']);

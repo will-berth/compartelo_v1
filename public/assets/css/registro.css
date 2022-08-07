@@ -25,3 +25,6 @@
 .file-is-invalid{
     display: inherit !important;
 }
+.file-is-valid{
+    display: none !important;
+}
