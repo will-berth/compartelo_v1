@@ -15,12 +15,14 @@ class CreateCalificacionesArtcsTable extends Migration
     {
         Schema::create('calificaciones_artcs', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id')->nullable(false);
             $table->bigInteger('articulo_id')->unsigned();
             $table->integer('cali')->nullable(false);
             $table->string('tipo', 50)->nullable(false);
             $table->timestamps();
             $table->foreign('articulo_id')->references('id')->on('articulos')->onUpdate('cascade')
             ->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
