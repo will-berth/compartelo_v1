@@ -23,5 +23,6 @@ class DatabaseSeeder extends Seeder
         $this->call(DepositoSeeder::class);
         $this->call(CaracteristicaSeeder::class);
         $this->call(Calificacion_artcsSeeder::class);
+        $this->call(Opinion_artcsSeeder::class);
     }
 }

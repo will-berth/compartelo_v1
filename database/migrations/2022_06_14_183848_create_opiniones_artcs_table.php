@@ -16,12 +16,14 @@ class CreateOpinionesArtcsTable extends Migration
         Schema::create('opiniones_artcs', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('articulo_id')->unsigned();
+            $table->unsignedBigInteger('user_id')->nullable(false);
             $table->string('opinion', 200)->nullable(false);
             $table->datetime('f_opinion')->nullable(false);
             $table->boolean('estado')->nullable(false);
             $table->timestamps();
             $table->foreign('articulo_id')->references('id')->on('articulos')->onUpdate('cascade')
             ->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
