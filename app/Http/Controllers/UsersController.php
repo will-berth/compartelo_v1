@@ -27,7 +27,8 @@ class UsersController extends Controller
         $ine_reverso = $this->saveFile($request, "ine_reverso", "ine_r");
         $comprobante = $this->saveFile($request, "comprobante", "comprobante");
 
-        $request['password'] = hash('sha256', $request->password);
+        // $request['password'] = hash('sha256', $request->password);
+        $request['password'] = Hash::make($request->password);
 
         $data = $request->all();
         $data['ine_frontal'] = $ine_frontal;
