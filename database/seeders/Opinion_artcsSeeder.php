@@ -21,7 +21,8 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'recomiendo este producto',
                 'f_opinion'     =>'2022-10-10',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'          =>'positivo',
+                'titulo'        =>'excelente articulo',
             ],
             [
                 'articulo_id'   => 2,
@@ -30,6 +31,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-01-19',
                 'califi'        =>2,
                 'tipo'        =>'negativo',
+                'titulo'        =>'pesimo articulo',
             ],
             [
                 'articulo_id'   => 3,
@@ -38,6 +40,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'execelente prodcuto',
             ],
             [
                 'articulo_id'   => 4,
@@ -46,6 +49,8 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-09-10',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'me gusta el articulo',
+                'titulo'        =>'execelente servicio',
             ],
             [
                 'articulo_id'   => 5,
@@ -54,6 +59,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'no me gusta el producto',
             ],
             [
                 'articulo_id'   => 6,
@@ -62,6 +68,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-01-01',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'execelente producto',
             ],
             [
                 'articulo_id'   => 7,
@@ -70,6 +77,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-02-02',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'execelente producto',
             ],
             [
                 'articulo_id'   => 8,
@@ -78,7 +86,9 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-03-10',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'producto mal',
             ],
+            
             [
                 'articulo_id'   => 9,
                 'user_id'       => 2,
@@ -86,6 +96,8 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-03-03',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'producto mal',
+                
             ],
             [
                 'articulo_id'   => 10,
@@ -94,6 +106,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-04-18',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'producto bueno',
             ],
 
             [
@@ -103,6 +116,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-10-10',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'producto regular',
             ],
             [
                 'articulo_id'   => 12,
@@ -111,6 +125,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-01-19',
                 'califi'        =>2,
                 'tipo'        =>'negativo',
+                'titulo'        =>'producto bueno',
             ],
             [
                 'articulo_id'   => 13,
@@ -119,6 +134,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'mal servicio',
             ],
             [
                 'articulo_id'   => 14,
@@ -127,6 +143,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-09-10',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'pesimo servicio',
             ],
             [
                 'articulo_id'   => 15,
@@ -135,6 +152,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'producto bueno',
             ],
             [
                 'articulo_id'   => 16,
@@ -143,6 +161,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-01-01',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'producto mal',
             ],
             [
                 'articulo_id'   => 17,
@@ -151,6 +170,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-02-02',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'execelente articulo',
             ],
             [
                 'articulo_id'   => 18,
@@ -159,6 +179,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-03-10',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'recomendado',
             ],
             [
                 'articulo_id'   => 19,
@@ -167,6 +188,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-03-03',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'producto recomendado',
             ],
             [
                 'articulo_id'   => 20,
@@ -175,6 +197,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-04-18',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'producto mallicimo',
             ],
 
 
@@ -187,6 +210,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-05-17',
                 'califi'        =>10,
                 'tipo'        =>'negativo',
+                'titulo'        =>'producto bueno',
             ],
             [
                 'articulo_id'   => 12,
@@ -195,6 +219,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-06-16',
                 'califi'        =>2,
                 'tipo'        =>'negativo',
+                'titulo'        =>'producto pesimo',
             ],
             [
                 'articulo_id'   => 13,
@@ -203,6 +228,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-07-15',
                 'califi'        =>2,
                 'tipo'        =>'negativo',
+                'titulo'        =>'producto regular',
             ],
             [
                 'articulo_id'   => 14,
@@ -211,6 +237,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
                 'tipo'        =>'negativo',
+                'titulo'        =>'producto mal',
             ],
             [
                 'articulo_id'   => 15,
@@ -219,6 +246,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-17-15',
                 'califi'        =>4,
                 'tipo'        =>'negativo',
+                'titulo'        =>'producto mal',
             ],
             [
                 'articulo_id'   => 16,
@@ -227,6 +255,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-11-09',
                 'califi'        =>4,
                 'tipo'        =>'negativo',
+                'titulo'        =>'producto mal',
             ],
             [
                 'articulo_id'   => 17,
@@ -235,6 +264,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-06-15',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo excelente',
             ],
             [
                 'articulo_id'   => 18,
@@ -243,6 +273,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-11-12',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo excelente',
             ],
             [
                 'articulo_id'   => 19,
@@ -251,6 +282,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-17-16',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo excelente',
             ],
             [
                 'articulo_id'   => 20,
@@ -259,6 +291,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-11-18',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo excelente',
             ],
 
 
@@ -269,6 +302,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-10-10',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo excelente',
             ],
             [
                 'articulo_id'   => 2,
@@ -277,6 +311,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-01-19',
                 'califi'        =>2,
                 'tipo'        =>'negativo',
+                'titulo'        =>'pesimmo articulo',
             ],
             [
                 'articulo_id'   => 3,
@@ -285,6 +320,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'execelente articulo',
             ],
             [
                 'articulo_id'   => 4,
@@ -293,6 +329,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-09-10',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'execelente articulo',
             ],
             [
                 'articulo_id'   => 5,
@@ -301,6 +338,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'execelente articulo',
             ],
             [
                 'articulo_id'   => 6,
@@ -309,6 +347,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-01-01',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'regular articulo',
             ],
             [
                 'articulo_id'   => 7,
@@ -317,6 +356,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-02-02',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'producto regular',
             ],
             [
                 'articulo_id'   => 8,
@@ -325,6 +365,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-03-10',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'execelente articulo',
             ],
             [
                 'articulo_id'   => 9,
@@ -333,6 +374,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-03-03',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo regular',
             ],
             [
                 'articulo_id'   => 2,
@@ -341,6 +383,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-04-18',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'execelente articulo',
             ],
 
             [
@@ -350,6 +393,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-10-10',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'execelente articulo',
             ],
             [
                 'articulo_id'   => 5,
@@ -358,6 +402,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-01-19',
                 'califi'        =>2,
                 'tipo'        =>'negativo',
+                'titulo'        =>'es pesimo articulo',
             ],
             [
                 'articulo_id'   => 4,
@@ -366,6 +411,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'muy buen producto',
             ],
             [
                 'articulo_id'   => 3,
@@ -374,6 +420,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-09-10',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo al cien',
             ],
             [
                 'articulo_id'   => 2,
@@ -382,6 +429,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo al cien',
             ],
             [
                 'articulo_id'   => 7,
@@ -390,6 +438,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-01-01',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo regular',
             ],
             [
                 'articulo_id'   => 6,
@@ -398,6 +447,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-02-02',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo regular',
             ],
             [
                 'articulo_id'   => 8,
@@ -406,6 +456,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-03-10',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo al cien',
             ],
             [
                 'articulo_id'   => 10,
@@ -414,6 +465,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-03-03',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo regular',
             ],
             [
                 'articulo_id'   => 9,
@@ -422,6 +474,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-04-18',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo al cien',
             ],
 
 //-----------------------------------------------
@@ -432,6 +485,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-10-10',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo bueno',
             ],
             [
                 'articulo_id'   => 2,
@@ -440,6 +494,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-01-19',
                 'califi'        =>2,
                 'tipo'        =>'negativo',
+                'titulo'        =>'articulo pesimo',
             ],
             [
                 'articulo_id'   => 3,
@@ -448,6 +503,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo bueno',
             ],
             [
                 'articulo_id'   => 4,
@@ -456,6 +512,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-09-10',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'producto execelente',
             ],
             [
                 'articulo_id'   => 5,
@@ -464,6 +521,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo al cien',
             ],
             [
                 'articulo_id'   => 6,
@@ -472,6 +530,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-01-01',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo regular',
             ],
             [
                 'articulo_id'   => 7,
@@ -480,6 +539,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-02-02',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo regular',
             ],
             [
                 'articulo_id'   => 8,
@@ -488,6 +548,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-03-10',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo excelente',
             ],
             [
                 'articulo_id'   => 9,
@@ -496,6 +557,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-03-03',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'producto regular',
             ],
             [
                 'articulo_id'   => 10,
@@ -504,6 +566,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-04-18',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo execelente',
             ],
 
             [
@@ -513,6 +576,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-10-10',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'producto bueno',
             ],
             [
                 'articulo_id'   => 12,
@@ -521,6 +585,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-01-19',
                 'califi'        =>2,
                 'tipo'        =>'negativo',
+                'titulo'        =>'malisimo',
             ],
             [
                 'articulo_id'   => 13,
@@ -529,6 +594,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'execelente',
             ],
             [
                 'articulo_id'   => 14,
@@ -537,6 +603,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-09-10',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo excelente',
             ],
             [
                 'articulo_id'   => 15,
@@ -545,6 +612,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo bueno',
             ],
             [
                 'articulo_id'   => 16,
@@ -553,6 +621,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-01-01',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'producto regular',
             ],
             [
                 'articulo_id'   => 17,
@@ -561,6 +630,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-02-02',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'producto regular',
             ],
             [
                 'articulo_id'   => 18,
@@ -569,6 +639,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-03-10',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo execelente',
             ],
             [
                 'articulo_id'   => 19,
@@ -577,6 +648,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-03-03',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo regular',
             ],
             [
                 'articulo_id'   => 20,
@@ -585,6 +657,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-04-18',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo bueno',
             ],
 
 
@@ -597,6 +670,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-05-17',
                 'califi'        =>10,
                 'tipo'        =>'negativo',
+                'titulo'        =>'articulo excelente',
             ],
             [
                 'articulo_id'   => 12,
@@ -605,6 +679,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-06-16',
                 'califi'        =>2,
                 'tipo'        =>'negativo',
+                'titulo'        =>'articulo pesimo',
             ],
             [
                 'articulo_id'   => 13,
@@ -613,6 +688,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-07-15',
                 'califi'        =>2,
                 'tipo'        =>'negativo',
+                'titulo'        =>'producto muy malo',
             ],
             [
                 'articulo_id'   => 14,
@@ -621,6 +697,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
                 'tipo'        =>'negativo',
+                'titulo'        =>'articulo bueno',
             ],
             [
                 'articulo_id'   => 15,
@@ -629,6 +706,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-17-15',
                 'califi'        =>4,
                 'tipo'        =>'negativo',
+                'titulo'        =>'articulo no funcional',
             ],
             [
                 'articulo_id'   => 16,
@@ -637,6 +715,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-11-09',
                 'califi'        =>4,
                 'tipo'        =>'negativo',
+                'titulo'        =>'producto malo',
             ],
             [
                 'articulo_id'   => 17,
@@ -645,6 +724,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-06-15',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'producto regular',
             ],
             [
                 'articulo_id'   => 18,
@@ -653,6 +733,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-11-12',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'producto regular',
             ],
             [
                 'articulo_id'   => 19,
@@ -661,6 +742,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-17-16',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'producto excelente',
             ],
             [
                 'articulo_id'   => 20,
@@ -669,6 +751,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-11-18',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'producto normal',
             ],
 
 
@@ -679,6 +762,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-10-10',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo al cien',
             ],
             [
                 'articulo_id'   => 2,
@@ -687,6 +771,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-01-19',
                 'califi'        =>2,
                 'tipo'        =>'negativo',
+                'titulo'        =>'articulo malisimo',
             ],
             [
                 'articulo_id'   => 3,
@@ -695,6 +780,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'producto recomendado',
             ],
             [
                 'articulo_id'   => 4,
@@ -703,6 +789,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-09-10',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'excelente servicio',
             ],
             [
                 'articulo_id'   => 5,
@@ -711,6 +798,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'excelente producto',
             ],
             [
                 'articulo_id'   => 6,
@@ -719,6 +807,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-01-01',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'regular el producto',
             ],
             [
                 'articulo_id'   => 7,
@@ -727,6 +816,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-02-02',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'regular el articulo',
             ],
             [
                 'articulo_id'   => 8,
@@ -735,6 +825,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-03-10',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo execelente',
             ],
             [
                 'articulo_id'   => 9,
@@ -743,6 +834,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-03-03',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo regular',
             ],
             [
                 'articulo_id'   => 2,
@@ -751,6 +843,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-04-18',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo bueno',
             ],
 
             [
@@ -760,6 +853,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-10-10',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo bueno',
             ],
             [
                 'articulo_id'   => 5,
@@ -768,6 +862,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-01-19',
                 'califi'        =>2,
                 'tipo'        =>'negativo',
+                'titulo'        =>'articulo malisimo',
             ],
             [
                 'articulo_id'   => 4,
@@ -776,6 +871,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo muy bueno',
             ],
             [
                 'articulo_id'   => 3,
@@ -784,6 +880,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-09-10',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo muy bueno',
             ],
             [
                 'articulo_id'   => 2,
@@ -792,6 +889,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo muy bueno',
             ],
             [
                 'articulo_id'   => 7,
@@ -800,6 +898,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-01-01',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo regular',
             ],
             [
                 'articulo_id'   => 6,
@@ -808,6 +907,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-02-02',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'producto regular',
             ],
             [
                 'articulo_id'   => 8,
@@ -816,6 +916,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-03-10',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'producto muy bien',
             ],
             [
                 'articulo_id'   => 10,
@@ -824,6 +925,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-03-03',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo no muy bueno',
             ],
             [
                 'articulo_id'   => 9,
@@ -832,6 +934,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-04-18',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'producto buenisimo',
             ],
             
 
@@ -846,6 +949,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-10-10',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'execelente articulo',
             ],
             [
                 'articulo_id'   => 19,
@@ -854,6 +958,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-01-19',
                 'califi'        =>2,
                 'tipo'        =>'negativo',
+                'titulo'        =>'pesimo articulo',
             ],
             [
                 'articulo_id'   => 13,
@@ -862,6 +967,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'execelente articulo',
             ],
             [
                 'articulo_id'   => 15,
@@ -870,6 +976,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-09-10',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'execelente articulo',
             ],
             [
                 'articulo_id'   => 15,
@@ -878,6 +985,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'pesimo producto',
             ],
             [
                 'articulo_id'   => 16,
@@ -886,6 +994,8 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-01-01',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'producto regular',
+
             ],
             [
                 'articulo_id'   => 17,
@@ -894,6 +1004,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-02-02',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo regular',
             ],
             [
                 'articulo_id'   => 18,
@@ -902,6 +1013,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-03-10',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'execelente articulo',
             ],
             [
                 'articulo_id'   => 19,
@@ -910,6 +1022,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-03-03',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo regular',
             ],
             [
                 'articulo_id'   => 20,
@@ -918,6 +1031,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-04-18',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'execelente articulo',
             ],
 
             [
@@ -927,6 +1041,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-10-10',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'execelente articulo',
             ],
             [
                 'articulo_id'   => 20,
@@ -935,6 +1050,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-01-19',
                 'califi'        =>2,
                 'tipo'        =>'negativo',
+                'titulo'        =>'malisimo articulo',
             ],
             [
                 'articulo_id'   => 13,
@@ -943,6 +1059,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'execelente articulo',
             ],
             [
                 'articulo_id'   => 14,
@@ -951,6 +1068,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-09-10',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'execelente articulo',
             ],
             [
                 'articulo_id'   => 15,
@@ -959,6 +1077,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo muy bueno',
             ],
             [
                 'articulo_id'   => 16,
@@ -967,6 +1086,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-01-01',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo regular',
             ],
             [
                 'articulo_id'   => 17,
@@ -975,6 +1095,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-02-02',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo regular',
             ],
             [
                 'articulo_id'   => 18,
@@ -983,6 +1104,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-03-10',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'execelente articulo',
             ],
             [
                 'articulo_id'   => 19,
@@ -991,6 +1113,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-03-03',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'pruducto regular',
             ],
             [
                 'articulo_id'   => 20,
@@ -999,6 +1122,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-04-18',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'execelente articulo',
             ],
 
 
@@ -1011,6 +1135,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-05-17',
                 'califi'        =>10,
                 'tipo'        =>'negativo',
+                'titulo'        =>' producto no recomendado',
             ],
             [
                 'articulo_id'   => 2,
@@ -1019,6 +1144,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-06-16',
                 'califi'        =>2,
                 'tipo'        =>'negativo',
+                'titulo'        =>'producto malo',
             ],
             [
                 'articulo_id'   => 3,
@@ -1027,6 +1153,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-07-15',
                 'califi'        =>2,
                 'tipo'        =>'negativo',
+                'titulo'        =>'mal producto',
             ],
             [
                 'articulo_id'   => 14,
@@ -1035,6 +1162,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
                 'tipo'        =>'negativo',
+                'titulo'        =>'pesimo producto',
             ],
             [
                 'articulo_id'   => 15,
@@ -1043,6 +1171,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-17-15',
                 'califi'        =>4,
                 'tipo'        =>'negativo',
+                'titulo'        =>'pesimo articulo',
             ],
             [
                 'articulo_id'   => 16,
@@ -1051,6 +1180,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-11-09',
                 'califi'        =>4,
                 'tipo'        =>'negativo',
+                'titulo'        =>'pesimo articulo',
             ],
             [
                 'articulo_id'   => 17,
@@ -1059,6 +1189,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-06-15',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'producto regular',
             ],
             [
                 'articulo_id'   => 1,
@@ -1067,6 +1198,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-11-12',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'producto no tan funcional',
             ],
             [
                 'articulo_id'   => 1,
@@ -1075,6 +1207,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-17-16',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'buen producto',
             ],
             [
                 'articulo_id'   => 2,
@@ -1083,6 +1216,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-11-18',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'buen articulo',
             ],
 
 
@@ -1093,6 +1227,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-10-10',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'execelente producto',
             ],
             [
                 'articulo_id'   => 12,
@@ -1101,6 +1236,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-01-19',
                 'califi'        =>2,
                 'tipo'        =>'negativo',
+                'titulo'        =>'malismo articulo',
             ],
             [
                 'articulo_id'   => 13,
@@ -1109,6 +1245,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'execelente articulo',
             ],
             [
                 'articulo_id'   => 14,
@@ -1117,6 +1254,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-09-10',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'execelente articulo',
             ],
             [
                 'articulo_id'   => 15,
@@ -1125,6 +1263,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'execelente articulo',
             ],
             [
                 'articulo_id'   => 16,
@@ -1133,6 +1272,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-01-01',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'articulo regular',
             ],
             [
                 'articulo_id'   => 7,
@@ -1141,6 +1281,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-02-02',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'execelente articulo',
             ],
             [
                 'articulo_id'   => 7,
@@ -1149,6 +1290,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-03-10',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'execelente articulo',
             ],
             [
                 'articulo_id'   => 4,
@@ -1157,6 +1299,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-03-03',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'producto regular',
             ],
             [
                 'articulo_id'   => 3,
@@ -1165,6 +1308,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-04-18',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'execelente servicio',
             ],
 
             [
@@ -1174,6 +1318,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-10-10',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'producto muy bueno',
             ],
             [
                 'articulo_id'   => 3,
@@ -1182,6 +1327,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-01-19',
                 'califi'        =>2,
                 'tipo'        =>'negativo',
+                'titulo'        =>'execelente articulo',
             ],
             [
                 'articulo_id'   => 1,
@@ -1190,6 +1336,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'recomendado',
             ],
             [
                 'articulo_id'   => 2,
@@ -1198,6 +1345,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-09-10',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'execelente articulo',
             ],
             [
                 'articulo_id'   => 1,
@@ -1206,6 +1354,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'execelente articulo',
             ],
             [
                 'articulo_id'   => 8,
@@ -1214,6 +1363,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-01-01',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'muy buen producto',
             ],
             [
                 'articulo_id'   => 7,
@@ -1222,6 +1372,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-02-02',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'execelente articulo',
             ],
             [
                 'articulo_id'   => 6,
@@ -1230,6 +1381,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-03-10',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'execelente articulo',
             ],
             [
                 'articulo_id'   => 10,
@@ -1238,6 +1390,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-03-03',
                 'califi'        =>8,
                 'tipo'        =>'positivo',
+                'titulo'        =>'execelente pruducto',
             ],
             [
                 'articulo_id'   => 19,
@@ -1246,6 +1399,7 @@ class Opinion_artcsSeeder extends Seeder
                 'f_opinion'     =>'2022-04-18',
                 'califi'        =>10,
                 'tipo'        =>'positivo',
+                'titulo'        =>'execelente servicio',
             ],
 
 

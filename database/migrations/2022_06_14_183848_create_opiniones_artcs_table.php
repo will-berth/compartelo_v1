@@ -21,6 +21,7 @@ class CreateOpinionesArtcsTable extends Migration
             $table->datetime('f_opinion')->nullable(false);
             $table->integer('califi')->nullable(false);
             $table->string('tipo', 50)->nullable(false);
+            $table->string('titulo', 50)->nullable(false);
             $table->timestamps();
             $table->foreign('articulo_id')->references('id')->on('articulos')->onUpdate('cascade')
             ->onDelete('cascade');
