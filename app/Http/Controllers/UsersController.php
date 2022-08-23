@@ -35,7 +35,8 @@ class UsersController extends Controller
         $data['ine_reverso'] = $ine_reverso;
         $data['comprobante'] = $comprobante;
 
-        User::create($data);
+        $usuario = User::create($data);
+        $usuario ->notify(new ComparteloSoporte());
 
         return json_encode(['type' => 'success', 'title' => 'Exito', 'text' => 'Tu registro se realizó con exito, queda en espera de verificación de los datos proporcionados.']);
 
