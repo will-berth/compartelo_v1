@@ -8,14 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Opinione extends Model
 {
     use HasFactory;
-    public $table='users';
 
-    public function user(){
-        return $this->belongsTo(User::class);
-    }
     protected $fillable=[
+        'user_id',
         'opinion',
-        'status',
         'f_opinion',
+        'status',
+        'cali',
+        'tipo'
+        
     ];
 }

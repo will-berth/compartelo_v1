@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
-use App\Models\Articulo;
+use App\Models\Opinione;
 
 class User extends Authenticatable
 {
@@ -54,8 +54,6 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $hidden = [
-        'id',
-        'nombre',
         'f_nacimiento',
         'sexo',
         'telefono',
@@ -80,4 +78,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public function opiniones()
+    {
+        return $this->belongsTo(Opinione::class, 'user_id', 'id');
+    }
 }

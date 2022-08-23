@@ -10,6 +10,7 @@ use App\Models\DetalleCategoria;
 use App\Models\User;
 use App\Models\Periodo;
 use App\Models\Marca;
+use App\Models\Caracteristica;
 
 class Articulo extends Model
 {
@@ -41,5 +42,13 @@ class Articulo extends Model
     public function marcas()
     {
         return $this->belongsTo(Marca::class, 'marca_id', 'id');
+    }
+    public function caracteristicas()
+    {
+        return $this->hasMany(Caracteristica::class, 'articulo_id', 'id');
+    }
+    public function opionesArtc()
+    {
+        return $this->hasMany(OpinionArtc::class, 'articulo_id', 'id');
     }
 }
