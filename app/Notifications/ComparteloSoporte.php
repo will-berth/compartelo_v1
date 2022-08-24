@@ -11,14 +11,17 @@ class ComparteloSoporte extends Notification
 {
     use Queueable;
 
+    protected $password;
+    protected $tipo;
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(String $password, Int $tipo)
     {
-        //
+        $this->password = $password;
+        $this->tipo = $tipo;
     }
 
     /**
@@ -40,10 +43,22 @@ class ComparteloSoporte extends Notification
      */
     public function toMail($notifiable)
     {
-        return (new MailMessage)
-                    ->line('The introduction to the notification.')
-                    ->action('Notification Action', url('/'))
-                    ->line('Thank you for using our application!');
+        // 1-Reenviar verificación de correo, 2-Recuperar contraseña
+        switch($this->tipo){
+            case 1:
+                return (new MailMessage)
+                    ->line('Confirma tu correo para poder usar nuestra aplicación.')
+                    ->action('Verificar correo', url('/'))
+                    ->line('No responder a este correo');
+                break;
+            case 2:
+                return (new MailMessage)
+                    ->line('Se restablecio tu contraseña:')
+                    ->line('Tu nueva contraseña es: '.$this->password)
+                    ->line('No responder a este correo');
+                break;
+        }
+        
     }
 
     /**

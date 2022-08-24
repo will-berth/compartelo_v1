@@ -54,7 +54,7 @@ Route::get('/unverified-email', function () {
 Route::get('/unverified-account', function () {
     return view('unverified-account');
 });
-Route::get('/resetpass', function () {
+Route::get('/reset-password', function () {
     return view('resetpass');
 });
 
@@ -105,6 +105,8 @@ Route::put('updateCategorias/', [CategoriasController::class, 'update']);
 //api login
 Route::post('api/loginCliente', [LoginController::class, 'login']);
 Route::get('api/estadoVerificado', [LoginController::class, 'estadoVerificado']);
+Route::post('api/resendVerification', [LoginController::class, 'resendVerification']);
+Route::post('api/resetPassword', [LoginController::class, 'resetPassword']);
 // api registrar
 Route::post('api/registrar', [UsersController::class, 'store']);
 

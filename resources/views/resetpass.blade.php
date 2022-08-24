@@ -1,57 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="zxx">
 
 <head>
-    <title>Compártelo - Restaurar Contraseña</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-    <!-- Favicon icon {{ asset('assets/css/tabler.min.css') }} -->
-    <link rel="icon" href="{{ asset('assets/login/images/favin.ico') }}" type="image/x-icon">
-    <!-- fontawesome icon -->
-    <link rel="stylesheet" href="{{ asset('assets/login/fonts/fontawesome/css/fontawesome-all.min.css') }}">
-    <!-- animation css -->
-    <link rel="stylesheet" href="{{ asset('assets/login/plugins/animation/css/animate.min.css') }}">
-    <!-- vendor css -->
-    <link rel="stylesheet" href="{{ asset('assets/login/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/login/css/login.css') }}">
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+    <title>COMPARTRELO</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg" />
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('assets/css/login.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/general.css') }}">
+    <link href="{{ asset('assets/icofont/icofont.min.css') }}" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <div class="bg-comparte"></div>
-    <div class="auth-wrapper">
-        <div class="auth-content">
-            <!-- <div class="auth-bg">
-                <span class="r"></span>
-                <span class="r s"></span>
-                <span class="r s"></span>
-                <span class="r"></span>
-            </div> -->
-            <div class="card">
-                <div class="card-body text-center">
-                    <div class="mb-4">
-                        <i class="feather icon-mail auth-icon"></i>
-                    </div>
-                    <h3 class="mb-4 font-comparte-1">Restaurar Contraseña</h3>
-                    <div class="input-group mb-3">
-                        <input type="email" class="form-control" placeholder="Email">
-                    </div>
-                    <button class="btn btn-primary mb-4 shadow-2 btn-comparte-primary">Restaurar</button>
-                    <!-- <p class="mb-0 text-muted">Don’t have an account? <a href="auth-signup.html">Signup</a></p> -->
-                </div>
+  <div class="bg-comparte">
+    <img class="logo-img mt-2 ml-2" src="{{ asset('assets/img/logo_white.png') }}" alt="" srcset="">
+    <small class="titulo-logo">COMPARTELO</small>
+  </div>
+  <center>
+    <div class="empty card shadow-sm px-4">
+        <br>
+        <h4>Recuperar contraseña</h4>
+        <br>
+        <form id="resetPassword" action="">
+            <div class="d-flex justify-content-start">
+                <label for="">Correo electrónico</label>
             </div>
-        </div>
+            <input type="email" class="form-control" name="email" placeholder="Correo electrónico" required autocomplete="off" autofocus>
+            <br>
+            <button type="submit" class="mx-2 btn btn-info w-100 mb-3">Enviar contraseña</button>
+            <a href="/login" class="mx-2 btn btn-success w-100">Volver</a>
+            <br><br>
+        </form>
     </div>
-
-    <!-- Required Js -->
-<script src="{{ asset('assets/login/js/vendor-all.min.js') }}assets/js/vendor-all.min.js"></script>
-	<script src="{{ asset('assets/login/plugins/bootstrap/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('assets/login/js/pcoded.min.js') }}"></script>
-
+  </center>
+    <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/js/sweetalert2.all.min.js') }}"></script>
+    <script src="{{ asset('assets/js/respuestas.js') }}"></script>
+    <script src="{{ asset('assets/js/usuarios/crud-usuarios.js') }}"></script>
+    <script type="text/javascript">
+      $.ajaxSetup({
+          headers: {
+              'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+          }
+      });
+    </script>
 </body>
+
 </html>

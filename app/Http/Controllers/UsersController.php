@@ -39,7 +39,7 @@ class UsersController extends Controller
         $data['comprobante'] = $comprobante;
 
         $usuario = User::create($data);
-        $usuario ->notify(new ComparteloSoporte());
+        $usuario ->notify(new ComparteloSoporte('', 1));
 
         return json_encode(['type' => 'success', 'title' => 'Exito', 'text' => 'Tu registro se realizó con exito, queda en espera de verificación de los datos proporcionados.']);
 
