@@ -37,7 +37,7 @@ class UsersSeeder extends Seeder
                 'estado'        => 'Chiapas',
                 'n_exterior'    => 18,
                 'referencia'    => 'A una cuadra de la torre telcel',
-                'coordenadas'   => '17.299422856975255, -92.42626930226666',
+                'coordenadas'   => '17.299422856975255,-92.42626930226666',
                 
             ],
             [
@@ -61,7 +61,7 @@ class UsersSeeder extends Seeder
                 'estado'        => 'Chiapas',
                 'n_exterior'    => 12,
                 'referencia'    => 'Es en un porton negro',
-                'coordenadas'   => '16.915938331251244, -92.08975150664936',
+                'coordenadas'   => '16.915938331251244,-92.08975150664936',
                 
             ],
         ];

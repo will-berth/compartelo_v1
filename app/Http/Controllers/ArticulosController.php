@@ -6,12 +6,23 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Articulo;
 use App\Models\Marca;
+use App\Models\OpinionArtc;
+use App\Models\User;
 
 class ArticulosController extends Controller
 {
     public function __constructor()
     {
        $this->middleware('auth', ['except'  => ['serviceListArticles']]) ;
+    }
+    //return views
+    public function viewItemByCategory()
+    {
+        return view('itemByCategory');
+    }
+    public function viewItemDetails()
+    {
+        return view('itemDetails');
     }
     public function index()
     {
@@ -34,9 +45,13 @@ class ArticulosController extends Controller
         }
        return json_encode($articulos);
     }
-    public function viewItemByCategory()
+    public function itemDetails($clave)
     {
-        return view('itemByCategory');
+        $articulo = Articulo::with(['categorias', 'users', 'periodos', 'marcas', 'caracteristicas', 'opionesArtc'])->where('articulos.clave', $clave)->get();
+        $opiniones = User::with('opiniones')->join('opiniones', 'user_id', '=', 'users.id')
+                                            ->where([['opiniones.user_id', $articulo[0]->users->id], ['opiniones.tipo', 0]])
+                                            ->get();
+        return json_encode(['articulo' => $articulo, 'opiniones' => $opiniones]);
     }
     public function itemByCategory($categoria, $marca)
     {
@@ -61,6 +76,15 @@ class ArticulosController extends Controller
                         ->groupBy('marcas.id')
                         ->get();
         return json_encode(['articulos' => $itemByCategory, 'marcas' => $marcas]);
+    }
+    public function getOpiniones($clave, $tipo, $status){
+        $articulo = Articulo::where('clave', $clave)->get();
+        if($status == 5){
+            $opiniones = OpinionArtc::where([['articulo_id', $articulo[0]['id']], ['tipo', $tipo]])->orderBy('id')->limit($status)->get();
+        }else{
+            $opiniones = OpinionArtc::where([['articulo_id', $articulo[0]['id']], ['tipo', $tipo]])->orderBy('id')->get();
+        }
+        return json_encode($opiniones);
     }
     public function serviceListArticles(Request $request)
     {

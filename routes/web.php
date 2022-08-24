@@ -81,8 +81,7 @@ Route::post('getPeriodos/', [PeriodosController::class, 'index']);
 Route::post('updatePeriodos/', [PeriodosController::class, 'update']);
 //rutas categorias
 Route::post('addCategorias/', [CategoriasController::class, 'store']);
-Route::get('categoria/getCategorias/{filtro}', [CategoriasController::class, 'index'])->name('getCategorias');
-Route::get('getCategorias/{filtro}', [CategoriasController::class, 'index'])->name('getCategorias');
+Route::get('getCategorias/{filtro}', [CategoriasController::class, 'index']);
 Route::put('updateCategorias/', [CategoriasController::class, 'update']);
 
 //api login
@@ -93,5 +92,10 @@ Route::post('api/registrar', [UsersController::class, 'store']);
 
 //rutas publicas
 Route::get('getArticulos', [ArticulosController::class, 'index']);
+Route::get('itemDetails/{clave}', [ArticulosController::class, 'itemDetails']);
 Route::get('categoria/itemByCategory/{categoria}/{marca}', [ArticulosController::class, 'itemByCategory']);
+Route::get('getOpiniones/{clave}/{tipo}/{status}', [ArticulosController::class, 'getOpiniones']);
+
+//rutas publicas (retornas vistas)
 Route::get('categoria/{filtro}', [ArticulosController::class, 'viewItemByCategory']);
+Route::get('item-details/{clave}', [ArticulosController::class, 'viewItemDetails']);

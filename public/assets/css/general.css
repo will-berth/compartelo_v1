@@ -167,3 +167,52 @@ body{
 .active-category i{
     color: #fff !important;
 }
+.img-bottom{
+    border: solid 1px #757575 !important;
+}
+.details{
+    font-size: 13px;
+}
+.color-transparent{
+    background-color: transparent;
+}
+.card-danger{
+    width: 100%;
+    background-color: #e9889a;
+}
+.card-danger-light{
+    width: 100%;
+    background-color: #f398a9;
+}
+.card-warning{
+    width: 100%;
+    background-color: #fcdd79;
+}
+.card-warning-light{
+    width: 100%;
+    background-color: #f5e19f;
+}
+.card-success{
+    width: 100%;
+    background-color: #88e998;
+}
+.card-success-light{
+    width: 100%;
+    background-color: #41f05e;
+}
+.card-active{
+    border-radius: 50px;
+}
+.tab-item{
+    width: 33.3%;
+}
+.tab-item button{
+    background-color: transparent;
+}
+.tab-item button.active{
+    outline: none;
+    background-color: transparent !important;
+    color: #6777EF !important;
+    border-radius: 0;
+    border-bottom: 1px solid#6777EF !important;
+}

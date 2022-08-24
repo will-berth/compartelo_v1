@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Http\Requests\RegistrerUserRequest;
 use Illuminate\Support\Facades\Hash;
+use App\Notifications\ComparteloSoporte;
+use Illuminate\Support\Facades\Notification;
+
 
 class UsersController extends Controller
 {

@@ -19,7 +19,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-general border py-2 fixed-top">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
             <img src="{{ asset('assets/img/logo_white.png') }}" width="50" height="50" class="d-inline-block align-top"
                 alt="">
             <small class="titulo-logo">COMPARTELO</small>
@@ -87,8 +87,6 @@
     <br>
     <br>
     <br>
-    <br>
-    <br>
     <div class="container-fluid list-categorias" id="list-categorias">
         <br>
         <div class="row">
@@ -118,23 +116,6 @@
     </div>
     <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('assets/js/categorias/crud-categorias.js') }}"></script>
-    <script>
-        $(document).ready(function () {
-            getCategoriasPublic(0);
-        })
-    
-        function scrollRight() {
-            let valor = $('#list-categorias ul').scrollLeft();
-            $('#list-categorias ul').scrollLeft(valor + 500);
-        }
-    
-        function scrollAtras() {
-            let valor = $('#list-categorias ul').scrollLeft();
-            $('#list-categorias ul').scrollLeft(valor - 500);
-        }
-    
-    </script> 
     @yield('script')
 </body>
 

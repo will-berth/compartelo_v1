@@ -15,16 +15,15 @@ class CreateOpinionesTable extends Migration
     {
         Schema::create('opiniones', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('id_usuario')->unsigned();
-            $table->foreign('id_usuario')->references('id')->on('users')->onUpdate('cascade')
-            ->onDelete('cascade');
+            $table->bigInteger('user_id')->unsigned();
             $table->string('opinion',200)->nullable(false);
             $table->date('f_opinion')->nullable(false);
             $table->string('status')->nullable(false);
             $table->integer('cali')->nullable(false);
             $table->boolean('tipo', 50)->nullable(false);
-            
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')
+            ->onDelete('cascade');
         });
     }
 

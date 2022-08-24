@@ -34,7 +34,7 @@ $('#form-add-categorias').submit(function(e){
 function getCategorias(filtro){
     $.ajax({
         'type': 'GET',
-        'url': 'getCategorias/'+filtro,
+        'url': '/getCategorias/'+filtro,
         beforeSend: function(){
             $('#table-categorias tbody').html('<tr><td colspan="3"><div class="progress"><div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"><center><b class="h6">Cargando...</b></center></div></div></td></tr>');
         },
@@ -78,7 +78,7 @@ function getCategoriasPublic(filtro){
     }
     $.ajax({
         'type': 'GET',
-        'url': 'getCategorias/' + filtro,
+        'url': '/getCategorias/'+filtro,
         beforeSend: function(){
             $('#progress').removeClass('d-none');
         },
