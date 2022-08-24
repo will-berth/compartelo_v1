@@ -69,6 +69,24 @@ Route::group(['middleware' => 'guest:web2'], function () {
     });
 });
 
+Route::name('publicar')->group(function(){
+    Route::get('/categoria-select', function () {
+        return view('publicar.categoria');
+    });
+    Route::get('/publicar/descripcion', function () {
+        return view('publicar.descripcion');
+    });
+    Route::get('/publicar/status', function () {
+        return view('publicar.other-info');
+    });
+    Route::get('/publicar/imagenes', function () {
+        return view('publicar.imagenes');
+    });
+});
+Route::get('/publicar', function () {
+    return view('publicar');
+});
+
 
 Route::get('getDepositos', [DepositosController::class, 'index']);
 //rutas marcas
