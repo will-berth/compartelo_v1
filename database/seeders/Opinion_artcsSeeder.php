@@ -21,7 +21,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'recomiendo este producto',
                 'f_opinion'     =>'2022-10-10',
                 'califi'        =>10,
-                'tipo'          =>'positivo',
+                'tipo'          =>'positiva',
                 'titulo'        =>'excelente articulo',
             ],
             [
@@ -30,7 +30,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'si va rentar algo que este buen estado',
                 'f_opinion'     =>'2022-01-19',
                 'califi'        =>2,
-                'tipo'        =>'negativo',
+                'tipo'        =>'negativa',
                 'titulo'        =>'pesimo articulo',
             ],
             [
@@ -39,7 +39,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'execelente servicio',
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'execelente prodcuto',
             ],
             [
@@ -48,7 +48,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'muy bueno producto, siga asi, le doy un 10',
                 'f_opinion'     =>'2022-09-10',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'me gusta el articulo',
                 'titulo'        =>'execelente servicio',
             ],
@@ -58,7 +58,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'muy amable al negociar, execelente',
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'no me gusta el producto',
             ],
             [
@@ -67,7 +67,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'hay ulgunas cosas que no le funciona bien',
                 'f_opinion'     =>'2022-01-01',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'execelente producto',
             ],
             [
@@ -76,7 +76,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'optimo, rentenlo',
                 'f_opinion'     =>'2022-02-02',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'execelente producto',
             ],
             [
@@ -85,7 +85,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'recomendado, excelente para rentar',
                 'f_opinion'     =>'2022-03-10',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'producto mal',
             ],
             
@@ -95,7 +95,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'al querer utlizarlo, no funciona una de sus partes',
                 'f_opinion'     =>'2022-03-03',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'producto mal',
                 
             ],
@@ -105,7 +105,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'recomiendo este producto',
                 'f_opinion'     =>'2022-04-18',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'producto bueno',
             ],
 
@@ -115,7 +115,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'recomiendo este producto',
                 'f_opinion'     =>'2022-10-10',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'producto regular',
             ],
             [
@@ -124,7 +124,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'si va rentar algo que este buen estado',
                 'f_opinion'     =>'2022-01-19',
                 'califi'        =>2,
-                'tipo'        =>'negativo',
+                'tipo'        =>'negativa',
                 'titulo'        =>'producto bueno',
             ],
             [
@@ -133,7 +133,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'execelente servicio',
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'mal servicio',
             ],
             [
@@ -142,7 +142,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'muy bueno producto, siga asi, le doy un 10',
                 'f_opinion'     =>'2022-09-10',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'pesimo servicio',
             ],
             [
@@ -151,7 +151,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'muy amable al negociar, execelente',
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'producto bueno',
             ],
             [
@@ -160,7 +160,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'hay ulgunas cosas que no le funciona bien',
                 'f_opinion'     =>'2022-01-01',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'producto mal',
             ],
             [
@@ -169,7 +169,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'optimo, rentenlo',
                 'f_opinion'     =>'2022-02-02',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'execelente articulo',
             ],
             [
@@ -178,7 +178,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'recomendado, excelente para rentar',
                 'f_opinion'     =>'2022-03-10',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'recomendado',
             ],
             [
@@ -187,7 +187,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'al querer utlizarlo, no funciona una de sus partes',
                 'f_opinion'     =>'2022-03-03',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'producto recomendado',
             ],
             [
@@ -196,7 +196,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'recomiendo este producto',
                 'f_opinion'     =>'2022-04-18',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'producto mallicimo',
             ],
 
@@ -209,7 +209,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'muy util, y en muy buen estado',
                 'f_opinion'     =>'2022-05-17',
                 'califi'        =>10,
-                'tipo'        =>'negativo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'producto bueno',
             ],
             [
@@ -218,7 +218,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'no renten algo que no sirve',
                 'f_opinion'     =>'2022-06-16',
                 'califi'        =>2,
-                'tipo'        =>'negativo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'producto pesimo',
             ],
             [
@@ -227,7 +227,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'no jueguen con la gente, el producto no sirve',
                 'f_opinion'     =>'2022-07-15',
                 'califi'        =>2,
-                'tipo'        =>'negativo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'producto regular',
             ],
             [
@@ -236,7 +236,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'le falta una pedazo del tal parte',
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
-                'tipo'        =>'negativo',
+                'tipo'        =>'negativa',
                 'titulo'        =>'producto mal',
             ],
             [
@@ -245,7 +245,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'el producto esta muy acabado',
                 'f_opinion'     =>'2022-17-15',
                 'califi'        =>4,
-                'tipo'        =>'negativo',
+                'tipo'        =>'negativa',
                 'titulo'        =>'producto mal',
             ],
             [
@@ -254,7 +254,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'tiene muchos golpes',
                 'f_opinion'     =>'2022-11-09',
                 'califi'        =>4,
-                'tipo'        =>'negativo',
+                'tipo'        =>'negativa',
                 'titulo'        =>'producto mal',
             ],
             [
@@ -263,7 +263,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'funciona bien',
                 'f_opinion'     =>'2022-06-15',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo excelente',
             ],
             [
@@ -272,7 +272,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'algo acabado pero funcional',
                 'f_opinion'     =>'2022-11-12',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo excelente',
             ],
             [
@@ -281,7 +281,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'funciona bien',
                 'f_opinion'     =>'2022-17-16',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo excelente',
             ],
             [
@@ -290,7 +290,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'execelente',
                 'f_opinion'     =>'2022-11-18',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo excelente',
             ],
 
@@ -301,7 +301,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'recomiendo este producto',
                 'f_opinion'     =>'2022-10-10',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo excelente',
             ],
             [
@@ -310,7 +310,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'si va rentar algo que este buen estado',
                 'f_opinion'     =>'2022-01-19',
                 'califi'        =>2,
-                'tipo'        =>'negativo',
+                'tipo'        =>'negativa',
                 'titulo'        =>'pesimmo articulo',
             ],
             [
@@ -319,7 +319,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'execelente servicio',
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'execelente articulo',
             ],
             [
@@ -328,7 +328,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'muy bueno producto, siga asi, le doy un 10',
                 'f_opinion'     =>'2022-09-10',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'execelente articulo',
             ],
             [
@@ -337,7 +337,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'muy amable al negociar, execelente',
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'execelente articulo',
             ],
             [
@@ -346,7 +346,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'hay ulgunas cosas que no le funciona bien',
                 'f_opinion'     =>'2022-01-01',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'regular articulo',
             ],
             [
@@ -355,7 +355,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'optimo, rentenlo',
                 'f_opinion'     =>'2022-02-02',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'producto regular',
             ],
             [
@@ -364,7 +364,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'recomendado, excelente para rentar',
                 'f_opinion'     =>'2022-03-10',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'execelente articulo',
             ],
             [
@@ -373,7 +373,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'al querer utlizarlo, no funciona una de sus partes',
                 'f_opinion'     =>'2022-03-03',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo regular',
             ],
             [
@@ -382,7 +382,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'recomiendo este producto',
                 'f_opinion'     =>'2022-04-18',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'execelente articulo',
             ],
 
@@ -392,7 +392,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'fatal producto',
                 'f_opinion'     =>'2022-10-10',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'execelente articulo',
             ],
             [
@@ -401,7 +401,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'este buen estado',
                 'f_opinion'     =>'2022-01-19',
                 'califi'        =>2,
-                'tipo'        =>'negativo',
+                'tipo'        =>'negativa',
                 'titulo'        =>'es pesimo articulo',
             ],
             [
@@ -410,7 +410,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'buen servicio',
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'muy buen producto',
             ],
             [
@@ -419,7 +419,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'muy bueno producto 10',
                 'f_opinion'     =>'2022-09-10',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo al cien',
             ],
             [
@@ -428,7 +428,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'execelente',
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo al cien',
             ],
             [
@@ -437,7 +437,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'no le funciona bien',
                 'f_opinion'     =>'2022-01-01',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo regular',
             ],
             [
@@ -446,7 +446,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'optimo',
                 'f_opinion'     =>'2022-02-02',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo regular',
             ],
             [
@@ -455,7 +455,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'excelente',
                 'f_opinion'     =>'2022-03-10',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo al cien',
             ],
             [
@@ -464,7 +464,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>' no funciona una de sus partes',
                 'f_opinion'     =>'2022-03-03',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo regular',
             ],
             [
@@ -473,7 +473,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'recomiendo este producto',
                 'f_opinion'     =>'2022-04-18',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo al cien',
             ],
 
@@ -484,7 +484,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'recomiendo este producto',
                 'f_opinion'     =>'2022-10-10',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo bueno',
             ],
             [
@@ -493,7 +493,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'si va rentar algo que este buen estado',
                 'f_opinion'     =>'2022-01-19',
                 'califi'        =>2,
-                'tipo'        =>'negativo',
+                'tipo'        =>'negativa',
                 'titulo'        =>'articulo pesimo',
             ],
             [
@@ -502,7 +502,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'execelente servicio',
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo bueno',
             ],
             [
@@ -511,7 +511,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'muy bueno producto, siga asi, le doy un 10',
                 'f_opinion'     =>'2022-09-10',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'producto execelente',
             ],
             [
@@ -520,7 +520,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'muy amable al negociar, execelente',
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo al cien',
             ],
             [
@@ -529,7 +529,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'hay ulgunas cosas que no le funciona bien',
                 'f_opinion'     =>'2022-01-01',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo regular',
             ],
             [
@@ -538,7 +538,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'optimo, rentenlo',
                 'f_opinion'     =>'2022-02-02',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo regular',
             ],
             [
@@ -547,7 +547,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'recomendado, excelente para rentar',
                 'f_opinion'     =>'2022-03-10',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo excelente',
             ],
             [
@@ -556,7 +556,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'al querer utlizarlo, no funciona una de sus partes',
                 'f_opinion'     =>'2022-03-03',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'producto regular',
             ],
             [
@@ -565,7 +565,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'recomiendo este producto',
                 'f_opinion'     =>'2022-04-18',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo execelente',
             ],
 
@@ -575,7 +575,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'recomiendo este producto',
                 'f_opinion'     =>'2022-10-10',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'producto bueno',
             ],
             [
@@ -584,7 +584,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'si va rentar algo que este buen estado',
                 'f_opinion'     =>'2022-01-19',
                 'califi'        =>2,
-                'tipo'        =>'negativo',
+                'tipo'        =>'negativa',
                 'titulo'        =>'malisimo',
             ],
             [
@@ -593,7 +593,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'execelente servicio',
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'execelente',
             ],
             [
@@ -602,7 +602,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'muy bueno producto, siga asi, le doy un 10',
                 'f_opinion'     =>'2022-09-10',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo excelente',
             ],
             [
@@ -611,7 +611,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'muy amable al negociar, execelente',
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo bueno',
             ],
             [
@@ -620,7 +620,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'hay ulgunas cosas que no le funciona bien',
                 'f_opinion'     =>'2022-01-01',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'producto regular',
             ],
             [
@@ -629,7 +629,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'optimo, rentenlo',
                 'f_opinion'     =>'2022-02-02',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'producto regular',
             ],
             [
@@ -638,7 +638,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'recomendado, excelente para rentar',
                 'f_opinion'     =>'2022-03-10',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo execelente',
             ],
             [
@@ -647,7 +647,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'al querer utlizarlo, no funciona una de sus partes',
                 'f_opinion'     =>'2022-03-03',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo regular',
             ],
             [
@@ -656,7 +656,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'recomiendo este producto',
                 'f_opinion'     =>'2022-04-18',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo bueno',
             ],
 
@@ -669,7 +669,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'muy util, y en muy buen estado',
                 'f_opinion'     =>'2022-05-17',
                 'califi'        =>10,
-                'tipo'        =>'negativo',
+                'tipo'        =>'negativa',
                 'titulo'        =>'articulo excelente',
             ],
             [
@@ -678,7 +678,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'no renten algo que no sirve',
                 'f_opinion'     =>'2022-06-16',
                 'califi'        =>2,
-                'tipo'        =>'negativo',
+                'tipo'        =>'negativa',
                 'titulo'        =>'articulo pesimo',
             ],
             [
@@ -687,7 +687,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'no jueguen con la gente, el producto no sirve',
                 'f_opinion'     =>'2022-07-15',
                 'califi'        =>2,
-                'tipo'        =>'negativo',
+                'tipo'        =>'negativa',
                 'titulo'        =>'producto muy malo',
             ],
             [
@@ -696,7 +696,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'le falta una pedazo del tal parte',
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
-                'tipo'        =>'negativo',
+                'tipo'        =>'negativa',
                 'titulo'        =>'articulo bueno',
             ],
             [
@@ -705,7 +705,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'el producto esta muy acabado',
                 'f_opinion'     =>'2022-17-15',
                 'califi'        =>4,
-                'tipo'        =>'negativo',
+                'tipo'        =>'negativa',
                 'titulo'        =>'articulo no funcional',
             ],
             [
@@ -714,7 +714,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'tiene muchos golpes',
                 'f_opinion'     =>'2022-11-09',
                 'califi'        =>4,
-                'tipo'        =>'negativo',
+                'tipo'        =>'negativa',
                 'titulo'        =>'producto malo',
             ],
             [
@@ -723,7 +723,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'funciona bien',
                 'f_opinion'     =>'2022-06-15',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'producto regular',
             ],
             [
@@ -732,7 +732,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'algo acabado pero funcional',
                 'f_opinion'     =>'2022-11-12',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'producto regular',
             ],
             [
@@ -741,7 +741,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'funciona bien',
                 'f_opinion'     =>'2022-17-16',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'producto excelente',
             ],
             [
@@ -750,7 +750,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'execelente',
                 'f_opinion'     =>'2022-11-18',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'producto normal',
             ],
 
@@ -761,7 +761,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'recomiendo este producto',
                 'f_opinion'     =>'2022-10-10',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo al cien',
             ],
             [
@@ -770,7 +770,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'si va rentar algo que este buen estado',
                 'f_opinion'     =>'2022-01-19',
                 'califi'        =>2,
-                'tipo'        =>'negativo',
+                'tipo'        =>'negativa',
                 'titulo'        =>'articulo malisimo',
             ],
             [
@@ -779,7 +779,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'execelente servicio',
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'producto recomendado',
             ],
             [
@@ -788,7 +788,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'muy bueno producto, siga asi, le doy un 10',
                 'f_opinion'     =>'2022-09-10',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'excelente servicio',
             ],
             [
@@ -797,7 +797,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'muy amable al negociar, execelente',
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'excelente producto',
             ],
             [
@@ -806,7 +806,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'hay ulgunas cosas que no le funciona bien',
                 'f_opinion'     =>'2022-01-01',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'regular el producto',
             ],
             [
@@ -815,7 +815,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'optimo, rentenlo',
                 'f_opinion'     =>'2022-02-02',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'regular el articulo',
             ],
             [
@@ -824,7 +824,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'recomendado, excelente para rentar',
                 'f_opinion'     =>'2022-03-10',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo execelente',
             ],
             [
@@ -833,7 +833,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'al querer utlizarlo, no funciona una de sus partes',
                 'f_opinion'     =>'2022-03-03',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo regular',
             ],
             [
@@ -842,7 +842,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'recomiendo este producto',
                 'f_opinion'     =>'2022-04-18',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo bueno',
             ],
 
@@ -852,7 +852,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'fatal producto',
                 'f_opinion'     =>'2022-10-10',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo bueno',
             ],
             [
@@ -861,7 +861,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'este buen estado',
                 'f_opinion'     =>'2022-01-19',
                 'califi'        =>2,
-                'tipo'        =>'negativo',
+                'tipo'        =>'negativa',
                 'titulo'        =>'articulo malisimo',
             ],
             [
@@ -870,7 +870,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'buen servicio',
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo muy bueno',
             ],
             [
@@ -879,7 +879,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'muy bueno producto 10',
                 'f_opinion'     =>'2022-09-10',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo muy bueno',
             ],
             [
@@ -888,7 +888,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'execelente',
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo muy bueno',
             ],
             [
@@ -897,7 +897,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'no le funciona bien',
                 'f_opinion'     =>'2022-01-01',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo regular',
             ],
             [
@@ -906,7 +906,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'optimo',
                 'f_opinion'     =>'2022-02-02',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'producto regular',
             ],
             [
@@ -915,7 +915,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'excelente',
                 'f_opinion'     =>'2022-03-10',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'producto muy bien',
             ],
             [
@@ -924,7 +924,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>' no funciona una de sus partes',
                 'f_opinion'     =>'2022-03-03',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo no muy bueno',
             ],
             [
@@ -933,7 +933,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'recomiendo este producto',
                 'f_opinion'     =>'2022-04-18',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'producto buenisimo',
             ],
             
@@ -948,7 +948,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'recomiendo este producto',
                 'f_opinion'     =>'2022-10-10',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'execelente articulo',
             ],
             [
@@ -957,7 +957,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'si va rentar algo que este buen estado',
                 'f_opinion'     =>'2022-01-19',
                 'califi'        =>2,
-                'tipo'        =>'negativo',
+                'tipo'        =>'negativa',
                 'titulo'        =>'pesimo articulo',
             ],
             [
@@ -966,7 +966,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'execelente servicio',
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'execelente articulo',
             ],
             [
@@ -975,7 +975,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'muy bueno producto, siga asi, le doy un 10',
                 'f_opinion'     =>'2022-09-10',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'execelente articulo',
             ],
             [
@@ -984,7 +984,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'muy amable al negociar, execelente',
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'pesimo producto',
             ],
             [
@@ -993,7 +993,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'hay ulgunas cosas que no le funciona bien',
                 'f_opinion'     =>'2022-01-01',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'producto regular',
 
             ],
@@ -1003,7 +1003,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'optimo, rentenlo',
                 'f_opinion'     =>'2022-02-02',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo regular',
             ],
             [
@@ -1012,7 +1012,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'recomendado, excelente para rentar',
                 'f_opinion'     =>'2022-03-10',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'execelente articulo',
             ],
             [
@@ -1021,7 +1021,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'al querer utlizarlo, no funciona una de sus partes',
                 'f_opinion'     =>'2022-03-03',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo regular',
             ],
             [
@@ -1030,7 +1030,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'recomiendo este producto',
                 'f_opinion'     =>'2022-04-18',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'execelente articulo',
             ],
 
@@ -1040,7 +1040,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'recomiendo este producto',
                 'f_opinion'     =>'2022-10-10',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'execelente articulo',
             ],
             [
@@ -1049,7 +1049,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'si va rentar algo que este buen estado',
                 'f_opinion'     =>'2022-01-19',
                 'califi'        =>2,
-                'tipo'        =>'negativo',
+                'tipo'        =>'negativa',
                 'titulo'        =>'malisimo articulo',
             ],
             [
@@ -1058,7 +1058,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'execelente servicio',
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'execelente articulo',
             ],
             [
@@ -1067,7 +1067,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'muy bueno producto, siga asi, le doy un 10',
                 'f_opinion'     =>'2022-09-10',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'execelente articulo',
             ],
             [
@@ -1076,7 +1076,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'muy amable al negociar, execelente',
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo muy bueno',
             ],
             [
@@ -1085,7 +1085,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'hay ulgunas cosas que no le funciona bien',
                 'f_opinion'     =>'2022-01-01',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo regular',
             ],
             [
@@ -1094,7 +1094,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'optimo, rentenlo',
                 'f_opinion'     =>'2022-02-02',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo regular',
             ],
             [
@@ -1103,7 +1103,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'recomendado, excelente para rentar',
                 'f_opinion'     =>'2022-03-10',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'execelente articulo',
             ],
             [
@@ -1112,7 +1112,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'al querer utlizarlo, no funciona una de sus partes',
                 'f_opinion'     =>'2022-03-03',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'pruducto regular',
             ],
             [
@@ -1121,7 +1121,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'recomiendo este producto',
                 'f_opinion'     =>'2022-04-18',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'execelente articulo',
             ],
 
@@ -1134,7 +1134,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'muy util, y en muy buen estado',
                 'f_opinion'     =>'2022-05-17',
                 'califi'        =>10,
-                'tipo'        =>'negativo',
+                'tipo'        =>'negativa',
                 'titulo'        =>' producto no recomendado',
             ],
             [
@@ -1143,7 +1143,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'no renten algo que no sirve',
                 'f_opinion'     =>'2022-06-16',
                 'califi'        =>2,
-                'tipo'        =>'negativo',
+                'tipo'        =>'negativa',
                 'titulo'        =>'producto malo',
             ],
             [
@@ -1152,7 +1152,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'no jueguen con la gente, el producto no sirve',
                 'f_opinion'     =>'2022-07-15',
                 'califi'        =>2,
-                'tipo'        =>'negativo',
+                'tipo'        =>'negativa',
                 'titulo'        =>'mal producto',
             ],
             [
@@ -1161,7 +1161,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'le falta una pedazo del tal parte',
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
-                'tipo'        =>'negativo',
+                'tipo'        =>'negativa',
                 'titulo'        =>'pesimo producto',
             ],
             [
@@ -1170,7 +1170,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'el producto esta muy acabado',
                 'f_opinion'     =>'2022-17-15',
                 'califi'        =>4,
-                'tipo'        =>'negativo',
+                'tipo'        =>'negativa',
                 'titulo'        =>'pesimo articulo',
             ],
             [
@@ -1179,7 +1179,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'tiene muchos golpes',
                 'f_opinion'     =>'2022-11-09',
                 'califi'        =>4,
-                'tipo'        =>'negativo',
+                'tipo'        =>'negativa',
                 'titulo'        =>'pesimo articulo',
             ],
             [
@@ -1188,7 +1188,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'funciona bien',
                 'f_opinion'     =>'2022-06-15',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'producto regular',
             ],
             [
@@ -1197,7 +1197,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'algo acabado pero funcional',
                 'f_opinion'     =>'2022-11-12',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'producto no tan funcional',
             ],
             [
@@ -1206,7 +1206,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'funciona bien',
                 'f_opinion'     =>'2022-17-16',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'buen producto',
             ],
             [
@@ -1215,7 +1215,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'execelente',
                 'f_opinion'     =>'2022-11-18',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'buen articulo',
             ],
 
@@ -1226,7 +1226,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'recomiendo este producto',
                 'f_opinion'     =>'2022-10-10',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'execelente producto',
             ],
             [
@@ -1235,7 +1235,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'si va rentar algo que este buen estado',
                 'f_opinion'     =>'2022-01-19',
                 'califi'        =>2,
-                'tipo'        =>'negativo',
+                'tipo'        =>'negativa',
                 'titulo'        =>'malismo articulo',
             ],
             [
@@ -1244,7 +1244,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'execelente servicio',
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'execelente articulo',
             ],
             [
@@ -1253,7 +1253,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'muy bueno producto, siga asi, le doy un 10',
                 'f_opinion'     =>'2022-09-10',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'execelente articulo',
             ],
             [
@@ -1262,7 +1262,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'muy amable al negociar, execelente',
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'execelente articulo',
             ],
             [
@@ -1271,7 +1271,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'hay ulgunas cosas que no le funciona bien',
                 'f_opinion'     =>'2022-01-01',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'articulo regular',
             ],
             [
@@ -1280,7 +1280,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'optimo, rentenlo',
                 'f_opinion'     =>'2022-02-02',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'execelente articulo',
             ],
             [
@@ -1289,7 +1289,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'recomendado, excelente para rentar',
                 'f_opinion'     =>'2022-03-10',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'execelente articulo',
             ],
             [
@@ -1298,7 +1298,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'al querer utlizarlo, no funciona una de sus partes',
                 'f_opinion'     =>'2022-03-03',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'producto regular',
             ],
             [
@@ -1307,7 +1307,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'recomiendo este producto',
                 'f_opinion'     =>'2022-04-18',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'execelente servicio',
             ],
 
@@ -1317,7 +1317,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'fatal producto',
                 'f_opinion'     =>'2022-10-10',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'producto muy bueno',
             ],
             [
@@ -1326,7 +1326,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'este buen estado',
                 'f_opinion'     =>'2022-01-19',
                 'califi'        =>2,
-                'tipo'        =>'negativo',
+                'tipo'        =>'negativa',
                 'titulo'        =>'execelente articulo',
             ],
             [
@@ -1335,7 +1335,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'buen servicio',
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'recomendado',
             ],
             [
@@ -1344,7 +1344,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'muy bueno producto 10',
                 'f_opinion'     =>'2022-09-10',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'execelente articulo',
             ],
             [
@@ -1353,7 +1353,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'execelente',
                 'f_opinion'     =>'2022-10-19',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'execelente articulo',
             ],
             [
@@ -1362,7 +1362,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'no le funciona bien',
                 'f_opinion'     =>'2022-01-01',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'muy buen producto',
             ],
             [
@@ -1371,7 +1371,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'optimo',
                 'f_opinion'     =>'2022-02-02',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'execelente articulo',
             ],
             [
@@ -1380,7 +1380,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'excelente',
                 'f_opinion'     =>'2022-03-10',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'execelente articulo',
             ],
             [
@@ -1389,7 +1389,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>' no funciona una de sus partes',
                 'f_opinion'     =>'2022-03-03',
                 'califi'        =>8,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'execelente pruducto',
             ],
             [
@@ -1398,7 +1398,7 @@ class Opinion_artcsSeeder extends Seeder
                 'opinion'       =>'recomiendo este producto',
                 'f_opinion'     =>'2022-04-18',
                 'califi'        =>10,
-                'tipo'        =>'positivo',
+                'tipo'        =>'positiva',
                 'titulo'        =>'execelente servicio',
             ],
 

@@ -20,7 +20,7 @@ class OpinionSeeder extends Seeder
                 'id_usuario' =>1,
                 'opinion'    =>'buen negociante',
                 'f_opinion'  =>'2022-09-10',
-                'status'     =>'negativo',
+                'status'     =>'negativa',
                 'cali'       =>2,
                 'tipo'       =>0,
             ],
@@ -29,7 +29,7 @@ class OpinionSeeder extends Seeder
                 
                 'opinion'    =>'es un usuario malo',
                 'f_opinion'  =>'2022-09-10',
-                'status'     =>'negativo',
+                'status'     =>'negativa',
                 'cali'       =>2,
                 'tipo'       =>1,
             ],
@@ -38,7 +38,7 @@ class OpinionSeeder extends Seeder
                 
                 'opinion'    =>'persona responsable de entrega',
                 'f_opinion'  =>'2022-09-10',
-                'status'     =>'positivo',
+                'status'     =>'positiva',
                 'cali'       =>10,
                 'tipo'       =>1,
             ],
@@ -47,7 +47,7 @@ class OpinionSeeder extends Seeder
                 
                 'opinion'    =>'mala persona, no cumple',
                 'f_opinion'  =>'2022-09-02',
-                'status'     =>'negativo',
+                'status'     =>'negativa',
                 'cali'       =>2,
                 'tipo'       =>0,
             ],
@@ -56,7 +56,7 @@ class OpinionSeeder extends Seeder
                 
                 'opinion'    =>'responsable',
                 'f_opinion'  =>'2022-09-10',
-                'status'     =>'positivo',
+                'status'     =>'positiva',
                 'cali'       =>8,
                 'tipo'       =>1,
             ],
@@ -65,7 +65,7 @@ class OpinionSeeder extends Seeder
                 
                 'opinion'    =>'persona, que no cumple',
                 'f_opinion'  =>'2022-09-10',
-                'status'     =>'negativo',
+                'status'     =>'negativa',
                 'cali'       =>4,
                 'tipo'       =>0,
             ],
@@ -74,7 +74,7 @@ class OpinionSeeder extends Seeder
                 
                 'opinion'    =>'es un usuario malo',
                 'f_opinion'  =>'2022-09-10',
-                'status'     =>'negativo',
+                'status'     =>'negativa',
                 'cali'       =>4,
                 'tipo'       =>0,
             ],
@@ -83,7 +83,7 @@ class OpinionSeeder extends Seeder
                 
                 'opinion'    =>'recomiendo, le pongo 10',
                 'f_opinion'  =>'2022-09-10',
-                'status'     =>'positivo',
+                'status'     =>'positiva',
                 'cali'       => 8,
                 'tipo'       =>1,
             ],
@@ -92,7 +92,7 @@ class OpinionSeeder extends Seeder
                 
                 'opinion'    =>'excelente servicio',
                 'f_opinion'  =>'2022-09-10',
-                'status'     =>'positivo',
+                'status'     =>'positiva',
                 'cali'       =>10,
                 'tipo'       =>1,
             ],
@@ -101,7 +101,7 @@ class OpinionSeeder extends Seeder
                 
                 'opinion'    =>'es un usuario malo',
                 'f_opinion'  =>'2022-09-10',
-                'status'     =>'negativo',
+                'status'     =>'negativa',
                 'cali'       =>2,
                 'tipo'       =>1,
             ],
@@ -110,7 +110,7 @@ class OpinionSeeder extends Seeder
                 
                 'opinion'    =>'sus herramientas son malas',
                 'f_opinion'  =>'2022-09-10',
-                'status'     =>'negativo',
+                'status'     =>'negativa',
                 'cali'       =>4,
                 'tipo'       =>0,
             ],
@@ -119,7 +119,7 @@ class OpinionSeeder extends Seeder
                 
                 'opinion'    =>'no cumple',
                 'f_opinion'  =>'2022-08-10',
-                'status'     =>'negativo',
+                'status'     =>'negativa',
                 'cali'       =>4,
                 'tipo'       =>0,
             ],
@@ -129,7 +129,7 @@ class OpinionSeeder extends Seeder
                 
                 'opinion'    =>'responsable de entregar',
                 'f_opinion'  =>'2022-09-10',
-                'status'     =>'positivo',
+                'status'     =>'positiva',
                 'cali'       =>10,
                 'tipo'       =>1,
             ],
@@ -138,7 +138,7 @@ class OpinionSeeder extends Seeder
                 
                 'opinion'    =>'execelente',
                 'f_opinion'  =>'2022-09-10',
-                'status'     =>'positivo',
+                'status'     =>'positiva',
                 'cali'       =>8,
                 'tipo'       =>1,
             ],
@@ -147,7 +147,7 @@ class OpinionSeeder extends Seeder
                 
                 'opinion'    =>'no hace entrega de su material',
                 'f_opinion'  =>'2022-09-10',
-                'status'     =>'negativo',
+                'status'     =>'negativa',
                 'cali'       =>2,
                 'tipo'       =>0,
             ],
@@ -156,7 +156,7 @@ class OpinionSeeder extends Seeder
                 
                 'opinion'    =>'recomiendo esta persona',
                 'f_opinion'  =>'2022-09-10',
-                'status'     =>'positivo',
+                'status'     =>'positiva',
                 'cali'       =>10,
                 'tipo'       =>0,
             ],
@@ -165,7 +165,7 @@ class OpinionSeeder extends Seeder
                 
                 'opinion'    =>'es una persona de buenos principios',
                 'f_opinion'  =>'2022-09-12',
-                'status'     =>'positivo',
+                'status'     =>'positiva',
                 'cali'       =>10,
                 'tipo'       =>0,
             ],
@@ -175,7 +175,7 @@ class OpinionSeeder extends Seeder
                 
                 'opinion'    =>'entrega su material en tiempo y forma',
                 'f_opinion'  =>'2022-09-10',
-                'status'     =>'positivo',
+                'status'     =>'positiva',
                 'cali'       =>8,
                 'tipo'       =>1,
             ],
@@ -184,7 +184,7 @@ class OpinionSeeder extends Seeder
                 
                 'opinion'    =>'es un usuario malo',
                 'f_opinion'  =>'2022-09-10',
-                'status'     =>'negativo',
+                'status'     =>'negativa',
                 'cali'       =>4,
                 'tipo'       =>1,
             ],
@@ -193,7 +193,7 @@ class OpinionSeeder extends Seeder
                 
                 'opinion'    =>'es un usuario malo',
                 'f_opinion'  =>'2022-09-11',
-                'status'     =>'negativo',
+                'status'     =>'negativa',
                 'cali'       =>4,
                 'tipo'       =>0,
             ],
@@ -202,7 +202,7 @@ class OpinionSeeder extends Seeder
                 
                 'opinion'    =>'no es amable',
                 'f_opinion'  =>'2022-09-09',
-                'status'     =>'negativo',
+                'status'     =>'negativa',
                 'cali'       =>4,
                 'tipo'       =>1,
             ],
@@ -211,7 +211,7 @@ class OpinionSeeder extends Seeder
                 
                 'opinion'    =>'es un usuario malo',
                 'f_opinion'  =>'2022-09-10',
-                'status'     =>'positivo',
+                'status'     =>'positiva',
                 'cali'       =>10,
                 'tipo'       =>0,
             ],
@@ -220,7 +220,7 @@ class OpinionSeeder extends Seeder
                 
                 'opinion'    =>'no sabe negciar',
                 'f_opinion'  =>'2022-10-10',
-                'status'     =>'negativo',
+                'status'     =>'negativa',
                 'cali'       =>4,
                 'tipo'       =>0,
             ],
@@ -229,7 +229,7 @@ class OpinionSeeder extends Seeder
                 
                 'opinion'    =>'buen negociante',
                 'f_opinion'  =>'2022-08-10',
-                'status'     =>'positivo',
+                'status'     =>'positiva',
                 'cali'       =>10,
                 'tipo'       =>1,
             ],
