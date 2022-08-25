@@ -79,12 +79,19 @@ class ArticulosController extends Controller
     }
     public function getOpiniones($clave, $tipo, $status){
         $articulo = Articulo::where('clave', $clave)->get();
-        if($status == 5){
-            $opiniones = OpinionArtc::where([['articulo_id', $articulo[0]['id']], ['tipo', $tipo]])->orderBy('id')->limit($status)->get();
-        }else{
-            $opiniones = OpinionArtc::where([['articulo_id', $articulo[0]['id']], ['tipo', $tipo]])->orderBy('id')->get();
+        switch($status){
+            case 5:
+                $opiniones = OpinionArtc::where([['articulo_id', $articulo[0]['id']], ['tipo', $tipo]])->orderBy('id')->limit($status)->get();
+                break;
+            case 0:
+                $opiniones = OpinionArtc::where([['articulo_id', $articulo[0]['id']], ['tipo', $tipo]])->orderBy('id')->get();
+                break;
+            default:
+                $opiniones = OpinionArtc::where('articulo_id', $articulo[0]['id'])->orderBy('id')->get();
+                break;
         }
         return json_encode($opiniones);
+        
     }
     public function serviceListArticles(Request $request)
     {

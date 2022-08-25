@@ -3,7 +3,7 @@ function getArticulos(){
         'type': 'GET',
         'url': 'getArticulos',
         beforeSend: function(){
-
+            $('#populares').html('<div class="col-12 d-flex justify-content-center mt-5"><div class="lds-ripple"><div></div><div></div></div></div>')
         },
         success: function(response){
             var data = JSON.parse(response);
@@ -69,7 +69,7 @@ function getItemByCategory(categoria, marca){
         'type': 'GET',
         'url': 'itemByCategory/'+categoria+'/'+marca,
         beforeSend: function(){
-
+            $('#populares').html('<div class="col-12 d-flex justify-content-center mt-5"><div class="lds-ripple"><div></div><div></div></div></div>')
         },
         success: function(response){
             var data = JSON.parse(response);
@@ -154,7 +154,7 @@ function itemDetails(clave){
         'type': 'GET',
         'url': '/itemDetails/'+clave,
         beforeSend: function(){
-
+            $('#detalles').html('<div class="col-12 d-flex justify-content-center mt-5"><div class="lds-ripple"><div></div><div></div></div></div>')
         },
         success: function(response){
             var data = JSON.parse(response);
@@ -234,6 +234,7 @@ function itemDetails(clave){
             //debugger
             //calculo de opiniones
             $('#title-articulo').html('Opiniones sobre '+data.articulo[0].articulo);
+            $('#title-articulo2').html('Opiniones sobre '+data.articulo[0].articulo);
             let total_opiniones = data.articulo[0].opiones_artc.length;
             let total_cali = 0;
             let cinco = 0;
@@ -276,30 +277,51 @@ function itemDetails(clave){
             }
             $(".rate").rate(options);
             $('#calificacion').html(cali_final.toFixed(1));
+            $('#calificacion2').html(cali_final.toFixed(1));
             $('#total_opiniones2').html(total_opiniones);
+            $('#total_opiniones3').html(total_opiniones);
             $('#total_opiniones').html('('+total_opiniones+')');
-            $('#cinco').html(cinco);
             $('#progress-cinco').attr('aria-valuenow', porcen_cinco.toFixed(1));
             $('#progress-cinco').attr('style', 'width: '+porcen_cinco.toFixed(1)+'%;');
             $('#progress-cinco').html(porcen_cinco.toFixed(1)+'%');
+            $('#progress-cinco2').attr('aria-valuenow', porcen_cinco.toFixed(1));
+            $('#progress-cinco2').attr('style', 'width: '+porcen_cinco.toFixed(1)+'%;');
+            $('#progress-cinco2').html(porcen_cinco.toFixed(1)+'%');
             $('#progress-cuatro').attr('aria-valuenow', porcen_cuatro.toFixed(1));
             $('#progress-cuatro').attr('style', 'width: '+porcen_cuatro.toFixed(1)+'%;');
             $('#progress-cuatro').html(porcen_cuatro.toFixed(1)+'%');
+            $('#progress-cuatro2').attr('aria-valuenow', porcen_cuatro.toFixed(1));
+            $('#progress-cuatro2').attr('style', 'width: '+porcen_cuatro.toFixed(1)+'%;');
+            $('#progress-cuatro2').html(porcen_cuatro.toFixed(1)+'%');
             $('#progress-tres').attr('aria-valuenow', porcen_tres.toFixed(1));
             $('#progress-tres').attr('style', 'width: '+porcen_tres.toFixed(1)+'%;');
             $('#progress-tres').html(porcen_tres.toFixed(1)+'%');
+            $('#progress-tres2').attr('aria-valuenow', porcen_tres.toFixed(1));
+            $('#progress-tres2').attr('style', 'width: '+porcen_tres.toFixed(1)+'%;');
+            $('#progress-tres2').html(porcen_tres.toFixed(1)+'%');
             $('#progress-dos').attr('aria-valuenow', porcen_dos.toFixed(1));
             $('#progress-dos').attr('style', 'width: '+porcen_dos.toFixed(1)+'%;');
             $('#progress-dos').html(porcen_dos.toFixed(1)+'%');
+            $('#progress-dos2').attr('aria-valuenow', porcen_dos.toFixed(1));
+            $('#progress-dos2').attr('style', 'width: '+porcen_dos.toFixed(1)+'%;');
+            $('#progress-dos2').html(porcen_dos.toFixed(1)+'%');
             $('#progress-uno').attr('aria-valuenow', porcen_uno.toFixed(1));
             $('#progress-uno').attr('style', 'width: '+porcen_uno.toFixed(1)+'%;');
             $('#progress-uno').html(porcen_uno.toFixed(1)+'%');
+            $('#progress-uno2').attr('aria-valuenow', porcen_uno.toFixed(1));
+            $('#progress-uno2').attr('style', 'width: '+porcen_uno.toFixed(1)+'%;');
+            $('#progress-uno2').html(porcen_uno.toFixed(1)+'%');
 
-
+            $('#cinco').html(cinco);
+            $('#cinco2').html(cinco);
             $('#cuatro').html(cuatro);
+            $('#cuatro2').html(cuatro);
             $('#tres').html(tres);
+            $('#tres2').html(tres);
             $('#dos').html(dos);
+            $('#dos2').html(dos);
             $('#uno').html(uno);
+            $('#uno2').html(uno);
             //insertar opiniones
             var opiniones = '';
             var contador = 0;
@@ -355,7 +377,8 @@ function itemDetails(clave){
                 contador++;
             });
             $('#pills-todas').html(opiniones);
-            $('#pills-todas').append('<button class="btn btn-white text-primary">Ver todas las opiniones</button>');
+            $('#detalles').addClass('d-none');
+            $('#articles-detail').removeClass('d-none');
         }
     })
 }
@@ -367,7 +390,15 @@ function getOpiniones(tipo, status){
         'type': 'GET',
         'url': '/getOpiniones/'+clave+'/'+tipo+'/'+status,
         beforeSend: function(){
-
+            if(tipo == 'positivo'){
+                $('#pills-positivas').html('<div class="col-12 d-flex justify-content-center mt-5"><div class="lds-ripple"><div></div><div></div></div></div>');
+                $('#pills-positivas2').html('<div class="col-12 d-flex justify-content-center mt-5"><div class="lds-ripple"><div></div><div></div></div></div>');
+            }else if(tipo == 'negativo'){
+                $('#pills-negativas').html('<div class="col-12 d-flex justify-content-center mt-5"><div class="lds-ripple"><div></div><div></div></div></div>');
+                $('#pills-negativas2').html('<div class="col-12 d-flex justify-content-center mt-5"><div class="lds-ripple"><div></div><div></div></div></div>');
+            }else{
+                $('#pills-todas2').html('<div class="col-12 d-flex justify-content-center mt-5"><div class="lds-ripple"><div></div><div></div></div></div>');
+            }
         },
         success: function(response){
             var data = JSON.parse(response);
@@ -419,13 +450,29 @@ function getOpiniones(tipo, status){
                                     </div>
                                 </div>`;
             });
-            if(tipo == 'positivo'){
-                $('#pills-positivas').html(opiniones);
-                $('#pills-positivas').append('<button class="btn btn-white text-primary">Ver todas las opiniones</button>');
+            if(status == 5){
+                if(tipo == 'positivo'){
+                    $('#pills-positivas').html(opiniones);
+                }else{
+                    $('#pills-negativas').html(opiniones);
+                }
+            }else if(status == 0){
+                if(tipo == 'positivo'){
+                    $('#pills-positivas2').html(opiniones);
+                }else{
+                    $('#pills-negativas2').html(opiniones);
+                }
             }else{
-                $('#pills-negativas').html(opiniones);
-                $('#pills-negativas').append('<button class="btn btn-white text-primary">Ver todas las opiniones</button>');
+                $('#pills-todas2').html(opiniones);
             }
+            
         }
     })
+}
+function loadOpiniones(tipo, status){
+    let urlComplete = window.location;
+    let url = urlComplete.href.split('/');
+    let clave = url[4];
+    getOpiniones('todas', 'x');
+    $('#modal-opiniones').modal('show');
 }
