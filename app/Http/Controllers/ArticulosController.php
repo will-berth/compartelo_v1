@@ -15,15 +15,6 @@ class ArticulosController extends Controller
     {
        $this->middleware('auth', ['except'  => ['serviceListArticles']]) ;
     }
-    //return views
-    public function viewItemByCategory()
-    {
-        return view('itemByCategory');
-    }
-    public function viewItemDetails()
-    {
-        return view('itemDetails');
-    }
     public function viewSearchArticle()
     {
         return view('searchArticle');
@@ -77,22 +68,13 @@ class ArticulosController extends Controller
                                             ->get();
         return json_encode(['articulo' => $articulo, 'opiniones' => $opiniones]);
     }
-    public function itemByCategory($categoria, $marca)
+    public function itemByCategory($categoria)
     {
-        if($marca == 0){
-            $itemByCategory = Articulo::with(['categorias', 'users', 'periodos', 'marcas'])
+        $itemByCategory = Articulo::with(['categorias', 'users', 'periodos', 'marcas'])
                                     ->join('detalles_categorias', 'articulo_id', '=', 'articulos.id')
                                     ->join('categorias', 'categoria_id', '=', 'categorias.id')
                                     ->where('categorias.categoria', $categoria)
                                     ->get();
-        }else{
-            $itemByCategory = Articulo::with(['categorias', 'users', 'periodos', 'marcas'])
-                                    ->join('detalles_categorias', 'articulo_id', '=', 'articulos.id')
-                                    ->join('categorias', 'categoria_id', '=', 'categorias.id')
-                                    ->join('marcas', 'articulos.marca_id', 'marcas.id')
-                                    ->where([['categorias.categoria', $categoria], ['marcas.marca', $marca]])
-                                    ->get();
-        }
         $marcas = Marca::select('marcas.*')->join('articulos', 'marca_id', '=', 'marcas.id')
                         ->join('detalles_categorias', 'articulo_id', '=', 'articulos.id')
                         ->join('categorias', 'categoria_id', '=', 'categorias.id')
@@ -101,7 +83,24 @@ class ArticulosController extends Controller
                         ->get();
         return json_encode(['articulos' => $itemByCategory, 'marcas' => $marcas]);
     }
-    public function getOpiniones($clave, $tipo, $status){
+    public function itemByCategoryAndBrand($categoria, $marca)
+    {
+        $itemByCategory = Articulo::with(['categorias', 'users', 'periodos', 'marcas'])
+                                    ->join('detalles_categorias', 'articulo_id', '=', 'articulos.id')
+                                    ->join('categorias', 'categoria_id', '=', 'categorias.id')
+                                    ->join('marcas', 'articulos.marca_id', 'marcas.id')
+                                    ->where([['categorias.categoria', $categoria], ['marcas.marca', $marca]])
+                                    ->get();
+        $marcas = Marca::select('marcas.*')->join('articulos', 'marca_id', '=', 'marcas.id')
+                        ->join('detalles_categorias', 'articulo_id', '=', 'articulos.id')
+                        ->join('categorias', 'categoria_id', '=', 'categorias.id')
+                        ->where('categorias.categoria', $categoria)
+                        ->groupBy('marcas.id')
+                        ->get();
+        return json_encode(['articulos' => $itemByCategory, 'marcas' => $marcas]);
+    }
+    public function getOpiniones($clave, $tipo, $status)
+    {
         $articulo = Articulo::where('clave', $clave)->get();
         switch($status){
             case 5:

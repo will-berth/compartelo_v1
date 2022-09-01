@@ -97,14 +97,13 @@ function getCategoriasPublic(filtro){
             $.each(resp, function(index, valor){
                 if(link != 'categoria/'){
                     if(categoria.toLowerCase() == removeAccents(valor.categoria.toLowerCase())){
-                        clase = 'bg-primary active-category';
+                        clase = 'card-brand-active';
                     }else{
                         clase = '';
                     }
                 }
-
                 row += `<li class="nav-item mr-4 ${clase}">
-                            <a href="${link+removeAccents(valor.categoria)}" class="nav-link categorias">
+                            <a href="/categoria/${removeAccents(valor.categoria)}" class="nav-link categorias border">
                                 <center><i class="${valor.icono} text-general"></i></center>
                                 <small class="">${valor.categoria}</small>
                             </a>

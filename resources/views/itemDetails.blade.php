@@ -16,22 +16,22 @@
         <div class="row" id="itemDetails">
             <div class="col-1">
               <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                <button class="nav-link mb-3 active p-1 border-0 img-bottom" id="img1" data-toggle="pill" data-target="#tab-img1" type="button" role="tab" aria-controls="tab-img1" aria-selected="true">
+                <button class="nav-link mb-3 active p-1 border img-bottom" id="img1" data-toggle="pill" data-target="#tab-img1" type="button" role="tab" aria-controls="tab-img1" aria-selected="true">
                     <center>
                         <img src="" class="" alt="..." style="max-height:60px; min-height:60px; max-width:70px">
                     </center>
                 </button>
-                <button class="nav-link mb-3 p-1 border-0 img-bottom" id="img2" data-toggle="pill" data-target="#tab-img2" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                <button class="nav-link mb-3 p-1 border img-bottom" id="img2" data-toggle="pill" data-target="#tab-img2" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
                     <center>
                         <img src="" class="" alt="..." style="max-height:60px; min-height:60px; max-width:70px">
                     </center>
                 </button>
-                <button class="nav-link mb-3 p-1 border-0 img-bottom" id="img3" data-toggle="pill" data-target="#tab-img3" type="button" role="tab" aria-controls="tab-img3" aria-selected="false">
+                <button class="nav-link mb-3 p-1 border img-bottom" id="img3" data-toggle="pill" data-target="#tab-img3" type="button" role="tab" aria-controls="tab-img3" aria-selected="false">
                     <center>
                         <img src="" class="" alt="..." style="max-height:60px; min-height:60px; max-width:70px">
                     </center>
                 </button>
-                <button class="nav-link mb-3 p-1 border-0 img-bottom" id="img4" data-toggle="pill" data-target="#tab-img4" type="button" role="tab" aria-controls="tab-img4" aria-selected="false">
+                <button class="nav-link mb-3 p-1 border img-bottom" id="img4" data-toggle="pill" data-target="#tab-img4" type="button" role="tab" aria-controls="tab-img4" aria-selected="false">
                     <center>
                         <img src="" class="" alt="..." style="max-height:60px; min-height:60px; max-width:70px">
                     </center>

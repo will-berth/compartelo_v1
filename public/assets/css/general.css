@@ -114,6 +114,12 @@ body{
 .categorias{
     color: #9c9c9c;
 }
+.card-brand{
+    background-color: transparent;
+}
+.card-brand-active{
+    border: solid 1px #FF385C !important;
+}
 /* animacion hover a los iconos de las categorias */
 .nav a{
     position: relative;
@@ -161,14 +167,9 @@ body{
 .espacio{
     margin-left: 70px;
 }
-.active-category a{
-    color: #fff !important;
-}
-.active-category i{
-    color: #fff !important;
-}
-.img-bottom{
-    border: solid 1px #757575 !important;
+.flex-column .active{
+    background-color: transparent !important;
+    border: solid 1px #FF385C !important;
 }
 .details{
     font-size: 13px;

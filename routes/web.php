@@ -114,11 +114,17 @@ Route::post('api/registrar', [UsersController::class, 'store']);
 Route::get('getArticulos', [ArticulosController::class, 'index']);
 Route::get('searchArticle/{busqueda}/{marca}', [ArticulosController::class, 'searchArticle']);
 Route::get('itemDetails/{clave}', [ArticulosController::class, 'itemDetails']);
-Route::get('categoria/itemByCategory/{categoria}/{marca}', [ArticulosController::class, 'itemByCategory']);
+Route::get('categoria/itemByCategory/{categoria}', [ArticulosController::class, 'itemByCategory']);
+Route::get('itemByCategory/{categoria}/marca/{marca}', [ArticulosController::class, 'itemByCategoryAndBrand']);
 Route::get('getOpiniones/{clave}/{tipo}/{status}', [ArticulosController::class, 'getOpiniones']);
 
 //rutas publicas (retornas vistas)
-Route::get('categoria/{filtro}', [ArticulosController::class, 'viewItemByCategory']);
-Route::get('item-details/{clave}', [ArticulosController::class, 'viewItemDetails']);
-Route::get('search/{busqueda}', [ArticulosController::class, 'viewSearchArticle']);
-
+Route::get('categoria/{filtro}', function () {
+    return view('itemByCategory');
+});
+Route::get('categoria/{categoria}/marca/{marca}', function () {
+    return view('itemByCategoryAndBrand');
+});
+Route::get('item-details/{clave}', function () {
+    return view('itemDetails');
+});
