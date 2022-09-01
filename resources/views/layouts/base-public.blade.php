@@ -32,14 +32,17 @@
             <div class="row w-100">
                 <div class="col-md-8 xl-8">
                     <center>
-                        <div class="input-group mb-2 d-flex justify-content-center ml-4">
-                            <input type="search" class="input-buscar border shadow-sm" id="buscar" placeholder="Buscar artictulos, marcas y más"
-                                autocomplete="off">
-                            <div class="input-group-prepend">
-                                <button class="input-group-text icono-input"><i class="icofont-search"></i></button>
-                                
+                        <form id="form-search">
+                            <div class="input-group mb-2 d-flex justify-content-center ml-4">
+                                <input type="search" class="input-buscar border shadow-sm" name=buscar id="buscar" placeholder="Buscar artículos, marcas y más"
+                                    autocomplete="off">
+    
+                                <div class="input-group-prepend">
+                                    <button type="submit" class="input-group-text icono-input"><i class="icofont-search"></i></button>
+                                    
+                                </div>
                             </div>
-                        </div>
+                        </form>
                     </center>
                 </div>
                 <div class="col-md-4 xl-4">

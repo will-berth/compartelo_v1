@@ -112,6 +112,7 @@ Route::post('api/registrar', [UsersController::class, 'store']);
 
 //rutas publicas
 Route::get('getArticulos', [ArticulosController::class, 'index']);
+Route::get('searchArticle/{busqueda}/{marca}', [ArticulosController::class, 'searchArticle']);
 Route::get('itemDetails/{clave}', [ArticulosController::class, 'itemDetails']);
 Route::get('categoria/itemByCategory/{categoria}/{marca}', [ArticulosController::class, 'itemByCategory']);
 Route::get('getOpiniones/{clave}/{tipo}/{status}', [ArticulosController::class, 'getOpiniones']);
@@ -119,3 +120,5 @@ Route::get('getOpiniones/{clave}/{tipo}/{status}', [ArticulosController::class, 
 //rutas publicas (retornas vistas)
 Route::get('categoria/{filtro}', [ArticulosController::class, 'viewItemByCategory']);
 Route::get('item-details/{clave}', [ArticulosController::class, 'viewItemDetails']);
+Route::get('search/{busqueda}', [ArticulosController::class, 'viewSearchArticle']);
+

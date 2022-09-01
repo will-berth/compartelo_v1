@@ -24,6 +24,10 @@ class ArticulosController extends Controller
     {
         return view('itemDetails');
     }
+    public function viewSearchArticle()
+    {
+        return view('searchArticle');
+    }
     public function index()
     {
         $apiKey = 'AIzaSyB4CbJQ4DyUU8PBQA9wtm9IqClbF7dhOuo';
@@ -44,6 +48,26 @@ class ArticulosController extends Controller
             }
         }
        return json_encode($articulos);
+    }
+    public function searchArticle($articulo, $marca)
+    {
+        if($marca == 0){
+            $searchArticle = Articulo::with(['categorias', 'users', 'periodos', 'marcas'])
+                                    ->where('articulo', 'like', '%'.$articulo.'%')
+                                    ->get();
+        }else{
+            $searchArticle = Articulo::with(['categorias', 'users', 'periodos', 'marcas'])
+                                    ->join('detalles_categorias', 'articulo_id', '=', 'articulos.id')
+                                    ->join('categorias', 'categoria_id', '=', 'categorias.id')
+                                    ->join('marcas', 'articulos.marca_id', 'marcas.id')
+                                    ->where([['categorias.categoria', $articulo], ['marcas.marca', $marca]])
+                                    ->get();
+        }
+        $marcas = Marca::select('marcas.*')->join('articulos', 'marca_id', '=', 'marcas.id')
+                        ->where('articulo', 'like', '%'.$articulo.'%')
+                        ->groupBy('marcas.id')
+                        ->get();
+        return json_encode(['articulos' => $searchArticle, 'marcas' => $marcas]);
     }
     public function itemDetails($clave)
     {
