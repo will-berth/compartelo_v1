@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>COMPARTRELO</title>
+    <title>Publicar articulo</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg" />
@@ -93,42 +93,42 @@
     <div class="container">
         <div class="publicar-group">
             <div class="publicar-group-title mb-4">
-                <p>Paso 4 de 5</p>
-                <h3 class="fw-3 color-black23">Cuentanos un poco mas sobre tu artículo.</h3>
+                <p>Paso 5 de 6</p>
+                <h3 class="fw-3 color-black23">¿Cómo es tu artículo?</h3>
             </div>
-            <div class="form-card p-5">
-                <h4 class="fw-4 color-black23">Agrega un el costo y estado de tu articulo.</h4>
-                <p>Proporciona mas informacion al cliente.</p>
-                <form id="publicar-section-status" action="" class="w-100 mb-4">
+            <div class="form-card p-4">
+                <h4 class="fw-4 color-black23">Agrega las caracteristicas de tu articulo.</h4>
+                <p>Las caracteristicas son importantes para que conozcan mejor lo que deseas publicar.</p>
+                <form id="publicar-section-caracteristicas" action="" class="w-100 mb-4">
+                    <div id="f_nacimiento-alert" class="invalid-feedback text-left">
+                        Debe registrar por lo menos 3 caracteristicas.
+                    </div>
+                    <div class="form-row row-inputs-car">
+                        <div id="position-0" class="col-10 col-sm-10 col-lg-11 mt-2">
+                            <input id="input-0" name="input-0" type="text" class="form-control p-4" placeholder="Ej: Material polipropileno." required>
+                        </div>
+                        <div id="position-1" class="col-2 col-sm-2 col-lg-1 mt-2">
+                            <button type="button" id="1" class="btn p-2 button-1 h-100 w-100 remove-input-car"><i class="icofont-trash"></i></button>
+                        </div>
+                        <div id="position-2" class="col-10 col-sm-10 col-lg-11 mt-2">
+                            <input id="input-2" name="input-2" type="text" class="form-control p-4" placeholder="Ej: Tamaño estandar." required>
+
+                        </div>
+                        <div id="position-3" class="col-2 col-sm-2 col-lg-1 mt-2">
+                            <button type="button" id="3" class="btn p-2 button-1 h-100 w-100 remove-input-car"><i class="icofont-trash"></i></button>
+                        </div>
+                        <div id="position-4" class="col-10 col-sm-10 col-lg-11 mt-2">
+                            <input id="input-4" name="input-4" type="text" class="form-control p-4" placeholder="Ej: Resistente." required>
+                        </div>
+                        <div id="position-5" class="col-2 col-sm-2 col-lg-1 mt-2">
+                            <button type="button" id="5" class="btn p-2 button-1 h-100 w-100 remove-input-car"><i class="icofont-trash"></i></button>
+                        </div>
+                        
+                    </div>
                     <div class="form-row">
-                        <div class="col-sm-12 col-lg-4 mt-2">
-                            <label class="w-100 text-left" for="estado">Estado</label>
-                            <select id="estado" name="estado" class="form-control" required>
-                                <option value="">-- SELECCIONAR --</option>
-                                <option value="Nuevo">Nuevo</option>
-                                <option value="Seminuevo">Seminuevo</option>
-                                <option value="Usado">Usado</option>
-                            </select>
-                            <div id="estado-alert" class="invalid-feedback text-left">
-                                Debe seleccionar el estado en el que se encuentra su articulo.
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-lg-4 mt-2">
-                            <label class="w-100 text-left" for="periodo">Periodo</label>
-                            <select id="periodo" name="periodo" class="form-control" required>
-                                <option value="">-- SELECCIONAR --</option>
-                                <option value="Dia">Dia</option>
-                                <option value="Mensual">Mensual</option>
-                            </select>
-                            <div id="periodo-alert" class="invalid-feedback text-left">
-                                Debe seleccionar el periodo al cual dara su articulo.
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-lg-4 mt-2">
-                            <label class="w-100 text-left" for="costo">Costo</label>
-                            <input id="costo" name="costo" type="text" class="form-control" placeholder="Ej: 25.50" required>
-                            <div id="costo-alert" class="invalid-feedback text-left">
-                                Debe proporcionar un costo de su articulo.
+                        <div class="col-sm-12 col-lg-12 mt-2">
+                            <div id="nueva-caracteristica" class="card-categoria d-flex flex-column justify-content-center align-items-center h-100 w-100 category-inactive">
+                                <i class="icofont-ui-add"></i>
                             </div>
                         </div>
                         <div class="col-sm-12 col-lg-1 mt-2">

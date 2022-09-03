@@ -15,6 +15,23 @@
     background-color: #c92b48;
     color: #FFF;
 }
+.button-2{
+    color: #FF385C;
+}
+.button-2:hover{
+    background-color: #fbd1d9;
+    color: #FF385C;
+}
+.bg-comparte{
+    width: 100%;
+    height: 18rem;
+    /* background-color: #1DE2BE; */
+    /* background-color: #009393; */
+    background-color: #FF385C;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
 
 .form-card{
     background-color:#FFF;
@@ -22,6 +39,9 @@
     -webkit-box-shadow: -5px 4px 20px -5px rgba(0,0,0,0.43);
     -moz-box-shadow: -5px 4px 20px -5px rgba(0,0,0,0.43);
     border-radius: .3rem;
+}
+.form-card > img{
+    max-width: 22rem;
 }
 /* Categoria select */
 .card-categoria{

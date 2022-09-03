@@ -93,41 +93,14 @@
     <div class="container">
         <div class="publicar-group">
             <div class="publicar-group-title mb-4">
-                <p>Paso 2 de 5</p>
+                <p>Paso 2 de 6</p>
                 <h3 class="fw-3 color-black23">Conozcamos más acerca de tu artículo.</h3>
             </div>
-            <div class="form-card p-5">
+            <div class="form-card p-4">
                 <h4 class="fw-4 color-black23">Selecciona la(s) categoria(s) que pertenecen a tu producto.</h4>
                 <p>Selecciona solamente las categorias que tienen relación con tu artículo.</p>
                 <form id="publicar-section-categoria" action="" class="w-100 mb-4">
                     <div class="form-row">
-                        <!-- <div class="col-3 col-sm-3 col-md-3 col-lg-1 mt-2">
-                            <div class="card-categoria d-flex flex-column justify-content-center align-items-center h-100 w-100 category-inactive">
-                                <i class="icofont-recycling-man"></i>
-                                <p>Limpieza</p>
-                            </div>
-                        </div>
-                        <div class="col-3 col-sm-3 col-md-3 col-lg-1 mt-2">
-                            <div class="card-categoria d-flex flex-column justify-content-center align-items-center h-100 w-100 category-inactive">
-                                <i class="icofont-game-pad"></i>
-                                <p>Consolas</p>
-                            </div>
-                        </div>
-                        <div class="col-3 col-sm-3 col-md-3 col-lg-1 mt-2">
-                            <div class="card-categoria d-flex flex-column justify-content-center align-items-center h-100 w-100 category-inactive">
-                                <i class="icofont-bank"></i>
-                                <p>Coleccion</p>
-                            </div>
-                        </div>
-                        <div class="col-3 col-sm-3 col-md-3 col-lg-1 mt-2">
-                            <div class="card-categoria d-flex flex-column justify-content-center align-items-center h-100 w-100 category-inactive">
-                                <i class="icofont-guiter"></i>
-                                <p>Musica</p>
-                            </div>
-                        </div> -->
-                        <!-- <div class="col-sm-12 col-lg-1 mt-2">
-                            <button type="submit" class="btn p-2 bg-primary-com h-100 w-100">Avanzar</button>
-                        </div> -->
                     </div>
                 </form>
             </div>

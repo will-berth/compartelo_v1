@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use App\Models\Articulo;
+use App\Models\Caracteristica;
+use App\Models\DetalleCategoria;
 use App\Models\Marca;
 use App\Models\OpinionArtc;
 use App\Models\User;
@@ -150,6 +153,72 @@ class ArticulosController extends Controller
                 $articulos[$i]->duracion = $duracion;
             }
             return json_encode($articulos);
+        }
+    }
+
+    public function saveFile($request, $field, $tipo){
+        $imagen = $request->file($field);
+        $nombreimagen = $request->clave."-".$tipo.".".$imagen->guessExtension();
+        $ruta = public_path("assets/img/articulos/");
+
+        //$imagen->move($ruta,$nombreimagen);
+        $status = copy($imagen->getRealPath(),$ruta.$nombreimagen);
+        return $nombreimagen;
+    }
+
+    public function prepareUpset($articuloId, $separator, $dataStr, $field1, $field2)
+    {
+        $arrayData = explode($separator, $dataStr);
+        $upset = [];
+        for($i = 0; $i < count($arrayData); $i++){
+            $upset[] = [$field1 => $arrayData[$i], $field2 => $articuloId];
+        }
+        return $upset;
+    }
+
+    public function publicar(){
+        return view('publicar');
+    }
+
+    public function publicarOtherViews($step)
+    {
+        $root = 'publicar.';
+        $returnView = $root.$step;
+        return view($returnView);
+    }
+
+    public function store(Request $request)
+    {
+        try{
+            $claveReturn = $request['clave'];
+            $data = $request->all();
+            DB::transaction(function() use ($request, $data){
+                $img1 = $this->saveFile($request, "img1", "img1");
+                $img2 = $this->saveFile($request, "img2", "img2");
+                $img3 = $this->saveFile($request, "img3", "img3");
+                $img4 = $this->saveFile($request, "img4", "img4");
+                $data['img1'] = $img1;
+                $data['img2'] = $img2;
+                $data['img3'] = $img3;
+                $data['img4'] = $img4;
+                // $userId = Auth::id();
+                // $data['user_id'] = $userId;
+    
+                $res = Articulo::create($data);
+                $articuloId = $res['id'];
+               
+                $queryCaracteristicas = $this->prepareUpset($articuloId, '&/', $data['caracteristicas'], 'desc', 'articulo_id');
+                Caracteristica::upsert($queryCaracteristicas, ['articulo_id'], ['desc']);
+        
+                $queryCategorias = $this->prepareUpset($articuloId, ',', $data['categorias'], 'categoria_id', 'articulo_id');
+                DetalleCategoria::upsert($queryCategorias, ['categoria_id'], ['articulo_id']);
+            });
+            return json_encode(['type' => 'success', 
+            'title' => 'Exito', 
+            'text' => 'Tu artículo ha sido publicado exitsamente.',
+            'clave' => $claveReturn]);
+        }catch(Exception $e){
+            return json_encode(['type' => 'error', 'title' => 'Error', 'text' => 'Hubieron problemas al registrar tu artículo. Intenta nuevamente.']);
         }
     }
 }

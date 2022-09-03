@@ -93,18 +93,54 @@
     <div class="container">
         <div class="publicar-group">
             <div class="publicar-group-title mb-4">
-                <p>Paso 3 de 6</p>
+                <p>Paso 4 de 6</p>
                 <h3 class="fw-3 color-black23">Cuentanos un poco mas sobre tu artículo.</h3>
             </div>
             <div class="form-card p-5">
-                <h4 class="fw-4 color-black23">Agrega una descripcion sobre artículo que quieres publicar.</h4>
-                <p>La descripcion debe indicar detalles sobre tu articulo.</p>
-                <form id="publicar-section-desc" action="" class="w-100 mb-4">
+                <h4 class="fw-4 color-black23">Agrega un el costo y estado de tu articulo.</h4>
+                <p>Proporciona mas informacion al cliente.</p>
+                <form id="publicar-section-status" action="" class="w-100 mb-4" novalidate>
                     <div class="form-row">
-                        <div class="col-sm-12 col-lg-12 mt-2">
-                            <textarea id="desc" name="desc" row="5" class="form-control" placeholder="Ej: Taladro de impacto, destornillador eléctrico, con 25 + 3 posiciones de embrague ajustables, modo de trabajo tres en uno (destornillador, taladro eléctrico y martillo). 30 N.m de torque pueden proporcionar potencia de taladro percutor. La baja velocidad (0-600 RPM) proporciona un control preciso para perforar metales blandos, paredes, ladrillos duros y trabajos de jardinería. La velocidad más alta (0-1500 rpm) para apretar o aflojar tornillos o perforar agujeros." required></textarea>
-                            <div id="f_nacimiento-alert" class="invalid-feedback text-left">
-                                Debe registrar su fecha de nacimiento.
+                        <div class="col-sm-12 col-lg-6 mt-2">
+                            <label class="w-100 text-left" for="estado">Estado</label>
+                            <select id="estado" name="estado" class="form-control" required>
+                                <option value="">-- SELECCIONAR --</option>
+                                <option value="Nuevo">Nuevo</option>
+                                <option value="Seminuevo">Seminuevo</option>
+                                <option value="Usado">Usado</option>
+                            </select>
+                            <div id="estado-alert" class="invalid-feedback text-left">
+                                Debe seleccionar el estado en el que se encuentra su articulo.
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-6 mt-2">
+                            <label class="w-100 text-left" for="periodo">Periodo</label>
+                            <select id="periodo" name="periodo" class="form-control" required>
+                                <option value="">-- SELECCIONAR --</option>
+                                <option value="1">Hora</option>
+                                <option value="2">Dia</option>
+                                <option value="3">Semana</option>
+                                <option value="4">Mes</option>
+                                <option value="5">Año</option>
+                            </select>
+                            <div id="periodo-alert" class="invalid-feedback text-left">
+                                Debe seleccionar el periodo al cual dara su articulo.
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-6 mt-2">
+                            <label class="w-100 text-left" for="precio">Precio</label>
+                            <input id="precio" name="precio" type="number" class="form-control" placeholder="Ej: 25.50" required>
+                            <div id="precio-alert" class="invalid-feedback text-left">
+                                Debe proporcionar un precio de su articulo.
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-6 mt-2">
+                            <label class="w-100 text-left" for="marca">Marca</label>
+                            <select id="marca" name="marca" class="form-control" required>
+                                <option value="">-- SELECCIONAR --</option>
+                            </select>
+                            <div id="marca-alert" class="invalid-feedback text-left">
+                                Debe seleccionar una marca.
                             </div>
                         </div>
                         <div class="col-sm-12 col-lg-1 mt-2">

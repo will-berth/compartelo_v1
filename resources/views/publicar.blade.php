@@ -73,6 +73,7 @@
                                 @else
                                     <a class="dropdown-item" href="registrar">Regístrate</a>
                                     <a class="dropdown-item" href="login">Iniciar sesión</a>
+                                    <a class="dropdown-item" href="publicar">Publicar</a>
                                 @endauth
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#">Terminos y condiciones</a>
@@ -93,7 +94,7 @@
     <div class="container">
         <div class="publicar-group">
             <div class="publicar-group-title mb-4">
-                <p>Paso 1 de 5</p>
+                <p>Paso 1 de 6</p>
                 <h3 class="fw-3 color-black23">Comencemos a publicar tu artículo.</h3>
             </div>
             <div class="form-card p-5">

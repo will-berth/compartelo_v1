@@ -4,6 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <title>COMPARTRELO</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -95,13 +96,13 @@
     <div class="container">
         <div class="publicar-group">
             <div class="publicar-group-title mb-4">
-                <p>Paso 5 de 5</p>
+                <p>Paso 6 de 6</p>
                 <h3 class="fw-3 color-black23">Finalmente, muestranos tu artíulo.</h3>
             </div>
             <div class="form-card p-5">
                 <h4 class="fw-4 color-black23">Agrega fotografias del articulo.</h4>
-                <p>Puedes proporcionar un máximo de 4 imagenes o mínimo 1 si así lo deseas.</p>
-                <form id="publicar-nombre" action="" class="w-100 mb-4">
+                <p>Puedes proporcionar un máximo de 4 imagenes.</p>
+                <form id="publicar-section-imagenes" action="" class="w-100 mb-4" enctype="multipart/form-data">
                     <div class="form-row">
                         <div class="col-sm-12 col-lg-6 mt-2">
                             <input id="img1" name="img1" type="file" class="form-control-file" required>
@@ -115,7 +116,25 @@
                         <div class="col-sm-12 col-lg-6 mt-2">
                             <input id="img4" name="img4" type="file" class="form-control-file" required>
                         </div>
-                        <div class="col-sm-12 col-lg-1 mt-2">
+                        <div id="resumen-view" class="col-12 col-sm-12 col-lg-6 mt-5">
+                            <h5 class="fw-4 color-black23">Resumen del artículo.</h5>
+                            <h6 class="fw-4 color-black23">Articulo:</h6>
+                            <p id="resumen-articulo" class="fw-5">---</p>
+                            <h6 class="fw-4 color-black23">Descripción:</h6>
+                            <p id="resumen-desc" class="fw-5">---</p>
+                            <h6 class="fw-4 color-black23">Marca:</h6>
+                            <p id="resumen-marca" class="fw-5">---</p>
+                            <h6 class="fw-4 color-black23">Caracteristicas:</h6>
+                            <ol id="resumen-caracteristicas" class="pl-0">
+                                ---
+                            </ol>
+                            <h6 class="fw-4 color-black23">Estado:</h6>
+                            <p id="resumen-estado" class="fw-5">---</p>
+                            <h6 class="fw-4 color-black23">Renta:</h6>
+                            <p id="resumen-renta" class="fw-5">---</p>
+                        </div>
+                        <div class="col-12"></div>
+                        <div class="col-sm-12 col-lg-1 mt-4">
                             <button type="submit" class="btn p-2 button-1 h-100 w-100">Finalizar</button>
                         </div>
                     </div>
@@ -125,7 +144,7 @@
     </div>
     <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
-
+    <script src="{{ asset('assets/js/sweetalert2.all.min.js') }}"></script>
     <script src="{{ asset('assets/js/filepond/jquery.js') }}"></script>
     <script src="{{ asset('assets/js/filepond/filepond.min.js') }}"></script>
     <script src="{{ asset('assets/js/filepond/filepond.jquery.js') }}"></script>

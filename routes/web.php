@@ -69,23 +69,9 @@ Route::group(['middleware' => 'guest:web2'], function () {
     });
 });
 
-Route::name('publicar')->group(function(){
-    Route::get('/categoria-select', function () {
-        return view('publicar.categoria');
-    });
-    Route::get('/publicar/descripcion', function () {
-        return view('publicar.descripcion');
-    });
-    Route::get('/publicar/status', function () {
-        return view('publicar.other-info');
-    });
-    Route::get('/publicar/imagenes', function () {
-        return view('publicar.imagenes');
-    });
-});
-Route::get('/publicar', function () {
-    return view('publicar');
-});
+
+Route::get('/publicar', [ArticulosController::class, 'publicar']);
+Route::get('/publicar/{step}', [ArticulosController::class, 'publicarOtherViews']);
 
 
 Route::get('getDepositos', [DepositosController::class, 'index']);
@@ -112,6 +98,7 @@ Route::post('api/registrar', [UsersController::class, 'store']);
 
 //rutas publicas
 Route::get('getArticulos', [ArticulosController::class, 'index']);
+Route::post('addArticulos', [ArticulosController::class, 'store']);
 Route::get('searchArticle/{busqueda}/{marca}', [ArticulosController::class, 'searchArticle']);
 Route::get('itemDetails/{clave}', [ArticulosController::class, 'itemDetails']);
 Route::get('categoria/itemByCategory/{categoria}', [ArticulosController::class, 'itemByCategory']);

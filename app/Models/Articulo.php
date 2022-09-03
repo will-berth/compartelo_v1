@@ -19,6 +19,10 @@ class Articulo extends Model
     public $table = 'articulos';
     
     protected $fillable = [
+        'user_id',
+        'periodo_id',
+        'marca_id',
+        'clave',
         'articulo',
         'desc',
         'precio',
