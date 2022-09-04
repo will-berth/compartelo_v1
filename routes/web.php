@@ -24,6 +24,12 @@ use App\Http\Controllers\ArticulosController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/masPopulares', function () {
+    return view('masPopulares');
+});
+Route::get('/ofertasArticulos', function () {
+    return view('ofertasArticulos');
+});
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
