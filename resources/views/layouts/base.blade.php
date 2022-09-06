@@ -307,6 +307,7 @@
   <script src="{{ asset('assets/js/marcas/crud-marcas.js') }}"></script>
   <script src="{{ asset('assets/js/categorias/crud-categorias.js') }}"></script>
   <script src="{{ asset('assets/js/depositos/crud-depositos.js') }}"></script>
+  <script src="{{ asset('assets/js/usuarios/crud-usuarios.js') }}"></script>
 
   <script type="text/javascript">
     $.ajaxSetup({

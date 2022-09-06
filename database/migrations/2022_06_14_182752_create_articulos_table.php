@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use League\CommonMark\Extension\Table\Table;
 
 class CreateArticulosTable extends Migration
 {
@@ -22,6 +23,8 @@ class CreateArticulosTable extends Migration
             $table->string('articulo',50)->nullable(false);
             $table->string('desc',50)->nullable(false);
             $table->double('precio')->nullable(false);
+            $table->boolean('esta_rentada')->nullable(false)->default(false);
+            $table->boolean('activo')->nullable(false)->default(true);
             $table->string('img1',100)->nullable(false);
             $table->string('img2',100)->nullable(false);
             $table->string('img3',100)->nullable(false);

@@ -50,6 +50,7 @@ class ArticulosSeeder extends Seeder
                 'clave'         =>'pala-plom-trup',
                 'articulo'      => 'Pala',
                 'precio'        => 150,
+               
                 'img1'          => 'pala1.jpg',
                 'img2'          => 'pala2.jpg',
                 'img3'          => 'pala3.jpg',

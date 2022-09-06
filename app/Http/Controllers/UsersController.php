@@ -44,4 +44,14 @@ class UsersController extends Controller
         return json_encode(['type' => 'success', 'title' => 'Exito', 'text' => 'Tu registro se realizó con exito, queda en espera de verificación de los datos proporcionados.']);
 
     }
+
+    public function index($filtro){
+        if ($filtro == 0){
+            $usuarios = User::all();
+            return json_encode($usuarios);
+        }else{
+            $usuarios = User::where('nombre', 'sexo','usuario', 'email', 'email_verif', 'like', '%'.$filtro.'%')->get();
+            return json_encode($usuarios);
+        }
+    }
 }

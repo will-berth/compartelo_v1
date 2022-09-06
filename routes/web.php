@@ -64,6 +64,11 @@ Route::get('/reset-password', function () {
     return view('resetpass');
 });
 
+Route::get('/usuarios', function () {
+    return view('usuarios');
+});
+
+
 //Agrupación de rutas para redireccionar a los usuarios logeados
 Route::group(['middleware' => 'guest:web2'], function () {
     Route::get('/login', function () {
@@ -93,6 +98,11 @@ Route::post('updatePeriodos/', [PeriodosController::class, 'update']);
 Route::post('addCategorias/', [CategoriasController::class, 'store']);
 Route::get('getCategorias/{filtro}', [CategoriasController::class, 'index']);
 Route::put('updateCategorias/', [CategoriasController::class, 'update']);
+
+//rutas usuario
+
+Route::get('getUsuarios/{filtro}', [UsersController::class, 'index']);
+Route::post('addUsuarios/', [UsersController::class, 'store']);
 
 //api login
 Route::post('api/loginCliente', [LoginController::class, 'login']);
