@@ -106,8 +106,9 @@
                             <select id="estado" name="estado" class="form-control" required>
                                 <option value="">-- SELECCIONAR --</option>
                                 <option value="Nuevo">Nuevo</option>
-                                <option value="Seminuevo">Seminuevo</option>
-                                <option value="Usado">Usado</option>
+                                <option value="Usado como nuevo">Usado como nuevo</option>
+                                <option value="Semi nuevo">Semi nuevo</option>
+                                <option value="Usado regular">Usado regular</option>
                             </select>
                             <div id="estado-alert" class="invalid-feedback text-left">
                                 Debe seleccionar el estado en el que se encuentra su articulo.
