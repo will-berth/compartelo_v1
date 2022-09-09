@@ -708,3 +708,111 @@ $('#form-search').submit(function(e){
     let busqueda = $('#buscar').val();
     window.location.href='/search/'+busqueda;
 })
+
+function getMyArticles(){
+    $.ajax({
+        'type': 'get',
+        'url': 'getMyArticles',
+        beforeSend: function(){
+            $('#table-mis-articulos tbody').html('<tr><td colspan="6"><div class="progress"><div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"><center><b class="h6">Cargando...</b></center></div></div></td></tr>');
+        },
+        success: function(response){
+            var resp = JSON.parse(response);
+            console.log(resp)
+            var fila = '';
+            $.each(resp, function(index, valor){
+                let { id, created_at, articulo, precio, activo, tipo, desc, periodo_id, estado, marca} = valor;
+                let created = "";
+                created_at !== null ? created = created_at.split('T')[0]: created = "Sin fecha";
+                fila += `<tr>
+                <td>${articulo}</td>
+                <td>${tipo}</td>
+                <td>${precio}</td>
+                <td>${created}</td>
+                <td>
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="testSwitch custom-control-input" id="${id}" ${activo ? 'checked': ''}>
+                        <label class="custom-control-label" for="${id}"></label>
+                    </div>
+                </td>
+                <td>
+                <button onclick="showMyArticle('${valor.clave}', '${articulo}', '${desc}', ${precio}, '${marca}', '${tipo}', '${estado}', '${created}');" type="button" class="btn" data-toggle="modal" data-target="#exampleModal"><i class="icofont-eye-alt text-general icono-nav"></i></button>
+                <button onclick="getMyArticleRow(${id}, '${desc}', ${periodo_id}, ${precio}, '${estado}');" type="button" class="btn" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="icofont-edit text-general icono-nav"></i></button>
+                </td></tr>`;
+            });
+            $('#table-mis-articulos tbody').html(fila);
+            updateActiveArticle()
+        }
+    })
+
+}
+
+function updateActiveArticle(){
+    $('.testSwitch').on('change', function() {
+        let id_articulo = $(this).attr('id');
+        let status_articulo = $(this).is(':checked');
+        let status = 0;
+        if(status_articulo){
+            status = 1
+        }
+        $.ajax({
+            'type': 'PUT',
+            'url': 'updateStatusArticle',
+            'data': {id: id_articulo, activo: status},
+            beforeSend: function(){
+                // $('#btn-save').html('Enviando...');
+            },
+            success: function(response){
+                var resp = JSON.parse(response);
+                Swal.fire({
+                    icon: resp.type,
+                    title: resp.title,
+                    text: resp.text
+                });
+                // getMyArticles()
+            }
+        })
+    });
+}
+
+function getMyArticleRow(id, desc, periodo_id, precio, estado){
+    $('#id_articulo').val(id)
+    $('#precio').val(precio)
+    $("#periodo").val(periodo_id);
+    $("#desc").val(desc);
+    $("#estado").val(estado);
+}
+
+function showMyArticle(clave, articulo, desc, precio, marca, periodo, estado, created_at){
+    $('#view-articulo').text(articulo)
+    $('#view-desc').text(desc)
+    $('#view-precio').text(precio)
+    $('#view-marca').text(marca)
+    $('#view-periodo').text(periodo)
+    $('#view-estado').text(estado)
+    $('#view-created_at').text(created_at)
+}
+
+$('#form-edit-articulo').submit(function(e){
+    e.preventDefault();
+    var data = $(this).serialize();
+    $.ajax({
+        'type': 'PUT',
+        'url': 'updateInfoMyArticle',
+        'data': data,
+        beforeSend: function(){
+            $('#btn-edit-articulo').html('Enviando...');//Al momento de agregar un dato nos muestra el boton de enviando...
+        },
+        success: function(response){
+            var resp = JSON.parse(response);
+            Swal.fire({
+                icon: resp.type,
+                title: resp.title,
+                text: resp.text
+            });
+            $('.bd-example-modal-lg').modal('toggle');
+            closeModal('modal-edit-articulo', 'form-edit-articulo');//Para que cierre el modal y lo resetee 
+            getMyArticles()
+        }
+    })
+})

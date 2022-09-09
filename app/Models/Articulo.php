@@ -31,6 +31,7 @@ class Articulo extends Model
         'img3',
         'img4',
         'estado',
+        'activo'
     ];
     public function categorias(){
         return $this->belongsToMany(Categoria::class, 'detalles_categorias', 'articulo_id', 'categoria_id');

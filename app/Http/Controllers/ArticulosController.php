@@ -221,4 +221,48 @@ class ArticulosController extends Controller
             return json_encode(['type' => 'error', 'title' => 'Error', 'text' => 'Hubieron problemas al registrar tu artículo. Intenta nuevamente.']);
         }
     }
+
+    public function getMyArticles()
+    {
+        // $userId = Auth::id();
+        $userId = 1;
+        // $articulo = Articulo::where('user_id', $userId)->get();
+        $articulo = Articulo::join('periodos', 'periodos.id', '=', 'articulos.periodo_id')
+        ->join('marcas', 'marcas.id', '=', 'articulos.marca_id')
+        ->select('articulos.*', 'periodos.tipo', 'periodos.id as id_in_periodo', 'marcas.marca', 'marcas.id as id_in_marca')
+        ->where('user_id', $userId)->get();
+        return json_encode($articulo);
+    }
+
+    public function updateStatusActive(Request $request)
+    {
+        $request->validate([
+            'id'    => 'required',
+            'activo' => 'required'
+        ]);
+        $data = $request->all();
+        $articulo = Articulo::find($data['id']);
+        try {
+            $articulo->update($data);
+            $status = '';
+            $data['activo'] == true ? $status = 'activado' : $status = 'desactivado';
+            return json_encode(['type' => 'success', 'title' => 'Exito', 'text' => 'Artículo '.$status.' exitosamente.']);
+        } catch (\Exception $e) {
+            $status = '';
+            $data['activo'] == true ? $status = 'actiar' : $status = 'desactivar';
+            return json_encode(['type' => 'error', 'title' => 'Error', 'text' => 'Ocurrio un error al '.$status.' tu artículo.']);
+        }
+    }
+
+    public function updateInfoMyArticle(Request $request)
+    {
+        $data = $request->all();
+        $articulo = Articulo::find($data['id_articulo']);
+        try {
+            $articulo->update($data);
+            return json_encode(['type' => 'success', 'title' => 'Exito', 'text' => 'Artículo editado exitosamente.']);
+        } catch (\Exception $e) {
+            return json_encode(['type' => 'error', 'title' => 'Error', 'text' => 'Ocurrio un error al editar la información tu artículo.']);
+        }
+    }
 }

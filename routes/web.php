@@ -64,6 +64,10 @@ Route::get('/reset-password', function () {
     return view('resetpass');
 });
 
+Route::get('/mis-articulos', function () {
+    return view('mis-articulos');
+});
+
 Route::get('/usuarios', function () {
     return view('usuarios');
 });
@@ -114,6 +118,9 @@ Route::post('api/registrar', [UsersController::class, 'store']);
 
 //rutas publicas
 Route::get('getArticulos', [ArticulosController::class, 'index']);
+Route::get('getMyArticles', [ArticulosController::class, 'getMyArticles']);
+Route::put('updateStatusArticle', [ArticulosController::class, 'updateStatusActive']);
+Route::put('updateInfoMyArticle', [ArticulosController::class, 'updateInfoMyArticle']);
 Route::post('addArticulos', [ArticulosController::class, 'store']);
 Route::get('searchArticle/{busqueda}/{marca}', [ArticulosController::class, 'searchArticle']);
 Route::get('itemDetails/{clave}', [ArticulosController::class, 'itemDetails']);
