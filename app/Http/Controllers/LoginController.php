@@ -31,6 +31,12 @@ class LoginController extends Controller
             return json_encode(['type' => 'error', 'title' => 'Error', 'text' => 'Este correo no pertenece a ninguna cuenta']);
         }
     }
+    public function logout(Request $request)
+    {
+        Auth::guard('web2')->logout();
+        $request->session()->regenerate();//regenera el token csrf
+        return redirect('/');
+    }
     public function estadoVerificado(Request $request)
     {
         $email_verif = Auth::guard('web2')->user()->email_verif;

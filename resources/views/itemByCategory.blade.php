@@ -16,6 +16,7 @@
         $("body").tooltip({ selector: '[data-toggle=tooltip]' });
     });
     $(document).ready(function(){
+        $('#col-articles').addClass('col-md-12');
         let urlComplete = window.location;
         let url = urlComplete.href.split('/');
         let categoria = url[4];

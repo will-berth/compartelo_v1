@@ -66,9 +66,12 @@ body{
 }
 .icono-nav{
     font-size: 25px;
+    -webkit-text-stroke: 2px white;
+    color: transparent; 
 }
 .bg-general{
-    background-color: #ff6984;
+    background: rgb(201,43,72);
+    background: linear-gradient(0deg, rgba(201,43,72,1) 0%, rgba(255,56,92,1) 35%);
 }
 .text-general{
     color: #ff6984;
@@ -84,6 +87,7 @@ body{
 .input-buscar{
     width: 90%;
     padding: 7px;
+    border-radius: 7px 0px 0px 7px;
 }
 .icono-input{
     font-weight: bold;
@@ -91,11 +95,7 @@ body{
 .carrito{
     border-radius: 60px;
 }
-.carrito-badge{
-    position: absolute !important;
-    top: -60px;
-    border-radius: 50px;
-}
+
 .btn-carousel{
     border-radius: 50%;
     background-color: transparent;
@@ -118,7 +118,11 @@ body{
     background-color: transparent;
 }
 .card-brand-active{
-    border: solid 1px #FF385C !important;
+    border: solid 1px transparent !important;
+    border-image: linear-gradient(to bottom, #ff385c 0%, #c92b48 100%) 1 !important;
+}
+.text-small{
+    font-size: 13px;
 }
 /* animacion hover a los iconos de las categorias */
 .nav a{
@@ -263,4 +267,7 @@ body{
         height: 72px;
         opacity: 0;
     }
+}
+.texto-negro{
+    color: #000;
 }

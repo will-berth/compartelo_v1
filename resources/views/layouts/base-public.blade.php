@@ -33,9 +33,9 @@
             <div class="row w-100">
                 <div class="col-md-8 xl-8">
                     <center>
-                        <form id="form-search">
+                        <form id="form-search" method="GET" action="/search">
                             <div class="input-group mb-2 d-flex justify-content-center ml-4">
-                                <input type="search" class="input-buscar border shadow-sm" name=buscar id="buscar" placeholder="Buscar artículos, marcas y más"
+                                <input type="search" class="input-buscar border shadow-sm border-0" name=buscar id="buscar" placeholder="Buscar artículos, marcas y más"
                                     autocomplete="off">
     
                                 <div class="input-group-prepend">
@@ -50,14 +50,14 @@
                     <ul class="navbar-nav mr-auto d-flex justify-content-end">
                         <li class="nav-item mr-3">
                             <button type="button" class="btn carrito">
-                                <i class="icofont-shopping-cart icono-nav text-white"></i><span
-                                    class="badge bg-white text-general carrito-badge">4</span>
+                                <i class="icofont-shopping-cart icono-nav"></i><span
+                                    class="badge bg-white text-general">4</span>
                             </button>
                         </li>
                         <li class="nav-item mr-3">
                             <button type="button" class="btn carrito">
-                                <i class="icofont-alarm icono-nav text-white"></i><span
-                                    class="badge bg-white text-general carrito-badge">4</span>
+                                <i class="icofont-alarm icono-nav"></i><span
+                                    class="badge bg-white text-general">4</span>
                             </button>
                         </li>
                         <li class="nav-item dropdown dropleft">
@@ -72,10 +72,10 @@
                             </a>
                             <div class="dropdown-menu mr-3" aria-labelledby="navbarDropdown">
                                 @auth('web2')
-                                    <a class="dropdown-item" href="registrar">Cerrar sesión</a>
+                                    <a class="dropdown-item" href="/logout">Cerrar sesión</a>
                                 @else
-                                    <a class="dropdown-item" href="registrar">Regístrate</a>
-                                    <a class="dropdown-item" href="login">Iniciar sesión</a>
+                                    <a class="dropdown-item" href="/registrar">Regístrate</a>
+                                    <a class="dropdown-item" href="/login">Iniciar sesión</a>
                                 @endauth
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#">Terminos y condiciones</a>
@@ -86,8 +86,30 @@
                     </ul>
                 </div>
             </div>
+            <div class="row w-100">
+                <div class="col-md-7">
+                    <ul class="navbar-nav ml-4">
+                        <li class="nav-item">
+                          <a class="nav-link text-white text-small" href="#">Ofertas</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link text-white text-small" href="#">Mas populares</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white text-small" href="/publicar">Publicar aticulo</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link text-white text-small" href="#">Mis aticulos</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link text-white text-small" href="#">Mis rentas</a>
+                          </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </nav>
+    <br>
     <br>
     <br>
     <br>
@@ -115,7 +137,68 @@
     </div>
     <br>
     <div class="container">
-        @yield('contenido')
+        <div class="row">
+            <div class="col-md-3 d-none" id="filtros">
+                <form id="form-filters">
+                    <h3 class="texto-negro" id="texto-buscado"></h3>
+                    <p class="texto-negro"><small id="total-busquedas"></small></p>
+                    @auth('web2')
+                    <div class="card px-4 py-3">
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" name="distancia" value="1" class="custom-control-input" id="customSwitch1">
+                            <label class="custom-control-label" for="customSwitch1"><i class="icofont-location-pin text-success"></i> Mostrar distancia</label>
+                        </div>
+                    </div>
+                    @endauth
+                    <br>
+                    <p class="texto-negro">Estado del articulo</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="estado" id="nuevo" value="Nuevo">
+                        <label class="form-check-label" for="nuevo">
+                        <small>Nuevo</small>
+                        </label>
+                    </div>    
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="estado" id="usadoNuevo" value="Usado como nuevo">
+                        <label class="form-check-label" for="usadoNuevo">
+                        <small>Usado como nuevo</small>
+                        </label>
+                    </div>    
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="estado" id="semiNuevo" value="Semi nuevo">
+                        <label class="form-check-label" for="semiNuevo">
+                        <small>Semi nuevo</small>
+                        </label>
+                    </div>     
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="estado" id="usadoRegular" value="Usado regular">
+                        <label class="form-check-label" for="usadoRegular">
+                        <small>Usado regular</small>
+                        </label>
+                    </div>    
+                    <br>
+                    <p class="texto-negro">Categorias</p>
+                    <div id="filters-cat">
+
+                    </div>                     
+                    <br>    
+                    <p class="texto-negro">Marcas</p>
+                    <div id="filters-marcas">
+
+                    </div>                       
+                    <br> 
+                    <p class="texto-negro">Precio</p>            
+                    <div class="d-flex mb-3">
+                        <input type="number" name="precioMin" class="form-control" placeholder="Minimo" autocomplete="off">__
+                        <input type="number" name="precioMax" class="form-control" placeholder="Maximo" autocomplete="off">
+                    </div>
+                    <button type="submit" class="btn btn-success w-100"><i class="icofont-filter"></i> Aplicar</button>
+                </form>
+            </div>
+            <div class="" id="col-articles">
+                @yield('contenido')
+            </div>
+        </div>
         
     </div>
     <script src="{{ asset('assets/js/jquery.min.js') }}"></script>

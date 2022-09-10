@@ -11,6 +11,7 @@ use App\Models\DetalleCategoria;
 use App\Models\Marca;
 use App\Models\OpinionArtc;
 use App\Models\User;
+use App\Models\Categoria;
 
 class ArticulosController extends Controller
 {
@@ -18,14 +19,10 @@ class ArticulosController extends Controller
     {
        $this->middleware('auth', ['except'  => ['serviceListArticles']]) ;
     }
-    public function viewSearchArticle()
-    {
-        return view('searchArticle');
-    }
     public function index()
     {
         $apiKey = 'AIzaSyB4CbJQ4DyUU8PBQA9wtm9IqClbF7dhOuo';
-        $articulos = Articulo::orderByRaw('rand()')->limit(5)->with(['categorias', 'users', 'periodos'])->get();
+        $articulos = Articulo::orderByRaw('rand()')->limit(10)->with(['users', 'periodos', 'marcas'])->get();
         if(Auth::guard('web2')->user() != null){
             for($i = 0; $i < sizeof($articulos); $i++)
             {
@@ -43,25 +40,67 @@ class ArticulosController extends Controller
         }
        return json_encode($articulos);
     }
-    public function searchArticle($articulo, $marca)
+    public function searchArticle(Request $request, $articulo)
     {
-        if($marca == 0){
-            $searchArticle = Articulo::with(['categorias', 'users', 'periodos', 'marcas'])
-                                    ->where('articulo', 'like', '%'.$articulo.'%')
-                                    ->get();
-        }else{
-            $searchArticle = Articulo::with(['categorias', 'users', 'periodos', 'marcas'])
-                                    ->join('detalles_categorias', 'articulo_id', '=', 'articulos.id')
-                                    ->join('categorias', 'categoria_id', '=', 'categorias.id')
-                                    ->join('marcas', 'articulos.marca_id', 'marcas.id')
-                                    ->where([['categorias.categoria', $articulo], ['marcas.marca', $marca]])
-                                    ->get();
+        $articulo       = $request->get('buscar');
+        $distancia      = $request->get('distancia');
+        $estado         = $request->get('estado');
+        $categoria      = $request->get('categoria');
+        $idMarca        = $request->get('marca');
+        $precioMin      = $request->get('precioMin');
+        $precioMax      = $request->get('precioMax');
+        $categorias     = [];
+        $marcas         = [];
+        $marcasUnique   = [];
+        $catUnique      = [];
+
+        $articulos = Articulo::with(['categorias', 'users', 'periodos', 'marcas'])
+                                ->estado($estado)
+                                ->categorias($categoria)
+                                ->marcas($idMarca)
+                                ->precioMin($precioMin)
+                                ->precioMax($precioMax)
+                                ->where('articulos.articulo', 'like', '%'.$articulo.'%')
+                                ->get();
+        if($distancia)
+        {
+            $apiKey = 'AIzaSyB4CbJQ4DyUU8PBQA9wtm9IqClbF7dhOuo';
+            for($i = 0; $i < sizeof($articulos); $i++)
+            {
+                $origen = Auth::guard('web2')->user()->coordenadas;
+                $destino = $articulos[$i]->users->coordenadas;
+                //dd($destino);
+                //calculamos la distancia
+                $calcular=file_get_contents("https://maps.googleapis.com/maps/api/directions/json?key=$apiKey&origin=$origen&destination=$destino&mode=driving");
+                $datos_api=json_decode($calcular);
+                $distancia = $datos_api->{"routes"}[0]->{"legs"}[0]->{"distance"}->{"text"};
+                $duracion = $datos_api->{"routes"}[0]->{"legs"}[0]->{"duration"}->{"text"};
+                $articulos[$i]->distancia = $distancia;
+                $articulos[$i]->duracion = $duracion;
+            }
         }
-        $marcas = Marca::select('marcas.*')->join('articulos', 'marca_id', '=', 'marcas.id')
-                        ->where('articulo', 'like', '%'.$articulo.'%')
-                        ->groupBy('marcas.id')
-                        ->get();
-        return json_encode(['articulos' => $searchArticle, 'marcas' => $marcas]);
+        
+        for($i=0; $i< sizeof($articulos); $i++)
+        {
+            $cat        = Categoria::with('articulos')->join('detalles_categorias', 'categoria_id', 'categorias.id')
+                                    ->join('articulos', 'detalles_categorias.articulo_id', 'articulos.id')
+                                    ->where('detalles_categorias.articulo_id', $articulos[$i]->id)->get()->toArray();
+            $marca      = Marca::where('id', $articulos[$i]->marca_id)->get()->toArray();
+            $marcas     = array_merge($marcas, $marca);
+            $categorias = array_merge($categorias, $cat);
+        }
+        $marcasRepet    = array_unique(array_column($marcas, 'id'));
+        $carRepet       = array_unique(array_column($categorias, 'id'));
+
+        foreach($marcasRepet as $indice => $valor)
+        {
+            array_push($marcasUnique, $marcas[$indice]);
+        }
+        foreach($carRepet as $indice => $valor)
+        {
+            array_push($catUnique, $categorias[$indice]);
+        }
+        return json_encode(['articulos' => $articulos, 'categorias' => $catUnique, 'marcas' => $marcasUnique]);
     }
     public function itemDetails($clave)
     {

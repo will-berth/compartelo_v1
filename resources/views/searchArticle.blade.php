@@ -1,8 +1,5 @@
 @extends('layouts.base-public')
 @section('contenido')
-<div class="row" id="list-marcas">
-    
-</div>
 <br>
 <div class="row" id="coincidencias">
             
@@ -16,11 +13,13 @@
         $("body").tooltip({ selector: '[data-toggle=tooltip]' });
     });
     $(document).ready(function(){
+        $('#filtros').removeClass('d-none');
+        $('#col-articles').addClass('col-md-9');
         let urlComplete = window.location;
         let url = urlComplete.href.split('/');
-        let articulo = url[4];
+        let filtros = url[3];
         getCategoriasPublic(0);
-        searchArticle(articulo, 0)
+        searchArticle(filtros, 0);
     });
     function scrollRight() {
             let valor = $('#list-categorias ul').scrollLeft();

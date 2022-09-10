@@ -69,7 +69,7 @@
                     <div class="rate h4 text-warning"></div>
                     <small class="text-warning mt-2" id="total_opiniones"></small>
                 </div>
-                <span class="badge badge-dark">RECOMENDADO</span> <small>en Taladro para carpinteria</small>
+                <span class="badge badge-dark">RECOMENDADO</span> <small id="recomendado"></small>
                 <p class="card-text text-dark h4" id="precio"></p>
                 <p class="text-dark"><small>Lo que tienes que saber de este articulo</small></p>
                 <ul class="details">
@@ -357,7 +357,7 @@
 <script src="{{ asset('assets/js/rater.min.js') }}"></script>
 <script>
     $(document).ready(function(){
-        $('#list-categorias').addClass('d-none');
+        $('#col-articles').addClass('col-md-12');
         let urlComplete = window.location;
         let url = urlComplete.href.split('/');
         let clave = url[4];

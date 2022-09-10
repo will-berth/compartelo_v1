@@ -63,6 +63,7 @@ Route::get('/unverified-account', function () {
 Route::get('/reset-password', function () {
     return view('resetpass');
 });
+Route::get('logout', [LoginController::class, 'logout']);
 
 Route::get('/mis-articulos', function () {
     return view('mis-articulos');
@@ -122,7 +123,7 @@ Route::get('getMyArticles', [ArticulosController::class, 'getMyArticles']);
 Route::put('updateStatusArticle', [ArticulosController::class, 'updateStatusActive']);
 Route::put('updateInfoMyArticle', [ArticulosController::class, 'updateInfoMyArticle']);
 Route::post('addArticulos', [ArticulosController::class, 'store']);
-Route::get('searchArticle/{busqueda}/{marca}', [ArticulosController::class, 'searchArticle']);
+Route::get('searchArticle/{busqueda}', [ArticulosController::class, 'searchArticle']);
 Route::get('itemDetails/{clave}', [ArticulosController::class, 'itemDetails']);
 Route::get('categoria/itemByCategory/{categoria}', [ArticulosController::class, 'itemByCategory']);
 Route::get('itemByCategory/{categoria}/marca/{marca}', [ArticulosController::class, 'itemByCategoryAndBrand']);
@@ -137,4 +138,7 @@ Route::get('categoria/{categoria}/marca/{marca}', function () {
 });
 Route::get('item-details/{clave}', function () {
     return view('itemDetails');
+});
+Route::get('search', function () {
+    return view('searchArticle');
 });

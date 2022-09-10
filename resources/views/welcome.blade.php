@@ -9,6 +9,7 @@
 <script src="{{ asset('assets/js/categorias/crud-categorias.js') }}"></script>
     <script>
         $(document).ready(function () {
+            $('#col-articles').addClass('col-md-12');
             getCategoriasPublic(0);
             getArticulos();
         })

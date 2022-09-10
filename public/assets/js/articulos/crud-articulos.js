@@ -18,39 +18,17 @@ function getArticulos(){
                 card += `
                 <div class="col-sm-6 col-md-4 col-lg-3">
                     <a href="item-details/${valor.clave}"  class="text-decoration-none">
-                        <div class="card shadow-sm mb-3">
-                            <div class="card-header d-flex justify-content-end">
-                                <span class="badge badge-primary">Mas popular</span>
-                            </div>
-                            <div id="card-carousel-${valor.id}" class="carousel slide" data-ride="carousel">
-                                <ol class="carousel-indicators">
-                                    <li data-target="#card-carousel-${valor.id}" data-slide-to="0" class="active"></li>
-                                    <li data-target="#card-carousel-${valor.id}" data-slide-to="1"></li>
-                                    <li data-target="#card-carousel-${valor.id}" data-slide-to="2"></li>
-                                    <li data-target="#card-carousel-${valor.id}" data-slide-to="3"></li>
-                                </ol>
-                                <div class="carousel-item active">
-                                    <img src="assets/img/articulos/${valor.img1}" class="d-block w-100" alt="..." style="min-height:230px; max-height:230px">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="assets/img/articulos/${valor.img2}" class="d-block w-100" alt="..." style="min-height:230px; max-height:230px">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="assets/img/articulos/${valor.img3}" class="d-block w-100" alt="..." style="min-height:230px; max-height:230px">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="assets/img/articulos/${valor.img4}" class="d-block w-100" alt="..." style="min-height:230px; max-height:230px">
-                                </div>
-                            </div>
-                            <div class="card-body text-center">
-                                <h6 class="card-title text-muted">${valor.articulo}</h6>
-                                <p class="text-muted m-0"><i class="icofont-badge"></i>${valor.categorias[0].categoria}</p>
+                        <div class="card shadow mb-3 border">
+                            <img src="assets/img/articulos/${valor.img1}" class="d-block w-100" alt="..." style="min-height:230px; max-height:230px">
+                            <div class="card-body  ">
+                                <h6 class="card-title texto-negro">${valor.articulo}</h6>
+                                <p class="text-danger m-0"><i class="icofont-badge"></i>${capitalize(valor.marcas.marca)}</p>
                                 <i class="icofont-star text-warning"></i>
                                 <i class="icofont-star text-warning"></i>
                                 <i class="icofont-star text-warning"></i>
                                 <i class="icofont-star text-warning"></i>
                                 <i class="icofont-star text-warning"></i>
-                                <p class="card-text text-muted">${precio} MXN/${valor.periodos.tipo}</p>
+                                <p class="card-text text-muted"><span class="badge badge-primary">${precio} MXN/${valor.periodos.tipo}</span></p>
                             </div>
                             <div class="border p-1 text-center bg-info text-white">
                                 <i class="icofont-car p-2 pt-4"></i><small>${valor.distancia}</small> <i class="icofont-clock-time p-2 pt-4"></i><small>${valor.duracion}</small>
@@ -142,9 +120,6 @@ function getItemByCategory(categoria){
             var card = '';
             var marcas = '';
             var clase = '';
-            const removeAccents = (str) => {//constante para elimnar acentos
-                return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-            } 
             $.each(data.marcas, function(index, valor){
                 marcas += `
                 <div class="col-md-1 mb-3">
@@ -161,47 +136,26 @@ function getItemByCategory(categoria){
                 }
                 card += `
                 <div class="col-sm-6 col-md-4 col-lg-3">
-                    <a href="/item-details/${valor.clave}"  class="text-decoration-none">
-                        <div class="card shadow-sm mb-3">
-                            <div class="card-header d-flex justify-content-end">
-                                <span class="badge badge-primary">Mas popular</span>
-                            </div>
-                            <div id="card-carousel-${valor.id}" class="carousel slide" data-ride="carousel">
-                                <ol class="carousel-indicators">
-                                    <li data-target="#card-carousel-${valor.id}" data-slide-to="0" class="active"></li>
-                                    <li data-target="#card-carousel-${valor.id}" data-slide-to="1"></li>
-                                    <li data-target="#card-carousel-${valor.id}" data-slide-to="2"></li>
-                                    <li data-target="#card-carousel-${valor.id}" data-slide-to="3"></li>
-                                </ol>
-                                <div class="carousel-item active">
-                                    <img src="../assets/img/articulos/${valor.img1}" class="d-block w-100" alt="..." style="min-height:230px; max-height:230px">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="../assets/img/articulos/${valor.img2}" class="d-block w-100" alt="..." style="min-height:230px; max-height:230px">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="../assets/img/articulos/${valor.img3}" class="d-block w-100" alt="..." style="min-height:230px; max-height:230px">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="../assets/img/articulos/${valor.img4}" class="d-block w-100" alt="..." style="min-height:230px; max-height:230px">
-                                </div>
-                            </div>
-                            <div class="card-body text-center">
-                                <h6 class="card-title text-muted">${valor.articulo}</h6>
-                                <p class="text-muted m-0"><i class="icofont-badge"></i>${valor.categoria}</p>
+                    <a href="item-details/${valor.clave}"  class="text-decoration-none">
+                        <div class="card shadow mb-3 border">
+                            <img src="/assets/img/articulos/${valor.img1}" class="d-block w-100" alt="..." style="min-height:230px; max-height:230px">
+                            <div class="card-body  ">
+                                <h6 class="card-title texto-negro">${valor.articulo}</h6>
+                                <p class="text-danger m-0"><i class="icofont-badge"></i>${capitalize(valor.marcas.marca)}</p>
                                 <i class="icofont-star text-warning"></i>
                                 <i class="icofont-star text-warning"></i>
                                 <i class="icofont-star text-warning"></i>
                                 <i class="icofont-star text-warning"></i>
                                 <i class="icofont-star text-warning"></i>
-                                <p class="card-text text-muted">${precio} MXN/${valor.periodos.tipo}</p>
+                                <p class="card-text text-muted"><span class="badge badge-primary">${precio} MXN/${valor.periodos.tipo}</span></p>
                             </div>
                             <div class="border p-1 text-center bg-info text-white">
                                 <i class="icofont-car p-2 pt-4"></i><small>${valor.distancia}</small> <i class="icofont-clock-time p-2 pt-4"></i><small>${valor.duracion}</small>
                             </div>
                         </div>
                     </a>
-                </div>`;
+                </div>
+                `;
             });
             $('#list-marcas').html(marcas);
             $('#populares').html(card);
@@ -244,83 +198,49 @@ function getItemByCategoryAndBrand(categoria, marca){
                 }
                 card += `
                 <div class="col-sm-6 col-md-4 col-lg-3">
-                    <a href="/item-details/${valor.clave}"  class="text-decoration-none">
-                        <div class="card shadow-sm mb-3">
-                            <div class="card-header d-flex justify-content-end">
-                                <span class="badge badge-primary">Mas popular</span>
-                            </div>
-                            <div id="card-carousel-${valor.id}" class="carousel slide" data-ride="carousel">
-                                <ol class="carousel-indicators">
-                                    <li data-target="#card-carousel-${valor.id}" data-slide-to="0" class="active"></li>
-                                    <li data-target="#card-carousel-${valor.id}" data-slide-to="1"></li>
-                                    <li data-target="#card-carousel-${valor.id}" data-slide-to="2"></li>
-                                    <li data-target="#card-carousel-${valor.id}" data-slide-to="3"></li>
-                                </ol>
-                                <div class="carousel-item active">
-                                    <img src="/assets/img/articulos/${valor.img1}" class="d-block w-100" alt="..." style="min-height:230px; max-height:230px">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="/assets/img/articulos/${valor.img2}" class="d-block w-100" alt="..." style="min-height:230px; max-height:230px">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="/assets/img/articulos/${valor.img3}" class="d-block w-100" alt="..." style="min-height:230px; max-height:230px">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="/assets/img/articulos/${valor.img4}" class="d-block w-100" alt="..." style="min-height:230px; max-height:230px">
-                                </div>
-                            </div>
-                            <div class="card-body text-center">
-                                <h6 class="card-title text-muted">${valor.articulo}</h6>
-                                <p class="text-muted m-0"><i class="icofont-badge"></i>${valor.categoria}</p>
+                    <a href="item-details/${valor.clave}"  class="text-decoration-none">
+                        <div class="card shadow mb-3 border">
+                            <img src="/assets/img/articulos/${valor.img1}" class="d-block w-100" alt="..." style="min-height:230px; max-height:230px">
+                            <div class="card-body  ">
+                                <h6 class="card-title texto-negro">${valor.articulo}</h6>
+                                <p class="text-danger m-0"><i class="icofont-badge"></i>${capitalize(valor.marcas.marca)}</p>
                                 <i class="icofont-star text-warning"></i>
                                 <i class="icofont-star text-warning"></i>
                                 <i class="icofont-star text-warning"></i>
                                 <i class="icofont-star text-warning"></i>
                                 <i class="icofont-star text-warning"></i>
-                                <p class="card-text text-muted">${precio} MXN/${valor.periodos.tipo}</p>
+                                <p class="card-text text-muted"><span class="badge badge-primary">${precio} MXN/${valor.periodos.tipo}</span></p>
                             </div>
                             <div class="border p-1 text-center bg-info text-white">
                                 <i class="icofont-car p-2 pt-4"></i><small>${valor.distancia}</small> <i class="icofont-clock-time p-2 pt-4"></i><small>${valor.duracion}</small>
                             </div>
                         </div>
                     </a>
-                </div>`;
+                </div>
+                `;
             });
             $('#list-marcas').html(marcas);
             $('#articulos').html(card);
         }
     })
 }
-function searchArticle(articulo, marca){
+function searchArticle(filtros, numBusqueda){
     $.ajax({
         'type': 'GET',
-        'url': '/searchArticle/'+articulo+'/'+marca,
+        'url': '/searchArticle/'+filtros,
         beforeSend: function(){
 
         },
         success: function(response){
+            filtros
             var data = JSON.parse(response);
+            var textoFiltro = filtros.split('=');
+            var textoBuscado = textoFiltro[1].split('&');
+            $('#texto-buscado').html('Busqueda de: '+textoBuscado[0]);
+            $('#total-busquedas').html(data.articulos.length+' resultados');
             var card = '';
-            var marcas = '';
-            var clase = '';
-            const removeAccents = (str) => {//constante para elimnar acentos
-                return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-            } 
-            $.each(data.marcas, function(index, valor){
-                if(marca != 0){
-                    if(marca.toLowerCase() == removeAccents(valor.marca.toLowerCase())){
-                        clase = 'bg-primary';
-                    }else{
-                        clase = '';
-                    }
-                }
-                marcas += `
-                <div class="col-md-1 mb-3">
-                    <button class="btn card py-3 marca border-0 ${clase}" onclick="/getItemByCategory('', '${valor.marca}')" data-toggle="tooltip" data-placement="bottom" title="${valor.marca}">
-                        <center><img src="../assets/img/marcas/${valor.img}" alt="" width="60" height="50"></center>
-                    </button>
-                </div>`;
-            });
+            var cat = '';
+            var marca = '';
             $.each(data.articulos, function(index, valor){
                 var precio = Intl.NumberFormat('es-MX',{style:'currency',currency:'MXN'}).format(valor.precio);
                 if(typeof(valor.distancia) == 'undefined'){
@@ -328,50 +248,48 @@ function searchArticle(articulo, marca){
                     valor.duracion = '';
                 }
                 card += `
-                <div class="col-sm-6 col-md-4 col-lg-3">
-                    <a href="/item-details/${valor.clave}"  class="text-decoration-none">
-                        <div class="card shadow-sm mb-3">
-                            <div class="card-header d-flex justify-content-end">
-                                <span class="badge badge-primary">Mas popular</span>
-                            </div>
-                            <div id="card-carousel-${valor.id}" class="carousel slide" data-ride="carousel">
-                                <ol class="carousel-indicators">
-                                    <li data-target="#card-carousel-${valor.id}" data-slide-to="0" class="active"></li>
-                                    <li data-target="#card-carousel-${valor.id}" data-slide-to="1"></li>
-                                    <li data-target="#card-carousel-${valor.id}" data-slide-to="2"></li>
-                                    <li data-target="#card-carousel-${valor.id}" data-slide-to="3"></li>
-                                </ol>
-                                <div class="carousel-item active">
-                                    <img src="../assets/img/articulos/${valor.img1}" class="d-block w-100" alt="..." style="min-height:230px; max-height:230px">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="../assets/img/articulos/${valor.img2}" class="d-block w-100" alt="..." style="min-height:230px; max-height:230px">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="../assets/img/articulos/${valor.img3}" class="d-block w-100" alt="..." style="min-height:230px; max-height:230px">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="../assets/img/articulos/${valor.img4}" class="d-block w-100" alt="..." style="min-height:230px; max-height:230px">
-                                </div>
-                            </div>
-                            <div class="card-body text-center">
-                                <h6 class="card-title text-muted">${valor.articulo}</h6>
-                                <p class="text-muted m-0"><i class="icofont-badge"></i>${valor.categorias[0].categoria}</p>
+                <div class="col-sm-6 col-md-4 col-lg-4">
+                    <a href="item-details/${valor.clave}"  class="text-decoration-none">
+                        <div class="card shadow mb-3 border">
+                            <img src="assets/img/articulos/${valor.img1}" class="d-block w-100" alt="..." style="min-height:230px; max-height:230px">
+                            <div class="card-body  ">
+                                <h6 class="card-title texto-negro">${valor.articulo}</h6>
+                                <p class="text-danger m-0"><i class="icofont-badge"></i>${capitalize(valor.marcas.marca)}</p>
                                 <i class="icofont-star text-warning"></i>
                                 <i class="icofont-star text-warning"></i>
                                 <i class="icofont-star text-warning"></i>
                                 <i class="icofont-star text-warning"></i>
                                 <i class="icofont-star text-warning"></i>
-                                <p class="card-text text-muted">${precio} MXN/${valor.periodos.tipo}</p>
+                                <p class="card-text text-muted"><span class="badge badge-primary">${precio} MXN/${valor.periodos.tipo}</span></p>
                             </div>
                             <div class="border p-1 text-center bg-info text-white">
                                 <i class="icofont-car p-2 pt-4"></i><small>${valor.distancia}</small> <i class="icofont-clock-time p-2 pt-4"></i><small>${valor.duracion}</small>
                             </div>
                         </div>
                     </a>
-                </div>`;
+                </div>
+                `;
             });
-            $('#list-marcas').html(marcas);
+            if(numBusqueda == 0){
+                $.each(data.categorias, function(index, valor){
+                    cat += `<div class="form-check">
+                                <input class="form-check-input" type="radio" name="categoria" id="${valor.clave}" value="${valor.categoria_id}">
+                                <label class="form-check-label" for="${valor.clave}">
+                                <small>${capitalize(valor.categoria)}</small>
+                                </label>
+                            </div>`;
+                });
+                $.each(data.marcas, function(index, valor){
+                    marca += `<div class="form-check">
+                                <input class="form-check-input" type="radio" name="marca" id="marca-${valor.id}" value="${valor.id}">
+                                <label class="form-check-label" for="marca-${valor.id}">
+                                <small>${capitalize(valor.marca)}</small>
+                                </label>
+                            </div>`;
+                });
+                $('#filters-cat').html(cat);
+                $('#filters-marcas').html(marca);
+            }
             $('#coincidencias').html(card);
         }
     })
@@ -398,8 +316,9 @@ function itemDetails(clave){
             $('#tab-img2 img').prop('src', '../assets/img/articulos/'+data.articulo[0].img2);
             $('#tab-img3 img').prop('src', '../assets/img/articulos/'+data.articulo[0].img3);
             $('#tab-img4 img').prop('src', '../assets/img/articulos/'+data.articulo[0].img4);
-            $('#estado-articulo').html(data.articulo[0].estado)
-            $('#nom-articulo').html(data.articulo[0].articulo)
+            $('#estado-articulo').html(data.articulo[0].estado);
+            $('#nom-articulo').html(data.articulo[0].articulo);
+            $('#recomendado').html('en '+data.articulo[0].articulo+' para '+data.articulo[0].categorias[0].categoria);
             var precio = Intl.NumberFormat('es-MX',{style:'currency',currency:'MXN'}).format(data.articulo[0].precio);
             $('#precio').html(precio+' MXN/'+data.articulo[0].periodos.tipo);
             $('#marca').html(data.articulo[0].marcas.marca);
@@ -458,7 +377,6 @@ function itemDetails(clave){
             $('#progress-rent').attr('aria-valuenow', porcen_rent.toFixed(1));
             $('#progress-rent').attr('style', 'width: '+porcen_rent.toFixed(1)+'%;');
             $('#progress-rent').html(porcen_rent.toFixed(1)+'%');
-            //debugger
             //calculo de opiniones
             $('#title-articulo').html('Opiniones sobre '+data.articulo[0].articulo);
             $('#title-articulo2').html('Opiniones sobre '+data.articulo[0].articulo);
@@ -703,10 +621,14 @@ function loadOpiniones(tipo, status){
     getOpiniones('todas', 'x');
     $('#modal-opiniones').modal('show');
 }
-$('#form-search').submit(function(e){
+$('#form-filters').submit(function(e){
     e.preventDefault();
-    let busqueda = $('#buscar').val();
-    window.location.href='/search/'+busqueda;
+    var data = $(this).serialize();
+    let urlComplete = window.location;
+    let url = urlComplete.href.split('/');
+    let busqueda = url[3];
+    let filtros = busqueda+'&'+data;
+    searchArticle(filtros, 1);
 })
 
 function getMyArticles(){
@@ -815,4 +737,8 @@ $('#form-edit-articulo').submit(function(e){
             getMyArticles()
         }
     })
-})
+});
+//primera letra en mayuscula
+function capitalize(word) {
+    return word[0].toUpperCase() + word.slice(1);
+}

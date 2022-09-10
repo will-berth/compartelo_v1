@@ -33,6 +33,42 @@ class Articulo extends Model
         'estado',
         'activo'
     ];
+    public function scopeEstado($query, $estado)
+    {
+        if($estado)
+        {
+            return $query->where('estado', $estado);
+        }
+    }
+    public function scopeCategorias($query, $categoria)
+    {
+        if($categoria)
+        {
+            return $query->join('detalles_categorias', 'articulo_id', '=', 'articulos.id')->join('categorias', 'categoria_id', '=', 'categorias.id')->where('categorias.id', $categoria);
+        }
+    }
+    public function scopeMarcas($query, $marca)
+    {
+        if($marca)
+        {
+            return $query->where('marca_id', $marca);
+        }
+    }
+    public function scopePrecioMin($query, $precioMin)
+    {
+        if($precioMin)
+        {
+            return $query->where('precio', '>=', $precioMin);
+        }
+    }
+    public function scopePrecioMax($query, $precioMax)
+    {
+        if($precioMax)
+        {
+            return $query->where('precio', '<=', $precioMax);
+        }
+    }
+    //relaciones
     public function categorias(){
         return $this->belongsToMany(Categoria::class, 'detalles_categorias', 'articulo_id', 'categoria_id');
     }
