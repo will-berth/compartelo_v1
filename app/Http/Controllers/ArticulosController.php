@@ -216,14 +216,14 @@ class ArticulosController extends Controller
     }
 
     public function publicar(){
-        return view('publicar');
+        return Auth::user() ? view('publicar') : view('publicar.noauth');
     }
 
     public function publicarOtherViews($step)
     {
         $root = 'publicar.';
         $returnView = $root.$step;
-        return view($returnView);
+        return Auth::user() ? view($returnView) : view('publicar.noauth');
     }
 
     public function store(Request $request)
