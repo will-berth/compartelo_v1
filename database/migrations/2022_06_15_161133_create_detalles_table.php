@@ -16,15 +16,16 @@ class CreateDetallesTable extends Migration
         Schema::create('detalles', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('renta_id')->unsigned();
+            $table->bigInteger('articulo_id')->unsigned();
             $table->integer('cantidad')->nullable(false);
             $table->integer('importe')->nullable(false);
             $table->dateTime('fecha_renta', 6)->nullable(false);
             $table->dateTime('fecha_devolucion',6)->nullable(false);
-            $table->string('estado', 50)->nullable(false);
+            $table->boolean('estado', 50)->nullable(false);
             $table->timestamps();
             $table->foreign('renta_id')->references('id')->on('rentas')->onUpdate('cascade')
             ->onDelete('cascade');
-            $table->bigInteger('articulo_id')->unsigned();
+            
             $table->foreign('articulo_id')->references('id')->on('articulos')->onUpdate('cascade')
             ->onDelete('cascade');
         });

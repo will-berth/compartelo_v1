@@ -108,6 +108,8 @@ Route::put('updateCategorias/', [CategoriasController::class, 'update']);
 
 Route::get('getUsuarios/{filtro}', [UsersController::class, 'index']);
 Route::post('addUsuarios/', [UsersController::class, 'store']);
+Route::post('verificar/usuario', [UsersController::class, 'verifyUser']);
+
 
 //api login
 Route::post('api/loginCliente', [LoginController::class, 'login']);

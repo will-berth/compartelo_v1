@@ -19,7 +19,7 @@ class CreateRentasTable extends Migration
             $table->bigInteger('user_id')->unsigned(); 
             $table->date('fecha_renta', 6)->nullable(false);
             $table->double('total', 10)->nullable(false);
-            $table->string('tipo_pago', 50)->nullable(false);
+            $table->string('tipo_pago', 60)->nullable(false);
             $table->string('estado')->nullable(false);
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')
             ->onDelete('cascade');

@@ -1,20 +1,10 @@
-$('#resendVerification').submit(function (e) {
-    e.preventDefault();
-    var data = $(this).serialize();
-
-    var url = '';
-    var type = '';
-    if ($('#id').val() == '') {
-        url = 'addUsuarios/';
-        type = 'POST';
-    } else {
-        url = 'updateUsuario/';
-        type = 'PUT';
-    }
+$('#form-add-usuarios').submit(function (e) { // id del formulario
+    e.preventDefault();     // para actualizar la pagina sin recargar
+    var data = $(this).serialize(); // serializa 
 
     $.ajax({
         'type': 'POST',
-        'url': 'api/resendVerification',
+        'url': 'verificar/usuario',
         'data': data,
         success: function (response) {
             var resp = JSON.parse(response);//Sirve para que muestre un mensaje si se agregó el dato

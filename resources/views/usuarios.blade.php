@@ -89,12 +89,13 @@
                     <div class="row">
                         <div class="col-md-12">
                             <label for="">Comentarios</label>
+                            <input type="hidden" class="d-none" name="id" id="id"> 
                             <textarea id="" class="form-control" name="Comentarios" rows="3" cols="40" placeholder="Comentarios"></textarea>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-secondary" data-dismiss="modal">Enviar</button>
-                        <button type="cancelar" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                     </div>
                 </form>
             </div>
