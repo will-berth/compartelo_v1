@@ -89,7 +89,8 @@
                     <div class="row">
                         <div class="col-md-12">
                             <label for="">Comentarios</label>
-                            <input type="hidden" class="d-none" name="id" id="id"> 
+                            <input type="hidden" class="d-none" name="id" id="id">
+                            <input type="text" class="" name="" id=""> 
                             <textarea id="" class="form-control" name="Comentarios" rows="3" cols="40" placeholder="Comentarios"></textarea>
                         </div>
                     </div>

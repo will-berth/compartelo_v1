@@ -40,8 +40,8 @@ function getUsuarios(filtro) {
                 <td><div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle"  type="button" data-toggle="dropdown" aria-expanded="false">Acción</button>
                 <div class="dropdown-menu">
-                  <a class="dropdown-item" onclick="onChange(${valor.id});" href="#">Autorizar</a>
-                  <a class="dropdown-item" onclick="onChange(${valor.id});" href="#">Rechazar</a>
+                  <a class="dropdown-item" onclick="onChange(${valor.id});"  href="#">Autorizar</a>
+                  <a class="dropdown-item" onclick="onChange(${valor.id});"  href="#">Rechazar</a>
                 </div>
               </div></td></tr>`;
               
@@ -51,9 +51,11 @@ function getUsuarios(filtro) {
     })
 }
 
-function onChange(id) {
+function onChange(id ) {
     $('#id').val(id);
+
     $('#add-usuarios').modal('show');
+    
 }
 
 $('#resetPassword').submit(function (e) {

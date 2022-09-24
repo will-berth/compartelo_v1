@@ -44,7 +44,7 @@ class ComparteloSoporte extends Notification
     public function toMail($notifiable)
     {
         // 1-Reenviar verificación de correo, 2-Recuperar contraseña
-        switch($this->tipo){
+        switch ($this->tipo) {
             case 1:
                 return (new MailMessage)
                     ->line('Confirma tu correo para poder usar nuestra aplicación.')
@@ -54,11 +54,24 @@ class ComparteloSoporte extends Notification
             case 2:
                 return (new MailMessage)
                     ->line('Se restablecio tu contraseña:')
-                    ->line('Tu nueva contraseña es: '.$this->password)
+                    ->line('Tu nueva contraseña es: ' . $this->password)
+                    ->line('No responder a este correo');
+                break;
+
+            case 3:
+                return (new MailMessage)
+                    ->line('usuario rechazado:')
+                    ->line($this->password)
+                    ->line('No responder a este correo');
+                break;
+
+            case 5:
+                return (new MailMessage)
+                    ->line('fue aceptado tu solicitud:')
+                    ->line($this->password)
                     ->line('No responder a este correo');
                 break;
         }
-        
     }
 
     /**
