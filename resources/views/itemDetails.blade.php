@@ -87,8 +87,8 @@
                 <li class="text-muted" style="list-style: none;"><small>Total: 122 rentas</small></li>
                 <p class="text-dark mt-2">Stock disponible</p>
                 <p class="text-dark mt-2">Cantidad: <b>1 Unidad</b> <small> (1 disponibles)</small></p>
-                <button class="btn btn-success w-100 mb-3">Rentar ahora</button>
-                <button class="btn btn-info w-100 mb-3">Agregar al carrito</button>
+                <button class="btn btn-success w-100 mb-3" data-toggle="modal" data-target="#modal-pago">Rentar ahora</button>
+                <button id="btn-carrito" class="btn btn-info w-100 mb-3">Agregar al carrito</button>
         
             </div>
         </div>
@@ -351,12 +351,34 @@
       </div>
     </div>
   </div>
+
+  <!-- Modal -->
+<div class="modal fade" id="modal-pago" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Realizar pago</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary">Realizar pago</button>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+ 
 @endsection
 @section('script')  
 <script src="{{ asset('assets/js/articulos/crud-articulos.js') }}"></script>
 <script src="{{ asset('assets/js/rater.min.js') }}"></script>
 <script>
     $(document).ready(function(){
+        $('#list-categorias').addClass('d-none');
         $('#col-articles').addClass('col-md-12');
         let urlComplete = window.location;
         let url = urlComplete.href.split('/');

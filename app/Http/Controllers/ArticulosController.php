@@ -14,6 +14,7 @@ use App\Models\Marca;
 use App\Models\OpinionArtc;
 use App\Models\User;
 use App\Models\Categoria;
+use App\Models\Carrito;
 
 class ArticulosController extends Controller
 {
@@ -306,6 +307,42 @@ class ArticulosController extends Controller
             return json_encode(['type' => 'error', 'title' => 'Error', 'text' => 'Ocurrio un error al editar la información tu artículo.']);
         }
     }
+    public function addCarito(Request $request)
+    {
+       if(Auth::guard('web2')->user() != null)
+       {
+        $id = Auth::guard('web2')->user()->id;
+        $data = $request->all();
+        if(Carrito::where([['user_id', $id], ['articulo_id', $data['articulo_id']]])->exists())
+        {
+            return json_encode(['type' => 'warning', 'title' => 'Advertencia', 'text' => 'Este articulo ya existe en tu carrito']);
+        }else{
+            $datos = [
+                'user_id' => $id,
+                'articulo_id' => $data['articulo_id'],
+            ];
+            Carrito::create($datos);
+            return json_encode(['type' => 'success', 'title' => 'Exito', 'text' => 'El articulo se agrego al carrito']);
+        }
+       }else
+       {
+        return json_encode(['type' => 'error', 'title' => 'Error', 'text' => 'No has iniciado sesión']);
+       }
+    }
+    public function loadCarrito(Request $request)
+    {
+        $id = Auth::guard('web2')->user()->id;
+        $carrito = Carrito::with('articulos')->where('user_id', $id)->get();
+        return json_encode($carrito);
+    }
+    public function deleteCarrito(Request $request)
+    {
+        $id = Auth::guard('web2')->user()->id;
+        $data = $request->all();
+        Carrito::find($data['id'])->delete();
+        return json_encode(['type' => 'sucess', 'title' => 'Exito', 'text' => 'Articulo borrado']);
+    }
+    
 
     public function getMisRentas()
     {

@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg" />
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/ruang-admin.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/general.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/icofont/icofont.min.css') }}" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,18 +49,22 @@
                 </div>
                 <div class="col-md-4 xl-4">
                     <ul class="navbar-nav mr-auto d-flex justify-content-end">
-                        <li class="nav-item mr-3">
-                            <button type="button" class="btn carrito">
-                                <i class="icofont-shopping-cart icono-nav"></i><span
-                                    class="badge bg-white text-general">4</span>
-                            </button>
-                        </li>
-                        <li class="nav-item mr-3">
-                            <button type="button" class="btn carrito">
-                                <i class="icofont-alarm icono-nav"></i><span
-                                    class="badge bg-white text-general">4</span>
-                            </button>
-                        </li>
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown"
+                              aria-haspopup="true" aria-expanded="false" onclick="loadCarrito()">
+                              <i class="icofont-shopping-cart icono-nav"></i>
+                            </a>
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                              aria-labelledby="alertsDropdown">
+                              <h6 class="dropdown-header">
+                                Carrito
+                              </h6>
+                              <div id="detalles-carrito">
+
+                              </div>
+                              <a class="dropdown-item text-center small text-gray-500" href="#">Realizar renta</a>
+                            </div>
+                          </li>
                         <li class="nav-item dropdown dropleft">
                             <a class="nav-link border-dropw border" href="#" id="navbarDropdown" role="button"
                                 data-toggle="dropdown" aria-expanded="false">
@@ -203,6 +208,18 @@
     </div>
     <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/ruang-admin.min.js') }}"></script>
+    <script src="{{ asset('assets/js/sweetalert2.all.min.js') }}"></script>
+    <script src="{{ asset('assets/js/respuestas.js') }}"></script>
+    <script src="{{ asset('assets/js/articulos/crud-articulos.js') }}"></script>
+    <script type="text/javascript">
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+      </script>
     @yield('script')
 </body>
 

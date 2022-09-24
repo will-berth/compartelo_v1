@@ -24,6 +24,9 @@ use App\Http\Controllers\ArticulosController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/noauth', function () {
+    return view('publicar.noauth');
+});
 Route::get('/masPopulares', function () {
     return view('masPopulares');
 });
@@ -136,6 +139,12 @@ Route::get('getOpiniones/{clave}/{tipo}/{status}', [ArticulosController::class, 
 
 Route::get('getMisRentas', [ArticulosController::class, 'getMisRentas']);
 Route::get('rentaDetalle/{id}', [ArticulosController::class, 'rentaDetalle']);
+
+//carito
+Route::post('/addCarriro', [ArticulosController::class, 'addCarito']);
+Route::get('/loadCarrito', [ArticulosController::class, 'loadCarrito']);
+Route::post('/deleteCarrito', [ArticulosController::class, 'deleteCarrito']);
+
 
 //rutas publicas (retornas vistas)
 Route::get('categoria/{filtro}', function () {

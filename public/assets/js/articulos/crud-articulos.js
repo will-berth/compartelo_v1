@@ -136,7 +136,7 @@ function getItemByCategory(categoria){
                 }
                 card += `
                 <div class="col-sm-6 col-md-4 col-lg-3">
-                    <a href="item-details/${valor.clave}"  class="text-decoration-none">
+                    <a href="/item-details/${valor.clave}"  class="text-decoration-none">
                         <div class="card shadow mb-3 border">
                             <img src="/assets/img/articulos/${valor.img1}" class="d-block w-100" alt="..." style="min-height:230px; max-height:230px">
                             <div class="card-body  ">
@@ -524,6 +524,7 @@ function itemDetails(clave){
             $('#pills-todas').html(opiniones);
             $('#detalles').addClass('d-none');
             $('#articles-detail').removeClass('d-none');
+            $('#btn-carrito').attr('onclick', `addCarito(${data.articulo[0].id})`);
         }
     })
 }
@@ -758,6 +759,80 @@ function initializeInputsFiles(){
 //primera letra en mayuscula
 function capitalize(word) {
     return word[0].toUpperCase() + word.slice(1);
+}
+function addCarito(id){
+    $.ajax({
+        'type': 'POST',
+        'url': '/addCarrito',
+        'data': {'articulo_id': id},
+        beforeSend: function(){
+           
+        },
+        success: function(response){
+            var resp = JSON.parse(response);
+            Toast.fire({
+                icon: resp.type,
+                title: resp.title,
+                text: resp.text
+            });
+            if(resp.type == 'error'){
+                window.location.href = '/noauth';
+            }
+        }
+
+    })
+}
+function loadCarrito(){
+    $.ajax({
+        'type': 'GET',
+        'url': '/loadCarrito',
+        beforeSend: function(){
+           
+        },
+        success: function(response){
+            var resp = JSON.parse(response);
+            var detalles = '';
+            $.each(resp, function(index, valor){
+                detalles += `<a class="dropdown-item d-flex align-items-center" href="/item-details/${valor.articulos.clave}">
+                                <div class="mr-3">
+                                    <div class="icon-circle bg-primary">
+                                        <img src="../assets/img/articulos/${valor.articulos.img1}" class="rounded-circle" width="40" height="40">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="small text-gray-500">${valor.articulos.articulo}</div>
+                                    <span class="font-weight-bold">${valor.articulos.desc}</span>
+                                </div>
+                                
+                            </a>
+                            <div>
+                                <a href="#" class="bg-danger p-1 dropdown-item text-center small text-white" onClick="deleteCarrito(${valor.id})">Eliminar</a>
+                            </div>`;
+            });
+            $('#detalles-carrito').html(detalles);
+        }
+
+    })
+}
+function deleteCarrito(id){
+    $.ajax({
+        'type': 'POST',
+        'url': '/deleteCarrito',
+        'data': {'id': id},
+        beforeSend: function(){
+           
+        },
+        success: function(response){
+            var resp = JSON.parse(response);
+            Toast.fire({
+                icon: resp.type,
+                title: resp.title,
+                text: resp.text
+            });
+            loadCarrito();
+        }
+
+    })
 }
 
 function getMisRentas(){
