@@ -21,10 +21,10 @@ class Renta extends Model
 
     ];
 
-    public function User(){
+    public function user(){
        return $this->belongsTo(User::class);
     }
     public function detalle(){
-        return $this->belongsTo(detalle::class);
+        return $this->belongsTo(Detalle::class,'renta_id','id');
      }
 }

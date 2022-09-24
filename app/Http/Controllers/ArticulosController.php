@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Models\Articulo;
+use App\Models\Renta;
+use App\Models\Detalle;
 use App\Models\Caracteristica;
 use App\Models\DetalleCategoria;
 use App\Models\Marca;
@@ -303,5 +305,26 @@ class ArticulosController extends Controller
         } catch (\Exception $e) {
             return json_encode(['type' => 'error', 'title' => 'Error', 'text' => 'Ocurrio un error al editar la información tu artículo.']);
         }
+    }
+
+    public function getMisRentas()
+    {
+        // $userId = Auth::id();
+        $userId = 1;
+        $rentas = [];
+        foreach (Renta::where('user_id', $userId)->cursor() as $renta){
+            $renta->user;
+            $renta->detalle;
+            $rentas[] = $renta;
+        }
+
+        return json_encode($rentas);
+    }
+
+    public function  rentaDetalle($id)
+    {
+        $detalle = Detalle::where('renta_id', $id)->first();
+        $detalle->articulo;
+        return json_encode($detalle);
     }
 }

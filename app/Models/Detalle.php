@@ -22,10 +22,10 @@ class Detalle extends Model
 
     ];
 
-    public function Renta(){
+    public function renta(){
        return $this->belongsTo(Renta::class);
     }
-    public function Articulos(){
-        return $this->belongsTo(Articulos::class);
+    public function articulo(){
+        return $this->belongsTo(Articulo::class);
     }
 }

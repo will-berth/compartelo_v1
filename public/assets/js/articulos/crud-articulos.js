@@ -738,7 +738,114 @@ $('#form-edit-articulo').submit(function(e){
         }
     })
 });
+function initializeInputsFiles(){
+    FilePond.registerPlugin(FilePondPluginImagePreview);
+    FilePond.registerPlugin(FilePondPluginFileValidateType);
+    let filepondConfig = {
+        storeAsFile: true,
+        acceptedFileTypes: ['image/*'],
+        allowImagePreview: true,
+        allowMultiple: false,
+        maxFiles: 2,
+    }
+    $('#testimg').filepond(filepondConfig);
+    $('#img1').filepond(filepondConfig);
+    $('#img2').filepond(filepondConfig);
+    $('#img3').filepond(filepondConfig);
+    $('#img4').filepond(filepondConfig);
+    FilePond.setOptions(labels_es_ES)
+}
 //primera letra en mayuscula
 function capitalize(word) {
     return word[0].toUpperCase() + word.slice(1);
+}
+
+function getMisRentas(){
+    $.ajax({
+        'type': 'get',
+        'url': 'getMisRentas',
+        beforeSend: function(){
+            $('#table-mis-rentas tbody').html('<tr><td colspan="6"><div class="progress"><div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"><center><b class="h6">Cargando...</b></center></div></div></td></tr>');
+        },
+        success: function(response){
+            var resp = JSON.parse(response);
+            console.log(resp)
+            var fila = '';
+            $.each(resp, function(index, valor){
+                let { fecha_renta, tipo_pago, total, estado, id} = valor;
+                let estadoStr = '';
+                estado == 0 ? estadoStr = 'En proceso' : estadoStr = 'Finalizado';
+                console.log(fecha_renta, tipo_pago);
+                fila += `<tr>
+                    <td>${fecha_renta}</td>
+                    <td>${tipo_pago}</td>
+                    <td>$${total}</td>
+                    <td>${estadoStr}</td>
+                    <td>
+                    <button onclick="rentaDetalle(${id});" type="button" class="btn bg-general text-white" data-toggle="modal" data-target="#exampleModal">Ver</button>
+                    </td>
+                    <tr>
+                `;
+                // fila += `<tr>
+                // <td>${articulo}</td>
+                // <td>${tipo}</td>
+                // <td>${precio}</td>
+                // <td>${created}</td>
+                // <td>
+                //     <div class="custom-control custom-switch">
+                //         <input type="checkbox" class="testSwitch custom-control-input" id="${id}" ${activo ? 'checked': ''}>
+                //         <label class="custom-control-label" for="${id}"></label>
+                //     </div>
+                // </td>
+                // <td>
+                // <button onclick="showMyArticle('${valor.clave}', '${articulo}', '${desc}', ${precio}, '${marca}', '${tipo}', '${estado}', '${created}');" type="button" class="btn" data-toggle="modal" data-target="#exampleModal"><i class="icofont-eye-alt text-general icono-nav"></i></button>
+                // <button onclick="getMyArticleRow(${id}, '${desc}', ${periodo_id}, ${precio}, '${estado}');" type="button" class="btn" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="icofont-edit text-general icono-nav"></i></button>
+                // </td></tr>`;
+            });
+            $('#table-mis-rentas tbody').html(fila);
+            // updateActiveArticle()
+        }
+    })
+
+}
+
+function rentaDetalle(id){
+    $.ajax({
+        'type': 'get',
+        'url': `/rentaDetalle/${id}`,
+        beforeSend: function(){
+            $('#rentaDetalleModal').html(`<div class="col-12 d-flex justify-content-center mt-5">
+            <div class="lds-ripple"><div></div><div></div></div>
+        </div>`);
+        },
+        success: function(response){
+            var resp = JSON.parse(response);
+            console.log(resp)
+            let {articulo : {articulo, precio}, cantidad, fecha_renta, fecha_devolucion, importe} = resp;
+            var fila = '';
+            $('#rentaDetalleModal').html(`
+                <h6 class="fw-4 color-black23">Artículo:</h6>
+                <p id="view-articulo" class="fw-5">${articulo}</p>
+                <h6 class="fw-4 color-black23">Cantidad rentada:</h6>
+                <p id="view-cantidad" class="fw-5">${cantidad}</p>
+                <h6 class="fw-4 color-black23">Fecha de renta:</h6>
+                <p id="view-f-renta" class="fw-5">${fecha_renta.split(' ')[0]}</p>
+                <h6 class="fw-4 color-black23">Fecha de devolución:</h6>
+                <p id="view-f-devolucion" class="fw-5">${fecha_devolucion.split(' ')[0]}</p>
+                <h6 class="fw-4 color-black23">Importe:</h6>
+                <p id="view-importe" class="fw-5">$${importe}</p>
+            `)
+            // $.each(resp, function(index, valor){
+            //     let { fecha_renta, tipo_pago, total, estado} = valor;
+            //     console.log(fecha_renta, tipo_pago);
+            //     fila += `<tr>
+            //         <td>${fecha_renta}</td>
+            //         <td>${tipo_pago}</td>
+            //         <td>$${total}</td>
+            //         <td>${estado}</td>
+            //         <tr>
+            //     `;
+            // });
+        }
+    })
 }

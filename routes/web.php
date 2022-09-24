@@ -68,6 +68,9 @@ Route::get('logout', [LoginController::class, 'logout']);
 Route::get('/mis-articulos', function () {
     return view('mis-articulos');
 });
+Route::get('/mis-rentas', function () {
+    return view('mis-rentas');
+});
 
 Route::get('/usuarios', function () {
     return view('usuarios');
@@ -130,6 +133,9 @@ Route::get('itemDetails/{clave}', [ArticulosController::class, 'itemDetails']);
 Route::get('categoria/itemByCategory/{categoria}', [ArticulosController::class, 'itemByCategory']);
 Route::get('itemByCategory/{categoria}/marca/{marca}', [ArticulosController::class, 'itemByCategoryAndBrand']);
 Route::get('getOpiniones/{clave}/{tipo}/{status}', [ArticulosController::class, 'getOpiniones']);
+
+Route::get('getMisRentas', [ArticulosController::class, 'getMisRentas']);
+Route::get('rentaDetalle/{id}', [ArticulosController::class, 'rentaDetalle']);
 
 //rutas publicas (retornas vistas)
 Route::get('categoria/{filtro}', function () {
