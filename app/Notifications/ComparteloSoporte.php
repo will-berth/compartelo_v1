@@ -71,6 +71,12 @@ class ComparteloSoporte extends Notification
                     ->line($this->password)
                     ->line('No responder a este correo');
                 break;
+            case 4:
+                return (new MailMessage)
+                    ->line('Se aceptó tu depósito:')
+                    ->line($this->password)
+                    ->line('Se rechazó tu depósito');
+                break;
         }
     }
 

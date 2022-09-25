@@ -95,8 +95,11 @@ Route::group(['middleware' => 'guest:web2'], function () {
 Route::get('/publicar', [ArticulosController::class, 'publicar']);
 Route::get('/publicar/{step}', [ArticulosController::class, 'publicarOtherViews']);
 
-
+//rutas depositos
+Route::post('verificar/depositos',[DepositosController::class,'verifiDeposito']);
 Route::get('getDepositos', [DepositosController::class, 'index']);
+Route::get('getDepositos/{filtro}', [DepositosController::class, 'index']);
+Route::put('updateDepositos/', [DepositosController::class, 'update']);
 //rutas marcas
 Route::post('addMarcas/', [MarcasController::class, 'store']);
 Route::get('getMarcas/{filtro}', [MarcasController::class, 'index']);

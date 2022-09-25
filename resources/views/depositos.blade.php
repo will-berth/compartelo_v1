@@ -22,6 +22,7 @@
                 <th>Fecha</th>
                 <th>Comprobante</th>
                 <th>Estado</th>
+                <th>Acción</th>
             </tr>
         </thead>
         <tbody class="text-center">
@@ -29,9 +30,32 @@
         </tbody>
     </table>
 </div>
+
+<!-- modal para agregar depositos -->
+<div class="modal fade" id="add-depositos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="titulo-modal"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="" id="form-add-depositos">
+              <div class="row">
+                  <div class="col-md-12">
+                      <label for="">Deposito</label>
+                      <input type="hidden" class="d-none" name="id" id="id">
+                      <textarea id="" class="form-control" name="Comentarios" rows="3" cols="40" placeholder="Deposito"></textarea>
+                  </div>
+              </div>
+              <div class="modal-footer">
+                  <button type="submit" class="btn btn-secondary">Enviar</button>
+                  <button type="cancelar" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+              </div>
         </form>
       </div>
-    </div>
   </div>
 </div>
 @endsection
