@@ -62,7 +62,12 @@
                               <div id="detalles-carrito">
 
                               </div>
-                              <a class="dropdown-item text-center small text-gray-500" href="#">Realizar renta</a>
+                              <!-- <a class="dropdown-item text-center small text-gray-500" href="#">Realizar renta</a> -->
+                              <form id="checkout-cart" action="/create-checkout" method="POST">
+                                    @csrf
+                                    <input hidden type="text" name="id_articulo" id="id_articulo_cart">
+                                    <button class="dropdown-item text-center small text-gray-500" type="submit">Realizar renta</button>
+                                </form>
                             </div>
                           </li>
                         <li class="nav-item dropdown dropleft">

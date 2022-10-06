@@ -793,7 +793,8 @@ function loadCarrito(){
             var resp = JSON.parse(response);
             var detalles = '';
             $.each(resp, function(index, valor){
-                detalles += `<a class="dropdown-item d-flex align-items-center" href="/item-details/${valor.articulos.clave}">
+                $('#id_articulo_cart').val(valor.articulos.id)
+                detalles += `<a id="${valor.articulos.id}" lass="dropdown-item d-flex align-items-center" href="/item-details/${valor.articulos.clave}">
                                 <div class="mr-3">
                                     <div class="icon-circle bg-primary">
                                         <img src="../assets/img/articulos/${valor.articulos.img1}" class="rounded-circle" width="40" height="40">

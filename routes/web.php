@@ -8,6 +8,7 @@ use App\Http\Controllers\PeriodosController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\ArticulosController;
+use App\Http\Controllers\PagosController;
 
 
 /*
@@ -78,6 +79,17 @@ Route::get('/mis-rentas', function () {
 Route::get('/usuarios', function () {
     return view('usuarios');
 });
+Route::get('/item-details-test/{clave}', function () {
+    // return 1;
+    return view('pre-checkout');
+});
+Route::get('/checkout', function () {
+    return view('checkout');
+});
+Route::post('/create-checkout', [PagosController::class, 'checkout']);
+Route::get('/success', [PagosController::class, 'success_view']);
+// Route::post('/success-checkout', [PagosController::class, 'success']);
+Route::get('/cancel', [PagosController::class, 'cancel']);
 
 
 //Agrupación de rutas para redireccionar a los usuarios logeados
@@ -144,7 +156,7 @@ Route::get('getMisRentas', [ArticulosController::class, 'getMisRentas']);
 Route::get('rentaDetalle/{id}', [ArticulosController::class, 'rentaDetalle']);
 
 //carito
-Route::post('/addCarriro', [ArticulosController::class, 'addCarito']);
+Route::post('/addCarrito', [ArticulosController::class, 'addCarito']);
 Route::get('/loadCarrito', [ArticulosController::class, 'loadCarrito']);
 Route::post('/deleteCarrito', [ArticulosController::class, 'deleteCarrito']);
 
