@@ -15,10 +15,11 @@ class Detalle extends Model
     protected $fillable=[
         'cantidad',
         'importe',
-        'f_renta',
-        'f_devolucion',
+        'fecha_renta',
+        'fecha_devolucion',
         'estado',
         'renta_id',
+        'articulo_id',
 
     ];
 

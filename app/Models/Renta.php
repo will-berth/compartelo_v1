@@ -13,11 +13,11 @@ class Renta extends Model
     use HasFactory;
     public $table = 'rentas';
     protected $fillable=[
-        'f_renta',
+        'fecha_renta',
         'total',
         'tipo_pago',
         'estado',
-        'id_usuario',
+        'user_id',
 
     ];
 

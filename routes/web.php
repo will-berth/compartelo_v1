@@ -79,10 +79,12 @@ Route::get('/mis-rentas', function () {
 Route::get('/usuarios', function () {
     return view('usuarios');
 });
-Route::get('/item-details-test/{clave}', function () {
+Route::get('/confirm/checkout', function () {
     // return 1;
+    // return view('check-element');
     return view('pre-checkout');
 });
+Route::get('/confirm/articulo', [PagosController::class, 'getDataConfirm']);
 Route::get('/checkout', function () {
     return view('checkout');
 });
@@ -91,6 +93,9 @@ Route::get('/success', [PagosController::class, 'success_view']);
 // Route::post('/success-checkout', [PagosController::class, 'success']);
 Route::get('/cancel', [PagosController::class, 'cancel']);
 
+Route::post('/test-create-element', [PagosController::class, 'createElement']);
+
+Route::post('/webhook', [PagosController::class, 'webhook']);
 
 //Agrupación de rutas para redireccionar a los usuarios logeados
 Route::group(['middleware' => 'guest:web2'], function () {

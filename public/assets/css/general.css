@@ -271,3 +271,34 @@ body{
 .texto-negro{
     color: #000;
 }
+
+
+/* CHECKOUT PROCESS */
+.card-pre-checkout{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #FAFAFA;
+    border-radius: .3rem;
+    padding: 1rem;
+}
+.lado-a,
+.lado-b{
+    color: #232323;
+}
+.lado-a > h1{
+    font-size: 1.6rem;
+}
+.lado-a > h3{
+    font-size: 1.2rem;
+}
+.lado-a > p{
+    max-width: 35rem;
+}
+.total-field{
+    border-top: solid .1rem #F1F1F1;
+}
+.lado-b{
+    background-color: #F3F3F3;
+}
+.lado-b > h3{
+    font-size: 1.4rem;
+}

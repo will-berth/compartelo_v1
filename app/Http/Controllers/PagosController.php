@@ -4,48 +4,37 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Articulo;
+use App\Models\Carrito;
+use App\Models\User;
+use App\Models\Renta;
+use App\Models\Detalle;
 use Stripe;
 
 class PagosController extends Controller
 {
     //
-
-    // public function set()
-    // {
-    //     $servicio = Servicio::where('id', $data['servicio_id'])->first();
-    //     Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
-    //     $charge = \Stripe\Charge::create([
-    //         "amount" => $servicio['precio_servicio'] * 100,
-    //         "currency" => "mxn",
-    //         "description" => "email: ".Auth::user()->email.", id_servicio: ".$servicio['tipo_servicio'],
-    //         "source" => $request->stripeToken,  
-    //     ]);
-    //     if($charge->status = 'succeeded'){
-    //         $data['cliente_id'] = Auth::user()->id;
-    //         $data['estado'] = 'P';
-    //         Cita::create($data);
-    //         return json_encode(['icono' => 'icofont-ui-check', 'color' => 'text-success', 'titulo' => 'Felicidades!!!', 'mensaje' => 'Cita agendada correctanente']);
-    //     }
-    // }
-
     public function checkout(Request $request, Response $response)
     {
         $data = $request->all();
-        $articulo = Articulo::where('id', $data['id_articulo'])->first();
+        // $articulo = Articulo::where('id', $data['id_articulo'])->first();
+        $cartItem = Carrito::with('articulos.users')->where('id', $data['id_c'])->first();
+        $cartItem->articulos->periodos;
         Stripe\Stripe::setApiKey(env('STRIPE_SECRET_APIKEY'));
         $session = \Stripe\Checkout\Session::create([
             'line_items' => [[
             'price_data' => [
                 'currency' => 'mxn',
                 'product_data' => [
-                    'name' => $articulo->articulo,
-                    "description" => $articulo->desc,
+                    'name' => $cartItem->articulos->articulo,
+                    "description" => $cartItem->articulos->desc,
                     "images" => [
-                        "http://69fa-2806-10a6-e-752e-8099-9b14-4a7e-715.ngrok.io/assets/img/articulos/".$articulo->img1,
+                        "https://compartelo.softcode.com.mx/assets/img/articulos/".$cartItem->articulos->img1,
                     ],
                 ],
-                'unit_amount' => $articulo->precio * 100,
+                'unit_amount' => $data['t_r'] * 100,
             ],
             'quantity' => 1,
             ]],
@@ -53,8 +42,19 @@ class PagosController extends Controller
                 "card"
             ],
             'mode' => 'payment',
-            'success_url' => 'http://127.0.0.1:8000/success',
-            'cancel_url' => 'http://127.0.0.1:8000/cancel',
+            'payment_intent_data' => [
+                'metadata' => [
+                    'id_carrito' => $data['id_c'],
+                    'total_renta' => $data['t_r'],
+                    'cantidad_periodo' => $data['cant-renta'],
+                    'id_articulo' => $cartItem->articulos->id,
+                    'periodo' => $cartItem->articulos->periodos->tipo,
+                    'user_id' => $cartItem->user_id
+                ]
+            ],
+            "customer_email" => $cartItem->articulos->users->email,
+            'success_url' => 'https://compartelo.softcode.com.mx/success',
+            'cancel_url' => 'https://compartelo.softcode.com.mx/cancel',
         ]);
         
         return response('', 303)->withHeaders(['Location' => $session->url]);
@@ -74,5 +74,46 @@ class PagosController extends Controller
     public function cancel()
     {
         return 'Pago cancelado';
+    }
+
+    public function webhook(Request $request)
+    {
+        switch ($request->type) {
+            case 'charge.succeeded':
+                $metadataPay = $request->data['object']['metadata'];
+                $fechaDevolucion = [
+                    'Hora' => Carbon::now()->addHours($metadataPay['cantidad_periodo']),
+                    'Dia' => Carbon::now()->addDays($metadataPay['cantidad_periodo']),
+                    'Semana' => Carbon::now()->addWeeks($metadataPay['cantidad_periodo']),
+                    'Mes' => Carbon::now()->addMonths($metadataPay['cantidad_periodo']),
+                    'Año' => Carbon::now()->addYears($metadataPay['cantidad_periodo']),
+                ];
+                $renta = Renta::create([
+                    'user_id' => $metadataPay['user_id'],
+                    'fecha_renta' => Carbon::now(),
+                    'total' => $metadataPay['total_renta'],
+                    'tipo_pago' => 'tarjeta',
+                    'estado' => '1',
+                ]);
+                Detalle::create([
+                    'renta_id' => $renta->id,
+                    'articulo_id' => $metadataPay['id_articulo'],
+                    'cantidad' => 1,
+                    'importe' => 12,
+                    'fecha_renta' => Carbon::now(),
+                    'fecha_devolucion' => $fechaDevolucion[$metadataPay['periodo']],
+                    'estado' => 1
+                ]);
+            default:
+                echo 'Received unknown event type ' . $request->type;
+        }
+    }
+
+    public function getDataConfirm(Request $request)
+    {
+        $data = $request->all();
+        $idCart = $data['id'];
+        $itemCart = Carrito::with('articulos.periodos')->where('id', $idCart)->first();
+        return json_encode(['datos' => $itemCart]);
     }
 }

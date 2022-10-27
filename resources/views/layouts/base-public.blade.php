@@ -63,10 +63,10 @@
 
                               </div>
                               <!-- <a class="dropdown-item text-center small text-gray-500" href="#">Realizar renta</a> -->
-                              <form id="checkout-cart" action="/create-checkout" method="POST">
+                              <form id="checkout-cart">
                                     @csrf
                                     <input hidden type="text" name="id_articulo" id="id_articulo_cart">
-                                    <button class="dropdown-item text-center small text-gray-500" type="submit">Realizar renta</button>
+                                    <a href="/confirm/checkout" class="dropdown-item text-center small text-gray-500">Confirmar renta</a>
                                 </form>
                             </div>
                           </li>
@@ -223,6 +223,9 @@
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
+        });
+        $(document).ready(function(){
+            confirmCart()
         });
       </script>
     @yield('script')

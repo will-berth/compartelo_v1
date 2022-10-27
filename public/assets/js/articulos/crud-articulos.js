@@ -793,7 +793,8 @@ function loadCarrito(){
             var resp = JSON.parse(response);
             var detalles = '';
             $.each(resp, function(index, valor){
-                $('#id_articulo_cart').val(valor.articulos.id)
+                $('#id_articulo_cart').val(valor.id)
+                localStorage.setItem('uid_c', valor.id);
                 detalles += `<a id="${valor.articulos.id}" lass="dropdown-item d-flex align-items-center" href="/item-details/${valor.articulos.clave}">
                                 <div class="mr-3">
                                     <div class="icon-circle bg-primary">
@@ -831,6 +832,39 @@ function deleteCarrito(id){
                 text: resp.text
             });
             loadCarrito();
+        }
+
+    })
+}
+
+function checkoutCart(){
+    let id_art_c = localStorage.getItem('uid_c');
+    $.ajax({
+        'type': 'GET',
+        'url': '/confirm/articulo',
+        'data': {'id': id_art_c},
+        beforeSend: function(){
+           
+        },
+        success: function(response){
+            var resp = JSON.parse(response);
+            let {datos: {articulos, id}} = resp;
+
+            let {periodos : {tipo}, articulo, desc, precio} = articulos;
+            let questions = {
+                Hora: '¿Cuántas horas deseas rentar el artículo?',
+                Dia: '¿Cuántos días deseas rentar el artículo?',
+                Semana: '¿Cuántas semanas deseas rentar el artículo?',
+                Mes: '¿Cuántos meses deseas rentar el artículo?',
+                Año: '¿Cuántos años deseas rentar el artículo?',
+            }
+            $('.lado-a').removeClass('lado-a-isload')
+            $('#id_c_item').val(id);
+            $('#precio-renta').val(precio)
+            $('#nombre-renta').text(articulo)
+            $('#monto-renta').text(`$${precio} x ${tipo}`)
+            $('#descripcion-renta').text(desc)
+            $('#question-renta').text(questions[tipo])
         }
 
     })
