@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="csrf-token" content="{{ csrf_token() }}" />
-    <title>COMPARTRELO</title>
+    <title>COMPARTELO</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg" />
@@ -88,8 +88,8 @@
                                     <a class="dropdown-item" href="/login">Iniciar sesión</a>
                                 @endauth
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Terminos y condiciones</a>
-                                <a class="dropdown-item" href="#">Quines somos</a>
+                                <a class="dropdown-item" href="#">Términos y condiciones</a>
+                                <a class="dropdown-item" href="#">Quiénes somos</a>
                                 <a class="dropdown-item" href="#">Ayuda</a>
                             </div>
                         </li>
@@ -100,19 +100,19 @@
                 <div class="col-md-7">
                     <ul class="navbar-nav ml-4">
                         <li class="nav-item">
-                          <a class="nav-link text-white text-small" href="#">Ofertas</a>
+                          <a class="nav-link text-white text-small" href="/ofertasArticulos">Ofertas</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link text-white text-small" href="#">Mas populares</a>
+                          <a class="nav-link text-white text-small" href="/masPopulares">Más populares</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white text-small" href="/publicar">Publicar aticulo</a>
+                            <a class="nav-link text-white text-small" href="/publicar">Publicar artículo</a>
                           </li>
                           <li class="nav-item">
-                              <a class="nav-link text-white text-small" href="#">Mis aticulos</a>
+                              <a class="nav-link text-white text-small" href="/mis-articulos">Mis artículos</a>
                           </li>
                           <li class="nav-item">
-                              <a class="nav-link text-white text-small" href="#">Mis rentas</a>
+                              <a class="nav-link text-white text-small" href="/mis-rentas">Mis rentas</a>
                           </li>
                     </ul>
                 </div>
@@ -161,7 +161,7 @@
                     </div>
                     @endauth
                     <br>
-                    <p class="texto-negro">Estado del articulo</p>
+                    <p class="texto-negro">Estado del artículo</p>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="estado" id="nuevo" value="Nuevo">
                         <label class="form-check-label" for="nuevo">
@@ -187,7 +187,7 @@
                         </label>
                     </div>    
                     <br>
-                    <p class="texto-negro">Categorias</p>
+                    <p class="texto-negro">Categorías</p>
                     <div id="filters-cat">
 
                     </div>                     
