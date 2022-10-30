@@ -1,6 +1,6 @@
 @extends('layouts.base-public')
 @section('contenido')
-<div class="row" id="ofertas">
+<div class="row" id="populares">
 
 </div>
 @endsection
@@ -10,7 +10,7 @@
     <script>
         $(document).ready(function () {
             getCategoriasPublic(0);
-            ofertasArticulos();
+            getArticulos();
         })
     
         function scrollRight() {
