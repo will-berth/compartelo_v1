@@ -57,8 +57,8 @@ class PagosController extends Controller
                 ]
             ],
             "customer_email" => $cartItem->articulos->users->email,
-            'success_url' => 'http://5f4e-2806-10a6-e-85c0-d95e-aea5-1306-dcb7.ngrok.io/success',
-            'cancel_url' => 'http://5f4e-2806-10a6-e-85c0-d95e-aea5-1306-dcb7.ngrok.io/cancel',
+            'success_url' => 'https://compartelo.softcode.com.mx/success',
+            'cancel_url' => 'https://compartelo.softcode.com.mx/cancel',
         ]);
         Cache::add('sessionUrl', $session->url);
         Cache::add('coordenadas', $cartItem->articulos->users->coordenadas);
