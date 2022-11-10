@@ -10,6 +10,7 @@
                 <th>Total</th>
                 <th>Estado</th>
                 <th>Detalles</th>
+                <th>Ubicación</th>
             </tr>
         </thead>
         <tbody class="text-center">
@@ -27,6 +28,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+      <div style="min-height: 80%;height:40rem;" id="rentaMapa"></div>
       <div id="rentaDetalleModal" class="modal-body">
           <!-- <h6 class="fw-4 color-black23">Artículo:</h6>
           <p id="view-articulo" class="fw-5">---</p>
@@ -140,6 +142,9 @@
 </div>
 @endsection
 @section('script')  
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnDrR4c_IBxJQ36FPO_f3CrHJVqcRZ1fA&libraries=places">
+    </script>
 <script src="{{ asset('assets/js/sweetalert2.all.min.js') }}"></script>
 <script src="{{ asset('assets/js/filepond/jquery.js') }}"></script>
     <script src="{{ asset('assets/js/filepond/filepond.min.js') }}"></script>

@@ -302,3 +302,29 @@ body{
 .lado-b > h3{
     font-size: 1.4rem;
 }
+
+.success-container{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #0cb470;
+    border-radius: .3rem;
+    padding: 1rem;
+    color: white;
+}
+.cancel-container{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #c42020;
+    border-radius: .3rem;
+    padding: 1rem;
+    color: white;
+}
+.icon-success{
+    font-size: 4rem;
+    /* color: green; */
+}
+.success-title{
+    font-size: 1.4rem;
+    /* color: #232323; */
+}
+.success-link{
+    text-decoration: underline;
+}
