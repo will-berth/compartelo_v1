@@ -597,13 +597,13 @@ function getOpiniones(tipo, status){
                                 </div>`;
             });
             if(status == 5){
-                if(tipo == 'positivo'){
+                if(tipo == 'positiva'){
                     $('#pills-positivas').html(opiniones);
                 }else{
                     $('#pills-negativas').html(opiniones);
                 }
             }else if(status == 0){
-                if(tipo == 'positivo'){
+                if(tipo == 'positiva'){
                     $('#pills-positivas2').html(opiniones);
                 }else{
                     $('#pills-negativas2').html(opiniones);
@@ -643,8 +643,11 @@ function getMyArticles(){
             var resp = JSON.parse(response);
             console.log(resp)
             var fila = '';
+            if(resp.type == 'error'){
+                window.location.href = '/noauth';
+            }
             $.each(resp, function(index, valor){
-                let { id, created_at, articulo, precio, activo, tipo, desc, periodo_id, estado, marca} = valor;
+                let { id, created_at, articulo, precio, activo, tipo, desc, periodo_id, estado, marca, clave} = valor;
                 let created = "";
                 created_at !== null ? created = created_at.split('T')[0]: created = "Sin fecha";
                 fila += `<tr>
@@ -659,7 +662,7 @@ function getMyArticles(){
                     </div>
                 </td>
                 <td>
-                <button onclick="showMyArticle('${valor.clave}', '${articulo}', '${desc}', ${precio}, '${marca}', '${tipo}', '${estado}', '${created}');" type="button" class="btn" data-toggle="modal" data-target="#exampleModal"><i class="icofont-eye-alt text-general icono-nav"></i></button>
+                <a href="/item-details/${clave}" class="btn"><i class="icofont-eye-alt text-general icono-nav"></i></a>
                 <button onclick="getMyArticleRow(${id}, '${desc}', ${periodo_id}, ${precio}, '${estado}');" type="button" class="btn" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="icofont-edit text-general icono-nav"></i></button>
                 </td></tr>`;
             });
@@ -717,6 +720,7 @@ function showMyArticle(clave, articulo, desc, precio, marca, periodo, estado, cr
 }
 
 $('#form-edit-articulo').submit(function(e){
+    debugger;
     e.preventDefault();
     var data = $(this).serialize();
     $.ajax({
@@ -733,9 +737,8 @@ $('#form-edit-articulo').submit(function(e){
                 title: resp.title,
                 text: resp.text
             });
-            $('.bd-example-modal-lg').modal('toggle');
             closeModal('modal-edit-articulo', 'form-edit-articulo');//Para que cierre el modal y lo resetee 
-            getMyArticles()
+            getMyArticles();
         }
     })
 });

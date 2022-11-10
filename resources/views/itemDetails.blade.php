@@ -212,10 +212,10 @@
                       <button class="nav-link border-0 w-100 btn-white active" id="tab-todas" data-toggle="pill" data-target="#pills-todas" type="button" role="tab" aria-controls="pills-todas" aria-selected="true">Todas</button>
                     </li>
                     <li class="nav-item tab-item" role="presentation">
-                      <button class="nav-link border-0 w-100 btn-white" id="tab-positivas" data-toggle="pill" data-target="#pills-positivas" type="button" role="tab" aria-controls="pills-positivas" aria-selected="false" onclick="getOpiniones('positivo', 5)">Positivas</button>
+                      <button class="nav-link border-0 w-100 btn-white" id="tab-positivas" data-toggle="pill" data-target="#pills-positivas" type="button" role="tab" aria-controls="pills-positivas" aria-selected="false" onclick="getOpiniones('positiva', 5)">Positivas</button>
                     </li>
                     <li class="nav-item tab-item" role="presentation">
-                      <button class="nav-link border-0 w-100 btn-white" id="tab-negativas" data-toggle="pill" data-target="#pills-negativas" type="button" role="tab" aria-controls="pills-negativas" aria-selected="false" onclick="getOpiniones('negativo', 5)"x>Negativas</button>
+                      <button class="nav-link border-0 w-100 btn-white" id="tab-negativas" data-toggle="pill" data-target="#pills-negativas" type="button" role="tab" aria-controls="pills-negativas" aria-selected="false" onclick="getOpiniones('negativa', 5)"x>Negativas</button>
                     </li>
                   </ul>
                   <br>
@@ -324,10 +324,10 @@
                           <button class="nav-link border-0 w-100 btn-white active" id="tab-todas2" data-toggle="pill" data-target="#pills-todas2" type="button" role="tab" aria-controls="pills-todas2" aria-selected="true">Todas</button>
                         </li>
                         <li class="nav-item tab-item" role="presentation">
-                          <button class="nav-link border-0 w-100 btn-white" id="tab-2" data-toggle="pill" data-target="#pills-positivas2" type="button" role="tab" aria-controls="pills-positivas2" aria-selected="false" onclick="getOpiniones('positivo', 0)">Positivas</button>
+                          <button class="nav-link border-0 w-100 btn-white" id="tab-2" data-toggle="pill" data-target="#pills-positivas2" type="button" role="tab" aria-controls="pills-positivas2" aria-selected="false" onclick="getOpiniones('positiva', 0)">Positivas</button>
                         </li>
                         <li class="nav-item tab-item" role="presentation">
-                          <button class="nav-link border-0 w-100 btn-white" id="tab-negativas2" data-toggle="pill" data-target="#pills-negativas2" type="button" role="tab" aria-controls="pills-negativas2" aria-selected="false" onclick="getOpiniones('negativo', 0)"x>Negativas</button>
+                          <button class="nav-link border-0 w-100 btn-white" id="tab-negativas2" data-toggle="pill" data-target="#pills-negativas2" type="button" role="tab" aria-controls="pills-negativas2" aria-selected="false" onclick="getOpiniones('negativa', 0)"x>Negativas</button>
                         </li>
                       </ul>
                       <br>

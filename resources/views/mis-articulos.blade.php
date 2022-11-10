@@ -2,7 +2,7 @@
 @section('contenido')
 <h4 class="fw-4 color-black23 mt-4 mb-4">Mis artículos</h4>
 <div class="table-responsive">
-    <table class="table align-items-center table-flush" id="table-mis-articulos">
+    <table class="table align-items-center" id="table-mis-articulos">
         <thead class="thead-light text-center">
             <tr>
                 <th>Articulo</th>
@@ -105,10 +105,8 @@
                             <textarea class="form-control" name="desc" id="desc"></textarea>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-12 col-lg-9"></div>
                     <div class="col-12 col-sm-12 col-lg-3">
-                        <button id="btn-edit-articulo" type="submit" class="ml-auto btn bg-general text-white w-100">Editar</button>
-
+                        <button id="btn-edit-articulo"  class="ml-auto btn bg-general text-white w-100">Editar</button>
                     </div>
                 </div>
             </form>
