@@ -219,14 +219,14 @@ class ArticulosController extends Controller
     }
 
     public function publicar(){
-        return Auth::user() ? view('publicar') : view('publicar.noauth');
+        return Auth::guard('web2')->user() ? view('publicar') : view('publicar.noauth');
     }
 
     public function publicarOtherViews($step)
     {
         $root = 'publicar.';
         $returnView = $root.$step;
-        return Auth::user() ? view($returnView) : view('publicar.noauth');
+        return Auth::guard('web2')->user() ? view($returnView) : view('publicar.noauth');
     }
 
     public function store(Request $request)
@@ -244,7 +244,7 @@ class ArticulosController extends Controller
                 $data['img3'] = $img3;
                 $data['img4'] = $img4;
                 // $userId = Auth::id();
-                // $data['user_id'] = $userId;
+                $data['user_id'] = Auth::guard('web2')->user()->id;
     
                 $res = Articulo::create($data);
                 $articuloId = $res['id'];
@@ -267,7 +267,7 @@ class ArticulosController extends Controller
     public function getMyArticles()
     {
         // $userId = Auth::id();
-        $userId = 1;
+        $userId = Auth::guard('web2')->user()->id;
         // $articulo = Articulo::where('user_id', $userId)->get();
         $articulo = Articulo::join('periodos', 'periodos.id', '=', 'articulos.periodo_id')
         ->join('marcas', 'marcas.id', '=', 'articulos.marca_id')
@@ -347,7 +347,7 @@ class ArticulosController extends Controller
     public function getMisRentas()
     {
         // $userId = Auth::id();
-        $userId = 1;
+        $userId = Auth::guard('web2')->user()->id;
         $rentas = [];
         foreach (Renta::where('user_id', $userId)->cursor() as $renta){
             $renta->user;
