@@ -9,6 +9,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\ArticulosController;
 use App\Http\Controllers\PagosController;
+use App\Http\Controllers\RentaController;
 
 
 /*
@@ -90,6 +91,7 @@ Route::get('/checkout', function () {
 });
 Route::post('/create-checkout', [PagosController::class, 'checkout']);
 Route::get('/success', [PagosController::class, 'success_view']);
+Route::get('/canceled', [PagosController::class, 'cancel_view']);
 // Route::post('/success-checkout', [PagosController::class, 'success']);
 Route::get('/cancel', [PagosController::class, 'cancel']);
 
@@ -159,6 +161,7 @@ Route::get('getOpiniones/{clave}/{tipo}/{status}', [ArticulosController::class, 
 
 Route::get('getMisRentas', [ArticulosController::class, 'getMisRentas']);
 Route::get('rentaDetalle/{id}', [ArticulosController::class, 'rentaDetalle']);
+Route::get('/mapa/renta/{id}', [RentaController::class, 'getLatLngArticulo']);
 
 //carito
 Route::post('/addCarrito', [ArticulosController::class, 'addCarito']);

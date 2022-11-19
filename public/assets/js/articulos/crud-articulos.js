@@ -897,6 +897,9 @@ function getMisRentas(){
                     <td>
                     <button onclick="rentaDetalle(${id});" type="button" class="btn bg-general text-white" data-toggle="modal" data-target="#exampleModal">Ver</button>
                     </td>
+                    <td>
+                    <button onclick="loadMap(${id});" type="button" class="btn bg-general text-white" data-toggle="modal" data-target="#exampleModal">Ver ubicación</button>
+                    </td>
                     <tr>
                 `;
                 // fila += `<tr>
@@ -959,6 +962,50 @@ function rentaDetalle(id){
             //         <tr>
             //     `;
             // });
+        }
+    })
+}
+
+function createMarker(place, map) {
+
+    new google.maps.Marker({
+        position: place,
+        map: map
+    });
+}
+
+function chargeMap(lat, lng, input){
+    let map;
+    let service;
+    let infowindow;
+
+    let sydney = new google.maps.LatLng(lat, lng);
+
+    infowindow = new google.maps.InfoWindow();
+
+    map = new google.maps.Map(document.getElementById(input), {center: sydney, zoom: 15});
+
+    service = new google.maps.places.PlacesService(map);
+    createMarker({lat: lat, lng: lng}, map)
+}
+
+function loadMap(id_renta){
+    $.ajax({
+        'type': 'get',
+        'url': `/mapa/renta/${id_renta}`,
+        beforeSend: function(){
+            $('#rentaMapa').html(`<div id="loaderMap" class="col-12 d-flex justify-content-center mt-5">
+            <div class="lds-ripple"><div></div><div></div></div>
+        </div>`);
+        },
+        success: function(response){
+            var resp = JSON.parse(response);
+            let {coordenadas} = resp;
+            let ubicacion = coordenadas.split(',');
+            let lat = parseFloat(ubicacion[0]);
+            let lng = parseFloat(ubicacion[1]);
+            $('#loaderMap').html(``);
+            chargeMap(lat, lng, 'rentaMapa');
         }
     })
 }

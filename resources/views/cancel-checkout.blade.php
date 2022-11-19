@@ -104,41 +104,100 @@
     <br>
     <br>
     <div class="container mt-5">
-        <div class="success-container">
+        <div class="cancel-container">
             <div class="row">
                 <div class="col-3 col-lg-1 d-flex justify-content-center align-items-center">
-                    <i class="icofont-check-circled icon-success"></i>
+                    <i class="icofont-warning icon-success"></i>
                 </div>
                 <div class="col-9 col-lg-11">
-                    <h1 id="a" class="fw-4 success-title">Tu pago se realizó con éxito.</h1>
-                    <a class="text-white success-link" href="/mis-rentas">Ir a mis rentas</a>
+                    <h1 id="a" class="fw-4 success-title">Hubieron problemar al procesar tu pago.</h1>
+                    <a class="text-white success-link" href="{{$url}}">Volver a intentar</a>
                 </div>
             </div>
             <div class="registro-btn">
             </div>
         </div>
-        <div class="card-pre-checkout mt-3">
+        <!-- <div class="card-pre-checkout mt-3">
 
             <div class="row">
-                <div class="col-12 lado-a lado-a-isload">
-                    <h1 class="fw-4 mb-4">Tu artículo lo puedes encontrar aquí.</h1>
-                    
-                    <div id="map" style="min-height: 80%;height:40rem;"></div>
+                <div class="col-12 col-lg-8 lado-a lado-a-isload">
+                    <h1 id="nombre-renta" class="fw-4"></h1>
+                    <div class="nombre-load"></div>
+                    <h3 id="monto-renta" class="fw-5"></h3>
+                    <div class="renta-load"></div>
+                    <p id="descripcion-renta" class="fw-6"></p>
+                    <div class="descripcion-load"></div>
+                    <form action="/create-checkout" method="POST">
+                        <div class="form-row">
+                            <div class="col-12 col-lg-4 mt-2">
+                                <p id="question-renta"></p>
+                                <div class="question-load"></div>
+                            </div>
+                            <div class="col-6 col-lg-4 mt-2">
+                                @csrf
+                                <input id="cant-renta" name="cant-renta" type="number" class="form-control" placeholder="Ej: 1" value="0">
+                                <input id="precio-renta" name="precio-renta" type="hidden" class="form-control" value="0">
+                                <input id="id_c_item" name="id_c" type="hidden" class="form-control" value="0">
+                                <input id="t_r" name="t_r" type="hidden" class="form-control" value="0">
+                            </div>
+                            <div class="col-6 col-lg-4 mt-2">
+                                <button id="btn-checkout" type="submit" class="btn bg-comp-2 text-white" disabled>Proceder a pagar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="lado-b p-2 mt-2 mb-2 h-100">
+                        <h3>Detalles</h3>
+                        <div class="row mt-3">
+                            <div class="col-9">Renta</div>
+                            <div id="monto-t-renta" class="col-3">$0.00</div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-9">IVA</div>
+                            <div id="monto-iva" class="col-3">$0.00</div>
+                        </div>
+                        <div class="row mt-3 total-field">
+                            <div class="col-9">TOTAL</div>
+                            <div id="total-renta" class="col-3">$0.00</div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 @endsection
 @section('script')  
 <!-- <script src="{{ asset('assets/js/articulos/crud-articulos.js') }}"></script> -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnDrR4c_IBxJQ36FPO_f3CrHJVqcRZ1fA&libraries=places">
-    </script>
 <script src="{{ asset('assets/js/articulos/crud-articulos.js') }}"></script>
     <script>
-        let coordenadasResponse = '{{$coordenadas}}';
-        let coordenadasList = coordenadasResponse.split(',');
-        let lat = parseFloat(coordenadasList[0]);
-        let lng = parseFloat(coordenadasList[1]);
-        chargeMap(lat, lng, 'map');
+        $(document).ready(function(){
+            // checkoutCart()
+            // $("#cant-renta").keyup(e => {
+            //     detailsModifier()
+            // })
+            // $("#cant-renta").click(e => {
+            //     detailsModifier()
+            // })
+
+            // function detailsModifier(){
+            //     let precio = $('#precio-renta').val();
+            //     let cant = $("#cant-renta").val();
+            //     $("#cant-renta").val(cant.replace(/^0+/, ''))
+            //     let montoRenta = precio * cant;
+            //     let iva = montoRenta * 0.15;
+            //     let total = montoRenta + iva;
+            //     $('#monto-t-renta').text(`$${montoRenta.toFixed(2)}`);
+            //     $('#monto-iva').text(`$${iva.toFixed(2)}`);
+            //     $('#total-renta').text(`$${total.toFixed(2)}`);
+            //     $('#t_r').val(total.toFixed(2));
+            //     if(cant > 0.99){
+            //         $('#btn-checkout').prop('disabled', false);
+            //     }else{
+            //         $('#btn-checkout').prop('disabled', true);
+            //     }
+            // }
+        })
     </script>
 @endsection

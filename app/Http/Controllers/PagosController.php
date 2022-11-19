@@ -12,6 +12,7 @@ use App\Models\User;
 use App\Models\Renta;
 use App\Models\Detalle;
 use Stripe;
+use Illuminate\Support\Facades\Cache;
 
 class PagosController extends Controller
 {
@@ -19,9 +20,11 @@ class PagosController extends Controller
     public function checkout(Request $request, Response $response)
     {
         $data = $request->all();
+        Cache::flush();
         // $articulo = Articulo::where('id', $data['id_articulo'])->first();
         $cartItem = Carrito::with('articulos.users')->where('id', $data['id_c'])->first();
         $cartItem->articulos->periodos;
+        $importe = $cartItem->articulos->precio * $data['cant-renta'];
         Stripe\Stripe::setApiKey(env('STRIPE_SECRET_APIKEY'));
         $session = \Stripe\Checkout\Session::create([
             'line_items' => [[
@@ -48,14 +51,17 @@ class PagosController extends Controller
                     'total_renta' => $data['t_r'],
                     'cantidad_periodo' => $data['cant-renta'],
                     'id_articulo' => $cartItem->articulos->id,
-                    'periodo' => $cartItem->articulos->periodos->tipo,
-                    'user_id' => $cartItem->user_id
+                    'periodo' => $cartItem->articulos->periodos->id,
+                    'user_id' => $cartItem->user_id,
+                    'importe' => $importe
                 ]
             ],
             "customer_email" => $cartItem->articulos->users->email,
             'success_url' => 'https://compartelo.softcode.com.mx/success',
             'cancel_url' => 'https://compartelo.softcode.com.mx/cancel',
         ]);
+        Cache::add('sessionUrl', $session->url);
+        Cache::add('coordenadas', $cartItem->articulos->users->coordenadas);
         
         return response('', 303)->withHeaders(['Location' => $session->url]);
     }
@@ -67,8 +73,14 @@ class PagosController extends Controller
     
     public function success_view()
     {
-        return view('success-checkout');
+        $coordenadas = Cache::get('coordenadas');
+        return view('success-checkout', ['coordenadas' => $coordenadas]);
 
+    }
+    public function cancel_view()
+    {
+        $sessionStripeUrl = Cache::get('sessionUrl');
+        return view('cancel-checkout', ['url' => $sessionStripeUrl]);
     }
 
     public function cancel()
@@ -82,28 +94,33 @@ class PagosController extends Controller
             case 'charge.succeeded':
                 $metadataPay = $request->data['object']['metadata'];
                 $fechaDevolucion = [
-                    'Hora' => Carbon::now()->addHours($metadataPay['cantidad_periodo']),
-                    'Dia' => Carbon::now()->addDays($metadataPay['cantidad_periodo']),
-                    'Semana' => Carbon::now()->addWeeks($metadataPay['cantidad_periodo']),
-                    'Mes' => Carbon::now()->addMonths($metadataPay['cantidad_periodo']),
-                    'Año' => Carbon::now()->addYears($metadataPay['cantidad_periodo']),
+                    '1' => Carbon::now()->addHours($metadataPay['cantidad_periodo']),
+                    '2' => Carbon::now()->addDays($metadataPay['cantidad_periodo']),
+                    '3' => Carbon::now()->addWeeks($metadataPay['cantidad_periodo']),
+                    '4' => Carbon::now()->addMonths($metadataPay['cantidad_periodo']),
+                    '5' => Carbon::now()->addYears($metadataPay['cantidad_periodo']),
                 ];
                 $renta = Renta::create([
                     'user_id' => $metadataPay['user_id'],
                     'fecha_renta' => Carbon::now(),
                     'total' => $metadataPay['total_renta'],
                     'tipo_pago' => 'tarjeta',
-                    'estado' => '1',
+                    'estado' => '0',
                 ]);
                 Detalle::create([
                     'renta_id' => $renta->id,
                     'articulo_id' => $metadataPay['id_articulo'],
                     'cantidad' => 1,
-                    'importe' => 12,
+                    'importe' => $metadataPay['importe'],
                     'fecha_renta' => Carbon::now(),
                     'fecha_devolucion' => $fechaDevolucion[$metadataPay['periodo']],
-                    'estado' => 1
+                    'estado' => 0
                 ]);
+                $articulo = Articulo::find($metadataPay['id_articulo']);
+                $articulo->esta_rentada = 1;
+                $articulo->save();
+                $itemCart = Carrito::find($metadataPay['id_carrito']);
+                $itemCart->delete();
             default:
                 echo 'Received unknown event type ' . $request->type;
         }
