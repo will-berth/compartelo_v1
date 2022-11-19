@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>COMPARTRELO</title>
+    <title>COMPARTELO</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg" />
@@ -75,8 +75,8 @@
                                     <a class="dropdown-item" href="login">Iniciar sesión</a>
                                 @endauth
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Terminos y condiciones</a>
-                                <a class="dropdown-item" href="#">Quines somos</a>
+                                <a class="dropdown-item" href="#">Términos y condiciones</a>
+                                <a class="dropdown-item" href="#">Quiénes somos</a>
                                 <a class="dropdown-item" href="#">Ayuda</a>
                             </div>
                         </li>
@@ -97,8 +97,8 @@
                 <h3 class="fw-3 color-black23">Conozcamos más acerca de tu artículo.</h3>
             </div>
             <div class="form-card p-4">
-                <h4 class="fw-4 color-black23">Selecciona la(s) categoria(s) que pertenecen a tu producto.</h4>
-                <p>Selecciona solamente las categorias que tienen relación con tu artículo.</p>
+                <h4 class="fw-4 color-black23">Selecciona la(s) categoría(s) que pertenecen a tu producto.</h4>
+                <p>Selecciona solamente las categorías que tienen relación con tu artículo.</p>
                 <form id="publicar-section-categoria" action="" class="w-100 mb-4">
                     <div class="form-row">
                     </div>

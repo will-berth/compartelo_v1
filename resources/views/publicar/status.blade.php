@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>COMPARTRELO</title>
+    <title>COMPARTELO</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg" />
@@ -75,8 +75,8 @@
                                     <a class="dropdown-item" href="login">Iniciar sesión</a>
                                 @endauth
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Terminos y condiciones</a>
-                                <a class="dropdown-item" href="#">Quines somos</a>
+                                <a class="dropdown-item" href="#">Términos y condiciones</a>
+                                <a class="dropdown-item" href="#">Quiénes somos</a>
                                 <a class="dropdown-item" href="#">Ayuda</a>
                             </div>
                         </li>
@@ -98,7 +98,7 @@
             </div>
             <div class="form-card p-5">
                 <h4 class="fw-4 color-black23">Agrega un el costo y estado de tu articulo.</h4>
-                <p>Proporciona mas informacion al cliente.</p>
+                <p>Proporciona más información al cliente.</p>
                 <form id="publicar-section-status" action="" class="w-100 mb-4" novalidate>
                     <div class="form-row">
                         <div class="col-sm-12 col-lg-6 mt-2">
@@ -111,7 +111,7 @@
                                 <option value="Usado regular">Usado regular</option>
                             </select>
                             <div id="estado-alert" class="invalid-feedback text-left">
-                                Debe seleccionar el estado en el que se encuentra su articulo.
+                                Debe seleccionar el estado en el que se encuentra su artículo.
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-6 mt-2">
@@ -119,20 +119,20 @@
                             <select id="periodo" name="periodo" class="form-control" required>
                                 <option value="">-- SELECCIONAR --</option>
                                 <option value="1">Hora</option>
-                                <option value="2">Dia</option>
+                                <option value="2">Día</option>
                                 <option value="3">Semana</option>
                                 <option value="4">Mes</option>
                                 <option value="5">Año</option>
                             </select>
                             <div id="periodo-alert" class="invalid-feedback text-left">
-                                Debe seleccionar el periodo al cual dara su articulo.
+                                Debe seleccionar el periodo al cual dara su artículo.
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-6 mt-2">
                             <label class="w-100 text-left" for="precio">Precio</label>
                             <input id="precio" name="precio" type="number" class="form-control" placeholder="Ej: 25.50" required>
                             <div id="precio-alert" class="invalid-feedback text-left">
-                                Debe proporcionar un precio de su articulo.
+                                Debe proporcionar un precio de su artículo.
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-6 mt-2">

@@ -1,10 +1,10 @@
 @extends('layouts.base')
 @section('contenido')
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Categorias</h1>
+    <h1 class="h3 mb-0 text-gray-800">Categorías</h1>
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="./">Dashboard</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Categorias</li>
+        <li class="breadcrumb-item active" aria-current="page">Categorías</li>
     </ol>
 </div>
 <br>
@@ -20,7 +20,7 @@
     </div>
     <div class="col-md-6">
         <div class="d-flex justify-content-end">
-            <button type="button" class="btn btn-primary" onclick="openModal('add-categorias', 'categorias', '', 0)">Agregar Categorias</button>
+            <button type="button" class="btn btn-primary" onclick="openModal('add-categorias', 'categorias', '', 0)">Agregar Categorías</button>
         </div>
     </div>
 </div>

@@ -5,10 +5,10 @@
     <table class="table align-items-center" id="table-mis-articulos">
         <thead class="thead-light text-center">
             <tr>
-                <th>Articulo</th>
+                <th>Artículo</th>
                 <th>Periodo</th>
                 <th>Precio</th>
-                <th>Fecha de publicacion</th>
+                <th>Fecha de publicación</th>
                 <th>Activo</th>
                 <th>Acciones</th>
             </tr>
@@ -71,7 +71,7 @@
                             <select id="periodo" name="periodo" class="form-control" required>
                                 <option value="">-- SELECCIONAR --</option>
                                 <option value="1">Hora</option>
-                                <option value="2">Dia</option>
+                                <option value="2">Día</option>
                                 <option value="3">Semana</option>
                                 <option value="4">Mes</option>
                                 <option value="5">Año</option>

@@ -68,8 +68,8 @@
                                     <a class="dropdown-item" href="/login">Iniciar sesión</a>
                                 @endauth
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Terminos y condiciones</a>
-                                <a class="dropdown-item" href="#">Quines somos</a>
+                                <a class="dropdown-item" href="#">Términos y condiciones</a>
+                                <a class="dropdown-item" href="#">Quiénes somos</a>
                                 <a class="dropdown-item" href="#">Ayuda</a>
                             </div>
                         </li>

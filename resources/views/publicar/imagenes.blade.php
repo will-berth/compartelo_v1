@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="csrf-token" content="{{ csrf_token() }}" />
-    <title>COMPARTRELO</title>
+    <title>COMPARTELO</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg" />
@@ -78,8 +78,8 @@
                                     <a class="dropdown-item" href="login">Iniciar sesión</a>
                                 @endauth
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Terminos y condiciones</a>
-                                <a class="dropdown-item" href="#">Quines somos</a>
+                                <a class="dropdown-item" href="#">Términos y condiciones</a>
+                                <a class="dropdown-item" href="#">Quiénes somos</a>
                                 <a class="dropdown-item" href="#">Ayuda</a>
                             </div>
                         </li>
@@ -97,11 +97,11 @@
         <div class="publicar-group">
             <div class="publicar-group-title mb-4">
                 <p>Paso 6 de 6</p>
-                <h3 class="fw-3 color-black23">Finalmente, muestranos tu artíulo.</h3>
+                <h3 class="fw-3 color-black23">Finalmente, muestranos tu artículo.</h3>
             </div>
             <div class="form-card p-5">
-                <h4 class="fw-4 color-black23">Agrega fotografias del articulo.</h4>
-                <p>Puedes proporcionar un máximo de 4 imagenes.</p>
+                <h4 class="fw-4 color-black23">Agrega fotografías del artículo.</h4>
+                <p>Puedes proporcionar un máximo de 4 imágenes.</p>
                 <form id="publicar-section-imagenes" action="" class="w-100 mb-4" enctype="multipart/form-data">
                     <div class="form-row">
                         <div class="col-sm-12 col-lg-6 mt-2">
@@ -118,13 +118,13 @@
                         </div>
                         <div id="resumen-view" class="col-12 col-sm-12 col-lg-6 mt-5">
                             <h5 class="fw-4 color-black23">Resumen del artículo.</h5>
-                            <h6 class="fw-4 color-black23">Articulo:</h6>
+                            <h6 class="fw-4 color-black23">Artículo:</h6>
                             <p id="resumen-articulo" class="fw-5">---</p>
                             <h6 class="fw-4 color-black23">Descripción:</h6>
                             <p id="resumen-desc" class="fw-5">---</p>
                             <h6 class="fw-4 color-black23">Marca:</h6>
                             <p id="resumen-marca" class="fw-5">---</p>
-                            <h6 class="fw-4 color-black23">Caracteristicas:</h6>
+                            <h6 class="fw-4 color-black23">Características:</h6>
                             <ol id="resumen-caracteristicas" class="pl-0">
                                 ---
                             </ol>

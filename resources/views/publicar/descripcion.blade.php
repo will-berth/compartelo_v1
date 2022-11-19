@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>COMPARTRELO</title>
+    <title>COMPARTELO</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg" />
@@ -75,8 +75,8 @@
                                     <a class="dropdown-item" href="login">Iniciar sesión</a>
                                 @endauth
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Terminos y condiciones</a>
-                                <a class="dropdown-item" href="#">Quines somos</a>
+                                <a class="dropdown-item" href="#">Términos y condiciones</a>
+                                <a class="dropdown-item" href="#">Quiénes somos</a>
                                 <a class="dropdown-item" href="#">Ayuda</a>
                             </div>
                         </li>
@@ -98,7 +98,7 @@
             </div>
             <div class="form-card p-5">
                 <h4 class="fw-4 color-black23">Agrega una descripcion sobre artículo que quieres publicar.</h4>
-                <p>La descripcion debe indicar detalles sobre tu articulo.</p>
+                <p>La descripción debe indicar detalles sobre tu artículo.</p>
                 <form id="publicar-section-desc" action="" class="w-100 mb-4">
                     <div class="form-row">
                         <div class="col-sm-12 col-lg-12 mt-2">

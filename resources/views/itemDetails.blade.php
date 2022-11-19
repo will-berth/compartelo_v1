@@ -95,7 +95,7 @@
         <hr>
         <div class="row">
             <div class="col-md-4">
-                <h4 class="mb-3 py-4">Carcaterísticas</h4>
+                <h4 class="mb-3 py-4">Características</h4>
                 <ul id="caracteristicas">
                 </ul>
             </div>

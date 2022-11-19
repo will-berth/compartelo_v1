@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Publicar articulo</title>
+    <title>Publicar artículo</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg" />
@@ -75,8 +75,8 @@
                                     <a class="dropdown-item" href="login">Iniciar sesión</a>
                                 @endauth
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Terminos y condiciones</a>
-                                <a class="dropdown-item" href="#">Quines somos</a>
+                                <a class="dropdown-item" href="#">Términos y condiciones</a>
+                                <a class="dropdown-item" href="#">Quiénes somos</a>
                                 <a class="dropdown-item" href="#">Ayuda</a>
                             </div>
                         </li>
@@ -97,11 +97,11 @@
                 <h3 class="fw-3 color-black23">¿Cómo es tu artículo?</h3>
             </div>
             <div class="form-card p-4">
-                <h4 class="fw-4 color-black23">Agrega las caracteristicas de tu articulo.</h4>
-                <p>Las caracteristicas son importantes para que conozcan mejor lo que deseas publicar.</p>
+                <h4 class="fw-4 color-black23">Agrega las características de tu artículo.</h4>
+                <p>Las características son importantes para que conozcan mejor lo que deseas publicar.</p>
                 <form id="publicar-section-caracteristicas" action="" class="w-100 mb-4">
                     <div id="f_nacimiento-alert" class="invalid-feedback text-left">
-                        Debe registrar por lo menos 3 caracteristicas.
+                        Debe registrar por lo menos 3 características.
                     </div>
                     <div class="form-row row-inputs-car">
                         <div id="position-0" class="col-10 col-sm-10 col-lg-11 mt-2">
