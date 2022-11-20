@@ -219,7 +219,8 @@ class ArticulosController extends Controller
         return $upset;
     }
 
-    public function publicar(){
+    public function publicar()
+    {
         return Auth::guard('web2')->user() ? view('publicar') : view('publicar.noauth');
     }
 
@@ -317,22 +318,31 @@ class ArticulosController extends Controller
     {
        if(Auth::guard('web2')->user() != null)
        {
-        $id = Auth::guard('web2')->user()->id;
-        $data = $request->all();
-        if(Carrito::where([['user_id', $id], ['articulo_id', $data['articulo_id']]])->exists())
-        {
-            return json_encode(['type' => 'warning', 'title' => 'Advertencia', 'text' => 'Este articulo ya existe en tu carrito']);
-        }else{
-            $datos = [
-                'user_id' => $id,
-                'articulo_id' => $data['articulo_id'],
-            ];
-            Carrito::create($datos);
-            return json_encode(['type' => 'success', 'title' => 'Exito', 'text' => 'El articulo se agrego al carrito']);
-        }
-       }else
-       {
-        return json_encode(['type' => 'error', 'title' => 'Error', 'text' => 'No has iniciado sesión']);
+            $id = Auth::guard('web2')->user()->id;
+            $data = $request->all();
+            //verificamos si el articulo ya esta rentado
+            $articulo = Articulo::where('id', $data['articulo_id'])->get();
+            if($articulo[0]['activo'] == 0)
+            {
+                return json_encode(['type' => 'warning', 'title' => 'Advertencia', 'text' => 'Este articulo no esta disponible']);
+            }
+            if($articulo[0]['esta_rentada'] == 1)
+            {
+                return json_encode(['type' => 'warning', 'title' => 'Advertencia', 'text' => 'Este articulo ya esta rentado']);
+            }
+            if(Carrito::where([['user_id', $id], ['articulo_id', $data['articulo_id']]])->exists())
+            {
+                return json_encode(['type' => 'warning', 'title' => 'Advertencia', 'text' => 'Este articulo ya existe en tu carrito']);
+            }else{
+                $datos = [
+                    'user_id' => $id,
+                    'articulo_id' => $data['articulo_id'],
+                ];
+                Carrito::create($datos);
+                return json_encode(['type' => 'success', 'title' => 'Exito', 'text' => 'El articulo se agrego al carrito']);
+            }
+       }else{
+            return json_encode(['type' => 'error', 'title' => 'Error', 'text' => 'No has iniciado sesión']);
        }
     }
     public function loadCarrito(Request $request)

@@ -19,6 +19,7 @@ function getArticulos(){
                 <div class="col-sm-6 col-md-4 col-lg-3">
                     <a href="item-details/${valor.clave}"  class="text-decoration-none">
                         <div class="card shadow mb-3 border">
+                            <p class="card-text"><span class="badge badge-primary float-right">${valor.esta_rentada == 0 ? '' : 'RENTADO'}</span></p>
                             <img src="assets/img/articulos/${valor.img1}" class="d-block w-100" alt="..." style="min-height:230px; max-height:230px">
                             <div class="card-body  ">
                                 <h6 class="card-title texto-negro">${valor.articulo}</h6>
@@ -31,7 +32,7 @@ function getArticulos(){
                                 <p class="card-text text-muted"><span class="badge badge-primary">${precio} MXN/${valor.periodos.tipo}</span></p>
                             </div>
                             <div class="border p-1 text-center bg-info text-white">
-                                <i class="icofont-car p-2 pt-4"></i><small>${valor.distancia}</small> <i class="icofont-clock-time p-2 pt-4"></i><small>${valor.duracion}</small>
+                                ${valor.activo == 1 ? 'Disponible' : 'No disponible'}
                             </div>
                         </div>
                     </a>
@@ -198,7 +199,7 @@ function getItemByCategoryAndBrand(categoria, marca){
                 }
                 card += `
                 <div class="col-sm-6 col-md-4 col-lg-3">
-                    <a href="item-details/${valor.clave}"  class="text-decoration-none">
+                    <a href="/item-details/${valor.clave}"  class="text-decoration-none">
                         <div class="card shadow mb-3 border">
                             <img src="/assets/img/articulos/${valor.img1}" class="d-block w-100" alt="..." style="min-height:230px; max-height:230px">
                             <div class="card-body  ">
@@ -720,7 +721,6 @@ function showMyArticle(clave, articulo, desc, precio, marca, periodo, estado, cr
 }
 
 $('#form-edit-articulo').submit(function(e){
-    debugger;
     e.preventDefault();
     var data = $(this).serialize();
     $.ajax({
@@ -731,6 +731,7 @@ $('#form-edit-articulo').submit(function(e){
             $('#btn-edit-articulo').html('Enviando...');//Al momento de agregar un dato nos muestra el boton de enviando...
         },
         success: function(response){
+            $('#btn-edit-articulo').html('Editar');//Al momento de agregar un dato nos muestra el boton de enviando...
             var resp = JSON.parse(response);
             Swal.fire({
                 icon: resp.type,
