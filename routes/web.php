@@ -59,6 +59,18 @@ Route::get('/prueba', function () {
 Route::get('/depositos', function () {
     return view('depositos');
 });
+
+Route::get('/terminos', function () {
+    return view('terminos-condiciones');
+});
+Route::get('/quienes-somos', function () {
+    return view('quienes-somos');
+});
+Route::get('/ayuda', function () {
+    return view('ayuda');
+});
+
+
 Route::get('/unverified-email', function () {
     return view('unverified-email');
 });

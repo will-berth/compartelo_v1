@@ -34,7 +34,7 @@
             <div class="row w-100">
                 <div class="col-md-8 xl-8">
                     <center>
-                        <form id="form-search" method="GET" action="/search">
+                        <!-- <form id="form-search" method="GET" action="/search">
                             <div class="input-group mb-2 d-flex justify-content-center ml-4">
                                 <input type="search" class="input-buscar border shadow-sm border-0" name=buscar id="buscar" placeholder="Buscar artículos, marcas y más"
                                     autocomplete="off">
@@ -44,16 +44,16 @@
                                     
                                 </div>
                             </div>
-                        </form>
+                        </form> -->
                     </center>
                 </div>
                 <div class="col-md-4 xl-4">
                     <ul class="navbar-nav mr-auto d-flex justify-content-end">
                         <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown"
+                            <!-- <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown"
                               aria-haspopup="true" aria-expanded="false" onclick="loadCarrito()">
                               <i class="icofont-shopping-cart icono-nav"></i>
-                            </a>
+                            </a> -->
                             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
                               aria-labelledby="alertsDropdown">
                               <h6 class="dropdown-header">
@@ -123,93 +123,27 @@
     <br>
     <br>
     <br>
-    <div class="container-fluid list-categorias" id="list-categorias">
-        <br>
-        <div class="row">
-            <div class="col-1 col-sm-2 col-lg-1 d-flex justify-content-md-end justify-content-sm-start">
-                <button class="border btn-carousel" onclick="scrollAtras()"><i
-                        class="icofont-rounded-left"></i></button>
-            </div>
-            <div class="col-10 col-sm-8 col-lg-10">
-                <div class="progress m-4 d-none" id="progress">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                        aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">Cargando...</div>
-                </div>
-                <ul id="list-cat">
-
-                </ul>
-            </div>
-            <div class="col-1 col-sm-2 col-lg-1 d-flex justify-content-md-start justify-content-sm-end">
-                <button class="border btn-carousel" onclick="scrollRight()"><i
-                        class="icofont-rounded-right"></i></button>
-            </div>
-        </div>
-    </div>
     <br>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 d-none" id="filtros">
-                <form id="form-filters">
-                    <h3 class="texto-negro" id="texto-buscado"></h3>
-                    <p class="texto-negro"><small id="total-busquedas"></small></p>
-                    @auth('web2')
-                    <div class="card px-4 py-3">
-                        <div class="custom-control custom-switch">
-                            <input type="checkbox" name="distancia" value="1" class="custom-control-input" id="customSwitch1">
-                            <label class="custom-control-label" for="customSwitch1"><i class="icofont-location-pin text-success"></i> Mostrar distancia</label>
-                        </div>
-                    </div>
-                    @endauth
-                    <br>
-                    <p class="texto-negro">Estado del artículo</p>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="estado" id="nuevo" value="Nuevo">
-                        <label class="form-check-label" for="nuevo">
-                        <small>Nuevo</small>
-                        </label>
-                    </div>    
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="estado" id="usadoNuevo" value="Usado como nuevo">
-                        <label class="form-check-label" for="usadoNuevo">
-                        <small>Usado como nuevo</small>
-                        </label>
-                    </div>    
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="estado" id="semiNuevo" value="Semi nuevo">
-                        <label class="form-check-label" for="semiNuevo">
-                        <small>Semi nuevo</small>
-                        </label>
-                    </div>     
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="estado" id="usadoRegular" value="Usado regular">
-                        <label class="form-check-label" for="usadoRegular">
-                        <small>Usado regular</small>
-                        </label>
-                    </div>    
-                    <br>
-                    <p class="texto-negro">Categorías</p>
-                    <div id="filters-cat">
-
-                    </div>                     
-                    <br>    
-                    <p class="texto-negro">Marcas</p>
-                    <div id="filters-marcas">
-
-                    </div>                       
-                    <br> 
-                    <p class="texto-negro">Precio</p>            
-                    <div class="d-flex mb-3">
-                        <input type="number" name="precioMin" class="form-control" placeholder="Minimo" autocomplete="off">__
-                        <input type="number" name="precioMax" class="form-control" placeholder="Maximo" autocomplete="off">
-                    </div>
-                    <button type="submit" class="btn btn-success w-100"><i class="icofont-filter"></i> Aplicar</button>
-                </form>
-            </div>
-            <div class="" id="col-articles">
-                @yield('contenido')
-            </div>
-        </div>
-        
+    <div>
+        <center>
+            <h2>terminos y condiciones</h2>
+        </center>
+        <hr>
+        <center>
+            <h3>¿Qué hacemos con la información personal?</h3>
+        </center>
+        <p>La recolección y tratamiento de tu información personal nos permite
+                prestarte un excelente servicio para que puedas realizar operaciones
+                de forma rápida y segura y ofrecerte funcionalidades que se adaptan
+                mejor a tus necesidades. Compártelo podrá utilizar tu información personal para las siguientes finalidades:</p>
+            <br>
+        <ul>
+            <li>Brindar los servicios y/o beneficios que ofrece la plataforma</li>
+            <li>Mejorar nuestros servicios, desarrollar nuevos y ofrecerte una mejor experiencia con la plataforma </li>
+            <li>Cumplir con obligaciones legales y requerimientos de autoridades competentes</li>
+            <li>Detectar y prevenir fraudes, abusos y delitos relacionados para proteger la seguridad de nuestros usuarios </li>
+            <li>Proteger derechos de usuarios, de terceros o propios de Compártelo</li>
+        </ul>
     </div>
     <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
@@ -229,6 +163,8 @@
         });
       </script>
     @yield('script')
+
+    
 </body>
 
 
