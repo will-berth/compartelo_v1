@@ -13,7 +13,7 @@
             <div class="card">
                 <form id="formRegistro" action="POST" class="card-body text-center needs-validation" enctype="multipart/form-data" novalidate autocomplete="off">
                     <h3 class="mb-3 mt-2">¡Hola! necesitamos algunos de tus datos</h3>
-
+                    @csrf
                     
                     <!-- DATOS PERSONALES -->
                     <div class="w-100">
