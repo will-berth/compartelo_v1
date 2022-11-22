@@ -927,6 +927,7 @@ function getMisRentas(){
 }
 
 function rentaDetalle(id){
+    $("#rentaMapa").css("height", "0");
     $.ajax({
         'type': 'get',
         'url': `/rentaDetalle/${id}`,
@@ -991,6 +992,8 @@ function chargeMap(lat, lng, input){
 }
 
 function loadMap(id_renta){
+    $("#rentaDetalleModal").html("");
+    $("#rentaMapa").css("height", "40rem");
     $.ajax({
         'type': 'get',
         'url': `/mapa/renta/${id_renta}`,
