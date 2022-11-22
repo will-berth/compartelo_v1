@@ -43,6 +43,15 @@ $(document).ready(function() {
                         text: resp.text
                     });
                 }, error: function(jqXhr, json, errorThrown){
+                    if(jqXhr.responseJSON.hasOwnProperty("file")){
+                        Toast.fire({
+                            icon: "error",
+                            title: "Error",
+                            text: "Hubieron problemas al registrarte. Intenta nuevamente."
+                        });
+                        return;
+                    }
+                    
                     Toast.fire({
                         icon: "error",
                         title: "Error",

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Models\User;
 use App\Http\Requests\RegistrerUserRequest;
 use Illuminate\Support\Facades\Hash;
@@ -26,22 +27,30 @@ class UsersController extends Controller
     public function store(RegistrerUserRequest $request){
         $validated = $request->validated();
 
-        $ine_frontal = $this->saveFile($request, "ine_frontal", "ine_f");
-        $ine_reverso = $this->saveFile($request, "ine_reverso", "ine_r");
-        $comprobante = $this->saveFile($request, "comprobante", "comprobante");
+        try{
+            DB::transaction(function() use ($request){
 
-        // $request['password'] = hash('sha256', $request->password);
-        $request['password'] = Hash::make($request->password);
+                $ine_frontal = $this->saveFile($request, "ine_frontal", "ine_f");
+                $ine_reverso = $this->saveFile($request, "ine_reverso", "ine_r");
+                $comprobante = $this->saveFile($request, "comprobante", "comprobante");
+        
+                // $request['password'] = hash('sha256', $request->password);
+                $request['password'] = Hash::make($request->password);
+        
+                $data = $request->all();
+                $data['ine_frontal'] = $ine_frontal;
+                $data['ine_reverso'] = $ine_reverso;
+                $data['comprobante'] = $comprobante;
+        
+                $usuario = User::create($data);
+                $usuario->notify(new ComparteloSoporte('', 1));
+        
+            });
+            return json_encode(['type' => 'success', 'title' => 'Exito', 'text' => 'Tu registro se realizó con exito, queda en espera de verificación de los datos proporcionados.']);
+        }catch(Exception $e){
+            return json_encode(['type' => 'error', 'title' => 'Error', 'text' => 'Hubieron problemas al registrarte. Intenta nuevamente.']);
+        }
 
-        $data = $request->all();
-        $data['ine_frontal'] = $ine_frontal;
-        $data['ine_reverso'] = $ine_reverso;
-        $data['comprobante'] = $comprobante;
-
-        $usuario = User::create($data);
-        $usuario ->notify(new ComparteloSoporte('', 1));
-
-        return json_encode(['type' => 'success', 'title' => 'Exito', 'text' => 'Tu registro se realizó con exito, queda en espera de verificación de los datos proporcionados.']);
 
     }
 
